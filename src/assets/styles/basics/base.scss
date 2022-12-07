@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+// for mobile
+h1{
+  font-family: $BaseFont;
+font-style: normal;
+font-weight: 200;
+font-size: 24px;
+line-height: 32px;
+letter-spacing: 1.97px;
+color: $PrimaryColorBlack;
+}
+h2{
+  font-family: $BaseFont;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: $PrimaryColorBlack; 
+}
+h3{
+  font-family: $BaseFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 2.67px;
+  color: $PrimaryColorBlack;
+}
+
+// //for Desktop
+// @include xl{
+// h1 {
+//   font-family:$BaseFont;
+//   font-style: normal;
+//   font-weight: 200;
+//   font-size: 32px;
+//   line-height: 40px;
+//   letter-spacing: 1.97px;
+//   color: $PrimaryColorBlack;
+// }
+// h2 {
+//   font-family: $BaseFont;
+//   font-style: normal;
+//   font-weight: 200;
+//   font-size: 30px;
+//   line-height: 35px;
+//   text-align: center;
+//   letter-spacing: 1.25px;
+//   text-transform: uppercase;
+//   color: $PrimaryColorBlack;
+// }
+// h3 {
+//   font-family: $BaseFont;
+//   font-style: normal;
+//   font-weight: 400;
+//   font-size: 40px;
+//   line-height: 47px;
+//   letter-spacing: 2.67px;
+//   color: $PrimaryColorBlack;
+// }
+
+// }

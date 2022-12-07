@@ -1,8 +1,13 @@
 // BASICS
 @import './basics/variables';
 @import './basics/base.scss';
+@import './basics/breakpoints.scss';
+
 
 // COMPONENTS
+@import './components/navbar/navbar.scss';
+@import './components/hero_main/heromain.scss';
+
 
 // PAGES
 
