@@ -1,12 +1,17 @@
 // BASICS
-@import './basics/variables';
-@import './basics/base.scss';
+ @import './basics/variables.scss';
 @import './basics/breakpoints.scss';
+ @import './basics/base.scss';
+
 
 
 // COMPONENTS
 @import './components/navbar/navbar.scss';
 @import './components/hero_main/heromain.scss';
+
+//COMPONENTS Restaurant
+@import './components/restaurant_Carousel/restaurantCard.scss';
+@import './components/restaurant_Carousel/restaurantCarousel.scss';
 
 
 // PAGES
