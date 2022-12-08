@@ -1,13 +1,15 @@
 import React from 'react'
-import HeroMain from './componets/hero_main/HeroMain'
 import NavBar from './componets/navbar/NavBar'
+import HomePage from './pages/HomePage'
 
 const App = () => {
   return (
     <>
+    <header>
         <NavBar/>
+        </header>
       <main>
-        <HeroMain/>
+        <HomePage/>
       </main>
     </>
   )
