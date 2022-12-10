@@ -1,6 +1,5 @@
 import React from "react";
 import IRestaurant from "../../interfaces/Restaurant";
-
 interface IProps {
   restaurant: IRestaurant;
 }

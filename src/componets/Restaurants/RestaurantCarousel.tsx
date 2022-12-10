@@ -2,7 +2,8 @@ import React from "react";
 import { restaurantsData } from "../../data/restaurantData";
 import RestaurantCard from "./RestaurantCard";
 import Slider from "react-slick";
-import { Link } from "react-router-dom";
+import HomePageLink from "../common/links/HomePageLink";
+
 const RestaurantCarousel = () => {
   const settings = {
     dots: false,
@@ -15,7 +16,7 @@ const RestaurantCarousel = () => {
   return (
     <div className="restaurant-carousel-container">
       <div className="title-restaurant">
-        <h2>popular restaurant in epicure:</h2>
+        <h3>popular restaurant in epicure:</h3>
       </div>
       <div className="restaurant-carousel">
         <Slider {...settings}>
@@ -24,16 +25,7 @@ const RestaurantCarousel = () => {
           ))}
         </Slider>
         {/* move to common/linkButton */}
-        <div className="link">
-          <h2>All Restaurant</h2>
-          <Link to={"restaurant"}>
-            <img
-            //svg not work
-              src={require("../../assets/images/arrow.svg")}
-              alt="link-button"
-            ></img>
-          </Link>
-        </div>
+        <HomePageLink path="restaurant"/>
         {/* / */}
       </div>
     </div>

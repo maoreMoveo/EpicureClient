@@ -1,5 +1,6 @@
+@import '../../basics/variables';
 .main {
-  height: 300px;
+  //height: 300px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -29,7 +30,7 @@
     gap: 8px;
     width: 315px;
     height: 30px;
-    border: 0.5px solid black;
+    border: 0.5px solid $PrimaryColorBlack;
     border-radius: 4px;
     button {
       background-color: transparent;
@@ -45,13 +46,13 @@
       background-color: transparent;
       width: 253px;
       height: 100%;
-      font-family: "Helvetica Neue";
+      font-family: $BaseFont;
       font-style: normal;
       font-weight: 200;
       font-size: 12px;
       line-height: 15px;
       letter-spacing: 1.29px;
-      color: black;
+      color: $PrimaryColorBlack;
       &:focus {
         outline: none;
       }

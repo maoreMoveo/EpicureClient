@@ -6,14 +6,31 @@
 
 
 // COMPONENTS
+@import './components/common/home-page-link.scss';
 @import './components/navbar/navbar.scss';
-@import './components/hero_main/heromain.scss';
+@import './components/navbar/open-menu';
+@import './components/hero-main/heromain.scss';
 
 //COMPONENTS Restaurant
-@import './components/restaurant_Carousel/restaurantCard.scss';
-@import './components/restaurant_Carousel/restaurantCarousel.scss';
+@import './components/restaurant/restaurantCard.scss';
+@import './components/restaurant/restaurantCarousel.scss';
+
+//COMPONENTS dish
+@import './components/dishes/dishCard.scss';
+@import './components/dishes/dishesCaruosel.scss';
+@import './components/dishes/dish-signature.scss';
+// @import './components/chef-carousel';
 
 
+////COMPONENTS shef
+@import './components/shefs/shefOfWeek.scss';
+@import './components/shefs/shefCard';
+@import './components/shefs/shefCaruosel';
+
+//COMPONENTS about-us
+@import './components/about-us/about-us.scss';
+//COMPONENTS footer
+@import './components/footer/footer';
 // PAGES
 
 

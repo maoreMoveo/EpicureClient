@@ -1,0 +1,27 @@
+@import '../../basics//variables';
+.dish-signature{
+    background-color:$SeconderyBeige;
+    display: flex;
+    width: 100%;
+    height: 550px;
+    //justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    
+}
+.dish-options{
+display: flex;
+justify-content: space-around;
+flex-direction: column;
+height: 100%;
+
+img{
+    height: 30px;
+    width: 40px;
+}
+h2{
+    text-transform: none;
+}
+
+}
