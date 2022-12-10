@@ -1,0 +1,66 @@
+@import '../../basics/variables';
+.open-search{
+    position: absolute;
+  width: 100%;
+  height: 413px;
+  left: -1px;
+  top: 0px;
+  background-color: #FFFFFF;
+  z-index: 3;
+  .menu_button {
+    height: 46px;
+    display: flex;
+    align-items: center;
+  }
+  h3{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-transform: none;
+
+  }
+  .search-content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+    .search {
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 12px;
+        gap: 8px;
+        width: 315px;
+        height: 30px;
+        border: 0.5px solid $PrimaryColorBlack;
+        border-radius: 4px;
+        button {
+          background-color: transparent;
+          border: none;
+          img {
+            height: 20px;
+            width: 20px;
+            object-fit: cover;
+          }
+        }
+        input {
+          border: none;
+          background-color: transparent;
+          width: 253px;
+          height: 100%;
+          font-family: $BaseFont;
+          font-style: normal;
+          font-weight: 200;
+          font-size: 12px;
+          line-height: 15px;
+          letter-spacing: 1.29px;
+          color: $PrimaryColorBlack;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+  }

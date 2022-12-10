@@ -6,11 +6,12 @@ import searchIcon from "../../assets/images/search-icon.svg";
 import userIcon from "../../assets/images/user-icon.svg";
 import { useToggle } from "../../hooks/useToggle";
 import OpenMenu from "./OpenMenu";
+import OpenSearch from "./OpenSearch";
 
 const NavBar = () => {
   const [openMenu,menuToggle]= useToggle();
-  console.log('toogle value')
-  console.log(openMenu);
+  const [openSearch,searchToggle]= useToggle();
+
   return (
     <nav className="navbar">
       <div className="menu_button" >
@@ -20,12 +21,13 @@ const NavBar = () => {
         <img src={logo} alt="logo-icon"></img>
       </div>
       <div className="buttons_group">
-        <img src={searchIcon} alt="search-icon"></img>
+        <img src={searchIcon} alt="search-icon" onClick={()=> searchToggle()}></img>
         <img src={userIcon} alt="user-icon"></img>
         <img src={cartIcon} alt="cart-icon"></img>
       </div>
 
      {openMenu && <OpenMenu menuToggle={menuToggle}/>}
+     {openSearch && <OpenSearch searchToggle={searchToggle}/>}
     </nav>
   );
 };
