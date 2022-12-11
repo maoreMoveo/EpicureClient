@@ -21,9 +21,9 @@ const NavBar = () => {
         <img src={menuButton} alt="hh3mborger-icon" onClick={()=>menuToggle()}></img>
       </div>
       <div className="logo">
-        {/* <Link to='/'> */}
+        <Link to='/'>
         <img src={logo} alt="logo-icon"></img>
-        {/* </Link> */}
+        </Link>
       </div>
       <div className="buttons_group">
         <img src={searchIcon} alt="search-icon" onClick={()=> searchToggle()}></img>

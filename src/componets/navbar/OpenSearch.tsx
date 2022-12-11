@@ -7,7 +7,7 @@ interface IProps{
 const OpenSearch = ({searchToggle}:IProps) => {
   return (
     <div className="open-search">
-      <div className="menu_button">
+      <div className="search-button">
         <img src={x} alt="hamborger-icon" onClick={()=> searchToggle()}></img>
         <h3>Search</h3>
       </div>

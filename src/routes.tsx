@@ -8,14 +8,16 @@ import {
   Route,
 } from "react-router-dom";
 import NavBar from "./componets/navbar/NavBar";
+import Layout from "./Layout";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-        <Route path="/" element={<HomePage />} />
+        <Route  element={<Layout />}>
+        <Route path="/" element={<HomePage/>}/>
         <Route path="restaurant" element={<Restaurants />}></Route>
         <Route path="restaurant/:restaurantId" element={<RestaurantPage />} />
-
+        </Route>
         {/* to check with amir */}
         
         {/* <Route path="restaurant" element={<Restaurants />}>
