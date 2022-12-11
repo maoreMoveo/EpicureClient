@@ -1,19 +1,23 @@
-@import '../../basics/variables';
+@import "../../basics/variables";
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 40px;
-  //margin-top: 20px;
-  margin: 20px;
-  span {
-    font-family: $BaseFont;
-    font-style: normal;
-    font-weight: 200;
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: 1.92px;
-    color: $PrimaryColorBlack;
+  width: 377px;
+  height: 200px;
+  border-top: 1px solid #f2f2f2;
+  div {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+    span {
+      font-family: $BaseFont;
+      font-style: normal;
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 1.92px;
+      color: $PrimaryColorBlack;
+    }
   }
 }

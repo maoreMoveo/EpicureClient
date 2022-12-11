@@ -1,0 +1,38 @@
+.restaurant-container{
+    height: 100%;
+    margin: 20px;
+}
+.restaurant-content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    //align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.restuarant-sort{
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    padding-inline-start: 0px;
+    gap: 20px;
+
+    li{
+        font-family: "Helvetica Neue";
+        font-style: normal;
+        font-weight: 200;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 1.92px;
+        color: #000000;
+    }
+    .active{
+        border-bottom: 1.8px solid rgba(222, 146, 0, 0.9);
+        font-weight: 400;
+    }
+}
+}

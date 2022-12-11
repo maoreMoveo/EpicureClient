@@ -1,10 +1,10 @@
 import React from "react";
-import ShefCaruosel from "./ShefCaruosel";
+import ChefCaruosel from "./ChefCaruosel";
 
-const ShefOfWeek = () => {
+const ChefOfWeek = () => {
   return (
     <>
-    <div className="shef-container">
+    <div className="chef-container">
       <h3>Chef of the week:</h3>
       <div className="img">
         <img
@@ -13,7 +13,7 @@ const ShefOfWeek = () => {
         ></img>
         <div>Yossi Shitrit</div>
       </div>
-      <div className="shef-about">
+      <div className="chef-about">
         <p>
           Chef Yossi Shitrit has been living and breathing his culinary dreams
           for more than two decades, including running the kitchen in his first
@@ -23,11 +23,11 @@ const ShefOfWeek = () => {
         </p>
       </div>
       </div>
-      <div className="shef-week">
-        <ShefCaruosel/>
+      <div className="chef-week">
+        <ChefCaruosel/>
       </div>
       </>
   );
 };
 
-export default ShefOfWeek;
+export default ChefOfWeek;

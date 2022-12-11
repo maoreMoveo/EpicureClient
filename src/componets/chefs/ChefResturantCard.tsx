@@ -3,9 +3,9 @@ import IRestaurant from '../../interfaces/Restaurant';
 interface IProps{
   res: IRestaurant;
 }
-const ShefResturantCard = ({res}:IProps) => {
+const ChefResturantCard = ({res}:IProps) => {
   return (
-    <div className="card-shef-res">
+    <div className="card-chef-res">
       <img
         src={require(`../../${res.thumb}`)}
         alt={res.name}
@@ -15,4 +15,4 @@ const ShefResturantCard = ({res}:IProps) => {
   )
 }
 
-export default ShefResturantCard;
+export default ChefResturantCard;

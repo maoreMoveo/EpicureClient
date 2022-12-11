@@ -10,8 +10,6 @@ const HomePageLink = ({path}:IProps) => {
           <h2>All Restaurant</h2>
           <Link to={path}>
             <img
-              //svg not work
-              //src={require("../../assets/images/arrow.svg")}
               alt="link-button"
             ></img>
           </Link>

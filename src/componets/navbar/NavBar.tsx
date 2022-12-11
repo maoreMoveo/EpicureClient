@@ -7,10 +7,13 @@ import userIcon from "../../assets/images/user-icon.svg";
 import { useToggle } from "../../hooks/useToggle";
 import OpenMenu from "./OpenMenu";
 import OpenSearch from "./OpenSearch";
+import OpenCart from "./OpenCart";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [openMenu,menuToggle]= useToggle();
   const [openSearch,searchToggle]= useToggle();
+  const [openCart,cartToggle]= useToggle();
 
   return (
     <nav className="navbar">
@@ -18,16 +21,19 @@ const NavBar = () => {
         <img src={menuButton} alt="hh3mborger-icon" onClick={()=>menuToggle()}></img>
       </div>
       <div className="logo">
+        {/* <Link to='/'> */}
         <img src={logo} alt="logo-icon"></img>
+        {/* </Link> */}
       </div>
       <div className="buttons_group">
         <img src={searchIcon} alt="search-icon" onClick={()=> searchToggle()}></img>
         <img src={userIcon} alt="user-icon"></img>
-        <img src={cartIcon} alt="cart-icon"></img>
+        <img src={cartIcon} alt="cart-icon" onClick={()=> cartToggle()}></img>
       </div>
 
      {openMenu && <OpenMenu menuToggle={menuToggle}/>}
      {openSearch && <OpenSearch searchToggle={searchToggle}/>}
+    {openCart &&  <OpenCart cartToggle={cartToggle}/>}
     </nav>
   );
 };

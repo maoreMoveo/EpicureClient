@@ -10,10 +10,14 @@
 @import './components/navbar/navbar.scss';
 @import './components/navbar/open-menu';
 @import './components/navbar/open-search';
+@import './components/navbar/open-cart';
 @import './components/hero-main/heromain.scss';
 
 //COMPONENTS Restaurant
-@import './components/restaurant/restaurantCard.scss';
+@import './components/restaurant/restaurant';
+@import './components/restaurant/restaurantCard';
+@import './components/restaurant/restaurant-page';
+@import './components/restaurant/restaurantCardCarousel.scss';
 @import './components/restaurant/restaurantCarousel.scss';
 
 //COMPONENTS dish
@@ -24,9 +28,9 @@
 
 
 ////COMPONENTS shef
-@import './components/shefs/shefOfWeek.scss';
-@import './components/shefs/shefCard';
-@import './components/shefs/shefCaruosel';
+@import './components/chefs/chefOfWeek.scss';
+@import './components/chefs/chefCard';
+@import './components/chefs/chefCaruosel';
 
 //COMPONENTS about-us
 @import './components/about-us/about-us.scss';

@@ -1,6 +1,6 @@
 import React from "react";
 import { restaurantsData } from "../../data/restaurantData";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCardCarousel from "./RestaurantCardCarousel";
 import Slider from "react-slick";
 import HomePageLink from "../common/links/HomePageLink";
 
@@ -21,12 +21,10 @@ const RestaurantCarousel = () => {
       <div className="restaurant-carousel">
         <Slider {...settings}>
           {restaurantsData.map((rest) => (
-            <RestaurantCard key={rest._id} restaurant={rest} />
+            <RestaurantCardCarousel key={rest._id} restaurant={rest} />
           ))}
         </Slider>
-        {/* move to common/linkButton */}
-        <HomePageLink path="restaurant"/>
-        {/* / */}
+        <HomePageLink path="restaurant" />
       </div>
     </div>
   );

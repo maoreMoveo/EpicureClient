@@ -1,5 +1,5 @@
 @import "../../basics/variables";
-@import '../../basics/base';
+@import "../../basics/base";
 .card-chef {
   width: 250px;
   height: 450px;
@@ -7,42 +7,62 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-   justify-content: space-between;
+  //justify-content: space-between;
   margin: 10px;
   img {
     width: 100%;
     height: 150px;
     object-fit: cover;
   }
-  h3 {
-    margin-left: 20px;
-    margin-right: 20px;
-    @include cardTitle
-  }
+  
 }
-.dish-ing {
-  width: 200px;
-  height: 100px;
- // overflow-y: scroll;
-  margin-left: 20px;
-  margin-right: 20px;
-  h2{
-    //height: 100%;
-    text-transform: none;
+.dish-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  background: #f9f4ea;
+  justify-content: space-between;
+  h3 {
+    @include cardTitle;
+  }
+ 
+}
 
+.dish-ing {
+  width: 100%;
+  height: 100px;
+  h2 {
+    text-transform: none;
   }
 }
 .dish-icon {
-  margin-left: 20px;
+ 
   img {
     height: 20px;
     width: 30px;
   }
 }
 .price {
-  height: 100%;
-  width: 100%;
   display: flex;
-  margin: 20px;
-  align-items: end;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  width: 100%;
+  height: 30px;
+  span {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  div {
+    width: 256px;
+    margin: 5px;
+    border: 0.5px solid #979797;
+  }
 }

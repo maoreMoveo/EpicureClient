@@ -1,6 +1,8 @@
 import React from "react";
+import { RouterProvider } from "react-router-dom";
+import Footer from "./componets/footer/Footer";
 import NavBar from "./componets/navbar/NavBar";
-import HomePage from "./pages/HomePage";
+import { router } from "./routes";
 
 const App = () => {
   return (
@@ -9,8 +11,11 @@ const App = () => {
         <NavBar />
       </header>
       <main>
-        <HomePage />
+      <RouterProvider router={router} />
       </main>
+      <footer>
+      <Footer/>
+      </footer>
     </>
   );
 };

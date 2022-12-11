@@ -10,7 +10,11 @@ body {
 main {
   overflow-x: hidden;
   //remember to delete
-  height: 400vh;
+  height: 100%;
+  margin-top: 46px;
+}
+a{
+  text-decoration: none;
 }
 // for mobile
 h1 {
@@ -21,6 +25,7 @@ h1 {
   line-height: 32px;
   letter-spacing: 1.97px;
   color: $PrimaryColorBlack;
+ 
 }
 h2 {
   font-family: $BaseFont;
@@ -31,6 +36,7 @@ h2 {
   letter-spacing: 1.25px;
   text-transform: uppercase;
   color: $PrimaryColorBlack;
+  margin: 10px;
 }
 h3 {
   font-family: $BaseFont;
@@ -51,6 +57,7 @@ h3 {
   letter-spacing: 2.67px;
   color: $PrimaryColorBlack;
   text-transform: none;
+ 
 }
 // //for Desktop
 // @include xl{
