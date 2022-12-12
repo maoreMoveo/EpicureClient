@@ -7,7 +7,6 @@ import {
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
-import NavBar from "./componets/navbar/NavBar";
 import Layout from "./Layout";
 
 export const router = createBrowserRouter(

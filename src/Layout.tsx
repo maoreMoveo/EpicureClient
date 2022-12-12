@@ -10,7 +10,6 @@ const Layout = () => {
         <NavBar />
       </header>
       <main>
-      {/* <RouterProvider router={router} /> */}
       <Outlet/>
       </main>
       <footer>

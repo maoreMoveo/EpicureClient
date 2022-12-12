@@ -1,43 +1,52 @@
 @import "../../basics/variables";
 @import "../../basics/base";
-.card-dish {
-  padding: 0px;
+.card-dish-carousel {
+  width: 250px;
+  height: 450px;
   background-color: $SeconderyBeige;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  //justify-content: space-between;
   margin: 10px;
   img {
     width: 100%;
-    height: 220px;
+    height: 150px;
     object-fit: cover;
   }
+  
 }
-.dish-details {
+.dish-carousel-details {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 16px;
-  padding: 16px;
+  gap: 16px;
   width: 100%;
-  background: $SeconderyBeige;
+  height: 100%;
+  background: #f9f4ea;
+  justify-content: space-between;
   h3 {
     @include cardTitle;
-    margin: 0;
   }
-  p {
-    font-family: $BaseFont;
-    font-style: normal;
-    font-weight: 200;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 1.97px;
-    color: $PrimaryColorBlack;
+ 
+}
+
+.dish-carousel-ing {
+  width: 100%;
+  height: 100px;
+  h2 {
     text-transform: none;
   }
 }
-.dish-price {
+.dish-carousel-icon {
+ 
+  img {
+    height: 20px;
+    width: 30px;
+  }
+}
+.dish-carousel-price {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -52,8 +61,8 @@
     align-items: center;
   }
   div {
-    width: 100%;
+    width: 256px;
     margin: 5px;
-    border: 0.5px solid $PrimaryColorGray;
+    border: 0.5px solid #979797;
   }
 }
