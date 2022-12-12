@@ -7,10 +7,6 @@ interface IProps {
 const OpenCart = ({ cartToggle }: IProps) => {
   return (
     <div className="open-cart">
-      <div className="menu_button">
-        <img src={x} alt="hamborger-icon" onClick={() => cartToggle()}></img>
-        <h3>Cart</h3>
-      </div>
       <div className="cart-content">
         <img src={cartIcon} alt="cart-icon"></img>
         <div className="cart-text">

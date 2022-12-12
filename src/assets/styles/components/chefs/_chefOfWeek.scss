@@ -1,5 +1,5 @@
 @import '../../basics/variables';
-.shef-container {
+.chef-container {
   margin-left: 20px;
   margin-right: 20px;
   display: flex;
@@ -28,9 +28,9 @@
     background: rgba(255, 255, 255, 0.8);
   }
 }
-.shef-about {
+.chef-about {
   p {
-    font-family: "Helvetica Neue";
+    font-family: $BaseFont;
     font-style: normal;
     font-weight: 200;
     font-size: 18px;

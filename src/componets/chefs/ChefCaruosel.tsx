@@ -22,8 +22,9 @@ const ChefCaruosel = () => {
             <ChefResturantCard key={rest._id} res={rest} />
           ))}
         </Slider>
+        <HomePageLink path="chefs" />
       </div>
-      <HomePageLink path="chefs" />
+      
     </>
   );
 };
