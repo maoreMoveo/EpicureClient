@@ -9,7 +9,7 @@ const DishCard = ({ dish }: IProps) => {
   const [openDishModal,dishToggle]= useToggle();
   return (
     <>
-    <div className="card-dish" onClick={()=> dishToggle()}>
+    <div className="dish-card" onClick={()=> dishToggle()}>
       <img src={require(`../../${dish.image}`)} alt={dish.name}></img>
       <div className="dish-details">
         <h3>{dish.name}</h3>
@@ -17,8 +17,9 @@ const DishCard = ({ dish }: IProps) => {
           <p>{dish.ingredients}</p>
         </div>
         <div className="dish-price">
+          <div className="price-line"></div>
           <span>₪&nbsp;{dish.price}</span>
-          <div></div>
+          <div ></div>
         </div>
       </div>
     </div>

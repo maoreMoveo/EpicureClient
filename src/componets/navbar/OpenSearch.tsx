@@ -9,7 +9,7 @@ const OpenSearch = ({searchToggle}:IProps) => {
     <div className="open-search">
       <div className="search-button">
         <img src={x} alt="hamborger-icon" onClick={()=> searchToggle()}></img>
-        <h3>Search</h3>
+        <h2>Search</h2>
       </div>
       <div className="search-content">
         <div className="search">

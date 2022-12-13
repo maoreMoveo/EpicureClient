@@ -1,5 +1,7 @@
-@import '../../basics/variables';
-.main {
+@import "../../basics/variables";
+@import "../../basics/base";
+@import "../../basics/breakpoints";
+.hero-main {
   //height: 300px;
   width: 100%;
   display: flex;
@@ -7,9 +9,9 @@
   align-items: center;
   position: relative;
 }
-.img {
+.hero-img {
   width: 100%;
-  height: 100%;
+  height: 270px;
   object-fit: cover;
 }
 .box {
@@ -57,6 +59,26 @@
       &:focus {
         outline: none;
       }
+    }
+  }
+}
+
+@include xl {
+  .hero-img {
+    height: 700px;
+  }
+  .box {
+    width: 780px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    .text {
+      width: 450px;
+      height: 80px;
     }
   }
 }

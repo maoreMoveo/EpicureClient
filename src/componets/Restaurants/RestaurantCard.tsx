@@ -8,14 +8,16 @@ interface IProps {
 const RestaurantCard = ({ restaurant }: IProps) => {
   return (
     <Link to={`/restaurant/${restaurant._id}`}>
-    <div className="card-restaurant">
-      <img
-        src={require(`../../${restaurant.thumb}`)}
-        alt={restaurant.name}
-      ></img>
-      <h3>{restaurant.name}</h3>
-      <h2>{restaurant.chef}</h2>
-    </div>
+      <div className="card-restaurant">
+        <img
+          src={require(`../../${restaurant.thumb}`)}
+          alt={restaurant.name}
+        ></img>
+        <div className="card-content">
+          <h3>{restaurant.name}</h3>
+          <h2>{restaurant.chef}</h2>
+        </div>
+      </div>
     </Link>
   );
 };

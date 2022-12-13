@@ -1,4 +1,5 @@
 @import "./variables";
+@import './breakpoints';
 * {
   box-sizing: border-box;
 }
@@ -49,36 +50,36 @@ h3 {
   text-transform: uppercase;
 }
 
-// //for Desktop
-// @include xl{
-// h1 {
-//   font-family:$BaseFont;
-//   font-style: normal;
-//   font-weight: 200;
-//   font-size: 32px;
-//   line-height: 40px;
-//   letter-spacing: 1.97px;
-//   color: $PrimaryColorBlack;
-// }
-// h2 {
-//   font-family: $BaseFont;
-//   font-style: normal;
-//   font-weight: 200;
-//   font-size: 30px;
-//   line-height: 35px;
-//   text-align: center;
-//   letter-spacing: 1.25px;
-//   text-transform: uppercase;
-//   color: $PrimaryColorBlack;
-// }
-// h3 {
-//   font-family: $BaseFont;
-//   font-style: normal;
-//   font-weight: 400;
-//   font-size: 40px;
-//   line-height: 47px;
-//   letter-spacing: 2.67px;
-//   color: $PrimaryColorBlack;
-// }
+//for Desktop
+@include xl{
+h1 {
+  font-family:$BaseFont;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 1.97px;
+  color: $PrimaryColorBlack;
+}
+h2 {
+  font-family: $BaseFont;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: $PrimaryColorBlack;
+}
+h3 {
+  font-family: $BaseFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 2.67px;
+  color: $PrimaryColorBlack;
+}
 
-// }
+}

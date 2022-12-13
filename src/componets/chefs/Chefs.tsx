@@ -19,7 +19,7 @@ const Chefs = () => {
       </div>
       <div className="chefs-content">
         {chefData.map((chefs) => (
-          <div className="img">
+          <div className="chef-img">
           <img
             src={require(`../../${chefs.image}`)}
             alt={chefs.name}

@@ -1,13 +1,47 @@
-.chef-carousel-container {
-    width: 100%;
-    margin-top: 20px;
+@import "../../basics/variables";
+@import "../../basics/breakpoints";
+@import "../../basics/base";
+.dish-carousel-container {
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+.dish-title-chef {
+  margin-left: 20px;
+}
+.dish-carousel {
+  margin-left: 10px;
+}
+.dish-desktop {
+  display: none;
+}
+.dish-link {
+  margin-left: 10px;
+}
+@include xl {
+  .dish-carousel-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
   }
-  .title-chef {
-    margin-left: 20px;
-    
+  .dish-carousel {
+    display: none;
   }
-  .chef-carousel{
-    margin-left: 10px;
+  .dish-desktop {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
-  
-  
+  .dish-items {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 24px;
+  }
+  .dish-link {
+    display: flex;
+    justify-content: end;
+  }
+}

@@ -4,8 +4,8 @@ import searchButton from "../../assets/images/search-icon.svg";
 
 const HeroMain = () => {
   return (
-    <div className="main">
-      <img className="img" src={heroImg} alt="hero-img"></img>
+    <div className="hero-main">
+      <img className="hero-img" src={heroImg} alt="hero-img"></img>
       <div className="box">
         <div className="text">
           <h1>Epicure works with the top chef restaurants in Tel Aviv</h1>

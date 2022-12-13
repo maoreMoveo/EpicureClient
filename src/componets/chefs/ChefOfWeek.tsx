@@ -5,8 +5,9 @@ const ChefOfWeek = () => {
   return (
     <>
     <div className="chef-container">
-      <h3>Chef of the week:</h3>
-      <div className="img">
+      <h2>Chef of the week:</h2>
+      <div className="chef-about-content">
+      <div className="chef-week-img">
         <img
           src={require("../../assets/images/yossi-shitrit-image.png")}
           alt="yossi shitrit"
@@ -26,6 +27,8 @@ const ChefOfWeek = () => {
       <div className="chef-week">
         <ChefCaruosel/>
       </div>
+      </div>
+      
       </>
   );
 };

@@ -5,7 +5,8 @@ import vegetarianIcon from '../../assets/images/vegetarian-icon.svg';
 const DishSignature = () => {
   return (
     <div className='dish-signature'>
-        <h3>Signature Dish Of:</h3>
+      <div className='dish-title-signature'></div>
+        <h2>THE MEANING OF OUR ICONS:</h2>
         <div  className='dish-options'>
         <div>
             <img src={spicyIcon} alt="spicy-icon"></img>
@@ -13,7 +14,7 @@ const DishSignature = () => {
         </div>
         <div>
             <img src={vegetarianIcon} alt="vegenarian-icon"></img>
-            <h2>Vagitarian</h2>
+            <h2>Vegitarian</h2>
         </div>
         <div>
             <img src={veganIcon} alt="vegan-icon"></img>

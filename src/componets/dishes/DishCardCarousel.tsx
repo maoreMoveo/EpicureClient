@@ -10,7 +10,7 @@ const DishCardCarousel = ({ dish }: IProps) => {
       <div className="dish-carousel-details">
       <h3>{dish.name}</h3>
       <div className="dish-carousel-ing">
-        <h2>{dish.ingredients}</h2>
+        <p>{dish.ingredients}</p>
       </div>
       <div className="dish-carousel-icon">
         <img src={require(`../../${dish.icon}`)} alt={dish.name}></img>

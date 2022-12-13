@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import { dishesData } from "../../data/dishesData";
 import HomePageLink from "../common/links/HomePageLink";
+import DishCard from "./DishCard";
 import DishCardCarousel from "./DishCardCarousel";
 const DishesCarousel = () => {
   const settings = {
@@ -13,17 +14,27 @@ const DishesCarousel = () => {
     slidesToScroll: 1,
   };
   return (
-    <div className="restaurant-carousel-container">
-      <div className="title-chef">
-        <h3>Signature Dish Of::</h3>
+    <div className="dish-carousel-container">
+      <div className="dish-title-chef">
+        <h2>Signature Dish Of:</h2>
       </div>
-      <div className="restaurant-carousel">
+      <div className="dish-carousel">
         <Slider {...settings}>
           {dishesData.map((dish) => (
             <DishCardCarousel key={dish._id} dish={dish} />
           ))}
         </Slider>
-        <HomePageLink path="dishes" />
+        <HomePageLink path="restaurant" />
+      </div>
+      <div className="dish-desktop">
+        <div className="dish-items">
+          {dishesData.slice(0, 3).map((dish) => (
+            <DishCard key={dish._id} dish={dish} />
+          ))}
+        </div>
+        <div className="dish-link">
+          <HomePageLink path="restaurant" />
+        </div>
       </div>
     </div>
   );

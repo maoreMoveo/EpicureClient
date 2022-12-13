@@ -24,6 +24,12 @@ const NavBar = () => {
         <Link to='/'>
         <img src={logo} alt="logo-icon"></img>
         </Link>
+        <div className="navbar-links">
+              <span>Epicure</span>
+              <Link to={'restaurant'} >Restaurant</Link>
+              <Link to={'chefs'} >Chefs</Link>
+
+        </div>
       </div>
       <div className="buttons_group">
         <img src={searchIcon} alt="search-icon" onClick={()=> searchToggle()}></img>

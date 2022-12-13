@@ -1,5 +1,47 @@
+@import "../../basics/variables";
+@import "../../basics/base";
+@import "../../basics/breakpoints";
 .chef-res-carousel-container {
     width: 100%;
-    margin-top: 20px;
-    margin-left: 20px;
+  h2{
+    margin: 0;
   }
+  }
+  .chef-res-carousel{
+    margin-top: 20px;
+  }
+  .chef-desktop{
+    display: none;
+  }
+
+
+@include xl {
+  .chef-res-carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+    margin-left: 0px;
+  
+  }
+  .chef-res-carousel{
+    display: none;
+  }
+  .chef-desktop {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .chef-items {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 24px;
+  }
+  .chef-link {
+    display: flex;
+    justify-content: end;
+  }
+}

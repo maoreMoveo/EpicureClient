@@ -1,5 +1,6 @@
 @import "../../basics/variables";
 @import "../../basics/base";
+@import '../../basics/breakpoints';
 @mixin line {
   font-family: $BaseFont;
   font-style: normal;
