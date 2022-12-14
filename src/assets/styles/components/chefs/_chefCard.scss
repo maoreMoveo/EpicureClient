@@ -1,0 +1,16 @@
+@import '../../basics/variables';
+@import '../../basics/base.scss';
+.card-chef-res{
+    background-color: $SeconderyBeige;
+    width: 250px;
+    img{
+        height: 150px;
+        width: 250px;
+        object-fit: cover;
+    }
+    h3{
+        @include cardTitle;
+        height: 80px;
+         margin: 20px;
+    }
+}

@@ -1,0 +1,84 @@
+@import "../../basics/variables";
+@import "../../basics/base";
+@import "../../basics/breakpoints";
+.hero-main {
+  //height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.hero-img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+.box {
+  background: rgba(255, 255, 255, 0.88);
+  position: absolute;
+  width: 335px;
+  height: 150px;
+  .text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .search {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 12px;
+    gap: 8px;
+    width: 315px;
+    height: 30px;
+    border: 0.5px solid $PrimaryColorBlack;
+    border-radius: 4px;
+    button {
+      background-color: transparent;
+      border: none;
+      img {
+        height: 20px;
+        width: 20px;
+        object-fit: cover;
+      }
+    }
+    input {
+      border: none;
+      background-color: transparent;
+      width: 253px;
+      height: 100%;
+      font-family: $BaseFont;
+      font-style: normal;
+      font-weight: 200;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 1.29px;
+      color: $PrimaryColorBlack;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+@include xl {
+  .hero-img {
+    height: 700px;
+  }
+  .box {
+    width: 780px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    .text {
+      width: 450px;
+      height: 80px;
+    }
+  }
+}
