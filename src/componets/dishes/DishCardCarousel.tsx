@@ -16,6 +16,7 @@ const DishCardCarousel = ({ dish }: IProps) => {
         <img src={require(`../../${dish.icon}`)} alt={dish.name}></img>
       </div>
       <div className="dish-carousel-price">
+      <div></div>
       <span >₪&nbsp;{dish.price}</span>
       <div></div>
       </div>

@@ -10,7 +10,7 @@ const Chefs = () => {
       ]
   return (
     <div className="chefs-container">
-      <h3>chefs</h3>
+      <h2>chefs</h2>
       {/* add sort item */}
       <div className="chefs-sort">
         <ul>
@@ -19,7 +19,7 @@ const Chefs = () => {
       </div>
       <div className="chefs-content">
         {chefData.map((chefs) => (
-          <div className="chef-img">
+          <div key={chefs.name} className="chef-img">
           <img
             src={require(`../../${chefs.image}`)}
             alt={chefs.name}

@@ -32,9 +32,6 @@ const DishesCarousel = () => {
             <DishCardCarousel key={dish._id} dish={dish} />
           ))}
         </div>
-        <div className="dish-link">
-          <HomePageLink path="restaurant" />
-        </div>
       </div>
     </div>
   );

@@ -33,12 +33,13 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    gap: 24px;
   }
   .dish-items {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    gap: 24px;
+    //gap: 24px;
   }
   .dish-link {
     display: flex;
