@@ -1,11 +1,11 @@
 @import "../../basics/variables";
 @import "../../basics/base";
-
+@import '../../basics/breakpoints';
 .dish-modal {
   position: fixed;
   width: 100%;
   height: 100%;
-  left: -1px;
+  // left: -1px;
   top: 0px;
   background-color: #ffffff;
   z-index: 3;
@@ -180,4 +180,25 @@
     button{
         @include buttonPrimary
     }
+}
+
+@include xl{
+  .dish-modal-container{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // .dish-modal{
+  //   position: absolute;
+  //   margin-top: 80px;
+  //   margin-bottom: 80px;
+  //   width: 576px;
+
+  // }
 }

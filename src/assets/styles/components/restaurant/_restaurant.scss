@@ -1,41 +1,119 @@
 @import "../../basics/variables";
 @import "../../basics/breakpoints";
-@import '../../basics/base';
-.restaurant-container{
-    height: 100%;
-    margin: 20px;
+@import "../../basics/base";
+.restaurant-container {
+  height: 100%;
+  margin: 20px;
 }
-.restaurant-content{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    //align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 20px;
+.restaurant-title {
+  display: none;
 }
-.restuarant-sort{
-ul{
+.navbar-filter {
+  display: none;
+}
+.restaurant-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.restuarant-sort {
+  ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
     justify-content: space-between;
     padding-inline-start: 0px;
     gap: 20px;
+    li {
+      font-family: $BaseFont;
+      font-style: normal;
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 1.92px;
+      color: $PrimaryColorBlack;
+      cursor: pointer;
 
-    li{
-        font-family: $BaseFont;
+    }
+    .active {
+      border-bottom: 1.8px solid rgba(222, 146, 0, 0.9);
+      font-weight: 400;
+    }
+  }
+}
+
+@include xl {
+  .restaurant-container {
+    margin: 0;
+    margin-bottom: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    .restaurant-title {
+      display: none;
+    }
+  }
+  .restaurant-title {
+    display: flex;
+  }
+  .navbar-filter {
+    background-color: $SeconderyLightGray;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    .navbar-filter-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 8px;
+    
+      span {
+        font-family: "Helvetica Neue";
         font-style: normal;
         font-weight: 200;
         font-size: 18px;
         line-height: 22px;
         letter-spacing: 1.92px;
-        color: $PrimaryColorBlack;
+        color: #000000;
+      }
+      img {
+       // transform: rotate(90deg);
+        width: 10px;
+        height: 24px;
+      }
     }
-    .active{
-        border-bottom: 1.8px solid rgba(222, 146, 0, 0.9);
-        font-weight: 400;
+  }
+  .restaurant-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 1185px;
+    align-items: center;
+    margin-left: 130px;
+    margin-right: 130px;
+  }
+
+  .restuarant-sort {
+    margin-top: 40px;
+    ul {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 0px;
+      gap: 40px;
     }
-}
+  }
 }

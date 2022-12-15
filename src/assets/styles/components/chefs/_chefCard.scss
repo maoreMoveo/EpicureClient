@@ -1,16 +1,24 @@
-@import '../../basics/variables';
-@import '../../basics/base.scss';
-.card-chef-res{
-    background-color: $SeconderyBeige;
+@import "../../basics/variables";
+@import "../../basics/base.scss";
+.card-chef-res {
+  background-color: $SeconderyBeige;
+  width: 250px;
+
+  img {
+    height: 150px;
     width: 250px;
-    img{
-        height: 150px;
-        width: 250px;
-        object-fit: cover;
+    object-fit: cover;
+  }
+  .chef-card-content {
+    height: 130px;
+    justify-content: center;
+    display: flex;
+    padding: 20px 0px 0px;
+    gap: 8px;
+    h2 {
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 47px;
     }
-    h3{
-        @include cardTitle;
-        height: 80px;
-         margin: 20px;
-    }
+  }
 }

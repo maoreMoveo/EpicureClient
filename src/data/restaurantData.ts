@@ -11,6 +11,7 @@ export  const restaurantsData: IRestaurant[] = [
       image: "assets/images/restaurants/claroBig.png",
       latitude: "32.07040786743164",
       longitude: "34.78324890136719",
+      stars:3
     },
     {
       _id: "2",
@@ -22,6 +23,7 @@ export  const restaurantsData: IRestaurant[] = [
       image: "assets/images/restaurants/claroBig.png",
       latitude: "32.066898345947266",
       longitude: "34.781776428222656",
+      stars:4
     },
     {
       _id: "3",
@@ -33,6 +35,7 @@ export  const restaurantsData: IRestaurant[] = [
       image: "assets/images/restaurants/claroBig.png",
       latitude: "32.07036590576172",
       longitude: "34.786685943603516",
+      stars:5
     },
     {
       _id: "4",
@@ -44,6 +47,7 @@ export  const restaurantsData: IRestaurant[] = [
       image: "assets/images/restaurants/claroBig.png",
       latitude: "32.07036590576172",
       longitude: "34.786685943603516",
+      stars:2
     },
     {
       _id: "5",
@@ -55,6 +59,7 @@ export  const restaurantsData: IRestaurant[] = [
       image: "assets/images/restaurants/claroBig.png",
       latitude: "32.1080436706543",
       longitude: "34.83820343017578",
+      stars:1
     },
     {
       _id: "6",
@@ -66,6 +71,7 @@ export  const restaurantsData: IRestaurant[] = [
       image: "assets/images/restaurants/claroBig.png",
       latitude: "32.1080436706543",
       longitude: "34.83820343017578",
+      stars:4
     },
     {
       _id: "7",
@@ -77,5 +83,6 @@ export  const restaurantsData: IRestaurant[] = [
       image: "assets/images/restaurants/claroBig.png",
       latitude: "32.1080436706543",
       longitude: "34.83820343017578",
+      stars:3
     },
   ];

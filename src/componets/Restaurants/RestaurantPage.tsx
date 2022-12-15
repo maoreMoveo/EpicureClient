@@ -33,6 +33,7 @@ const RestaurantPage = () => {
       {restaurant && (
         <div className="restaurant-page-container">
           <img
+          className="restaurant-page-img"
             src={require(`../../${restaurant.thumb}`)}
             alt={restaurant.name}
           ></img>
@@ -41,7 +42,7 @@ const RestaurantPage = () => {
             <h2>{restaurant.chef}</h2>
             <div className="time-content">
               <img src={clockIcon} alt="clock-icon"></img>
-              <h2>Open now</h2>
+              <span>Open now</span>
             </div>
           </div>
           <div className="restuarant-page-sort">

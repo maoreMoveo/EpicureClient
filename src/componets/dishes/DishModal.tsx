@@ -7,6 +7,7 @@ interface IProps {
 }
 const DishModal = ({ dish, dishToggle }: IProps) => {
   return (
+    <div className="dish-modal-container">
     <div className="dish-modal">
       <div className="menu_button">
         <img src={x} alt="hamborger-icon" onClick={() => dishToggle()}></img>
@@ -62,6 +63,7 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

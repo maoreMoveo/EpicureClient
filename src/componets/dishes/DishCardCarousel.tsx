@@ -6,7 +6,7 @@ interface IProps {
 const DishCardCarousel = ({ dish }: IProps) => {
   return (
     <div className="card-dish-carousel">
-      <img src={require(`../../${dish.image}`)} alt={dish.name}></img>
+      <img className="card-dish-carousel-img" src={require(`../../${dish.image}`)} alt={dish.name}></img>
       <div className="dish-carousel-details">
       <h3>{dish.name}</h3>
       <div className="dish-carousel-ing">

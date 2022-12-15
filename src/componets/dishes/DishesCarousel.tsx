@@ -29,7 +29,7 @@ const DishesCarousel = () => {
       <div className="dish-desktop">
         <div className="dish-items">
           {dishesData.slice(0, 3).map((dish) => (
-            <DishCard key={dish._id} dish={dish} />
+            <DishCardCarousel key={dish._id} dish={dish} />
           ))}
         </div>
         <div className="dish-link">

@@ -23,12 +23,16 @@
   h2 {
     margin-left: 20px;
   }
+  .card-stars{
+    display: none;
+  }
 }
 
 @include xl {
   .card-restaurant {
     justify-content: center;
     align-items: center;
+    width: 379px;
     img {
       width: 379px;
       height: 235.82px;
@@ -49,6 +53,15 @@
         margin-top: 20px;
         margin: 0;
         padding: 0;
+      }
+    }
+    .card-stars{
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 20px;
+      img{
+        height: 40px;
+        width: 40px;
       }
     }
   }

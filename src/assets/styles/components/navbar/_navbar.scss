@@ -56,14 +56,14 @@
   }
   .logo {
     width: auto;
-    left: 100px;
+    left: 127px;
     .navbar-links {
       display: flex;
       align-items: center;
       margin-left: 20px;
       height: 100%;
       gap: 32px;
-      span {
+      .navbar-title {
         font-family: $BaseFont;
         font-style: normal;
         font-weight: 200;
@@ -72,7 +72,7 @@
         letter-spacing: 1.35px;
         color: $PrimaryColorBlack;
       }
-      a {
+      .navbar-link {
         font-family: $BaseFont;
         font-style: normal;
         font-weight: 200;
@@ -80,6 +80,10 @@
         line-height: 22px;
         letter-spacing: 1.92px;
         color: $PrimaryColorBlack;
+      }
+      .active {
+        border-bottom: 1.8px solid rgba(222, 146, 0, 0.9);
+        font-weight: 400;
       }
     }
   }

@@ -7,7 +7,10 @@ const AboutUs = () => {
   return (
     <div className="about-us-container">
       <div className="about-us-content">
-        <img className="about-us-logo" src={logo} alt="logo"></img>
+        <div className="about-us-logo">
+          <img src={logo} alt="logo"></img>
+        </div>
+        <div className="about-us-down-link">
         <div className="about-us-download">
           <img src={googleIcon} alt="google-icon"></img>
           <div>
@@ -22,8 +25,9 @@ const AboutUs = () => {
             <span className="line-two">App Store</span>
           </div>
         </div>
+        </div>
         <div className="about-us-text">
-          <h3>ABOUT US:</h3>
+          <h2>ABOUT US:</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus
             vel justo fermentum bibendum non eu ipsum. Cras porta malesuada
