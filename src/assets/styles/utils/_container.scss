@@ -1,0 +1,10 @@
+@import '../basics/breakpoints';
+
+@include xl{
+.container{
+    max-width: 1186px;
+    height: 100%;
+   margin: 0 auto;
+   margin-top: 80px;
+}
+}

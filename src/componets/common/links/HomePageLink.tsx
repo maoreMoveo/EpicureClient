@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { default as arrows } from "../../../assets/images/arrow.svg";
+import '../../../assets/styles/components/common/_home-page-link.scss';
+
 interface IProps {
   path: string;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import '../../assets/styles/components/restaurant/_restaurantCard.scss';
 import { Link } from "react-router-dom";
 import IRestaurant from "../../interfaces/Restaurant";
 import star from '../../assets/images/star.svg';
@@ -9,7 +10,7 @@ interface IProps {
 }
 const RestaurantCard = ({ restaurant }: IProps) => {
   return (
-    <Link to={`/restaurant/${restaurant._id}`}>
+    <Link className="card-navigate" to={`/restaurant/${restaurant._id}`}>
       <div className="card-restaurant">
         <img
           src={require(`../../${restaurant.thumb}`)}

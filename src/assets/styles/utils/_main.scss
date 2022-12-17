@@ -1,0 +1,13 @@
+@import '../basics/breakpoints';
+.main{
+    overflow-x: hidden;
+}
+ @include xl{
+.main{
+    max-width: 1440px;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ }

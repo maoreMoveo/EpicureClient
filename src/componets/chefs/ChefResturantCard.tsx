@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import '../../assets/styles/components/chefs/_chefCard.scss';
 import IRestaurant from '../../interfaces/Restaurant';
 interface IProps{
   res: IRestaurant;

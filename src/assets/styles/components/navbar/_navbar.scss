@@ -3,11 +3,12 @@
 @import '../../basics/base';
 .navbar {
   height: 46px;
+  max-width: 414px;
   width: 100%;
   display: flex;
   align-items: center;
   top: 0px;
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   background-color: #ffffff;
 }
@@ -51,12 +52,15 @@
 }
 
 @include xl {
+  .navbar{
+    max-width: 1186px;
+  }
   .menu_button {
     display: none;
   }
   .logo {
     width: auto;
-    left: 127px;
+    //left: 127px;
     .navbar-links {
       display: flex;
       align-items: center;
@@ -88,6 +92,6 @@
     }
   }
   .buttons_group{
-    right: 130px;
+    right: 0px;
   }
 }

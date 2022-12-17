@@ -1,4 +1,5 @@
 import React from "react";
+import '../../assets/styles/components/dishes/_dishesCaruosel.scss';
 import Slider from "react-slick";
 import { dishesData } from "../../data/dishesData";
 import HomePageLink from "../common/links/HomePageLink";
@@ -14,17 +15,13 @@ const DishesCarousel = () => {
     slidesToScroll: 1,
   };
   return (
-    <div className="dish-carousel-container">
-      <div className="dish-title-chef">
-        <h2>Signature Dish Of:</h2>
-      </div>
+    <>
       <div className="dish-carousel">
         <Slider {...settings}>
           {dishesData.map((dish) => (
             <DishCardCarousel key={dish._id} dish={dish} />
           ))}
         </Slider>
-        <HomePageLink path="restaurant" />
       </div>
       <div className="dish-desktop">
         <div className="dish-items">
@@ -33,7 +30,7 @@ const DishesCarousel = () => {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

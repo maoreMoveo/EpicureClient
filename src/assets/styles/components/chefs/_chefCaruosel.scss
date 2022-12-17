@@ -13,6 +13,9 @@
   .chef-desktop{
     display: none;
   }
+  .chef-res-link{
+    margin-bottom: 15px;
+  }
 
 
 @include xl {
@@ -27,21 +30,15 @@
   }
   .chef-res-carousel{
     display: none;
+   
   }
   .chef-desktop {
-    position: relative;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+
   }
   .chef-items {
     display: flex;
-    justify-content: center;
     flex-direction: row;
-    gap: 24px;
-  }
-  .chef-link {
-    display: flex;
-    justify-content: end;
+    gap: 16px;
   }
 }

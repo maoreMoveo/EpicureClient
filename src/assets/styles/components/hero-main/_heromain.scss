@@ -80,5 +80,22 @@
       width: 450px;
       height: 80px;
     }
+    
+    .search{
+      width: 505px;
+      height: 50px;
+      margin-top: 20px;
+      text-align: center;
+      button{
+        img{
+          height: 30px;
+          width: 30px;
+        }
+      }
+      input{
+        width: 100%;
+        font-size: 24px;
+      }
+    }
   }
 }

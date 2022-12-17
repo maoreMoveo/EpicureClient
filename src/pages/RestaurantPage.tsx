@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
+import "../assets/styles/pages/_restaurant-page.scss";
 import { useParams } from "react-router";
-import { restaurantsData } from "../../data/restaurantData";
-import clockIcon from "../../assets/images/clock-icon.svg";
-import IRestaurant from "../../interfaces/Restaurant";
-import IDish from "../../interfaces/Dishes";
-import { dishesData } from "../../data/dishesData";
-import { ISortPath } from "../../interfaces/sortPath";
-import DishCard from "../dishes/DishCard";
+import { restaurantsData } from "../data/restaurantData";
+import clockIcon from "../assets/images/clock-icon.svg";
+import IRestaurant from "../interfaces/Restaurant";
+import IDish from "../interfaces/Dishes";
+import { dishesData } from "../data/dishesData";
+import { ISortPath } from "../interfaces/sortPath";
+import DishCard from "../componets/dishes/DishCard";
 
 const RestaurantPage = () => {
   const { restaurantId } = useParams();
@@ -33,8 +34,8 @@ const RestaurantPage = () => {
       {restaurant && (
         <div className="restaurant-page-container">
           <img
-          className="restaurant-page-img"
-            src={require(`../../${restaurant.thumb}`)}
+            className="restaurant-page-img"
+            src={require(`../${restaurant.thumb}`)}
             alt={restaurant.name}
           ></img>
           <div className="restaurant-page-details">

@@ -1,4 +1,5 @@
 import React from "react";
+import '../../assets/styles/components/dishes/_dishCardCarousel.scss';
 import IDish from "../../interfaces/Dishes";
 interface IProps {
   dish: IDish;
@@ -16,7 +17,7 @@ const DishCardCarousel = ({ dish }: IProps) => {
         <img src={require(`../../${dish.icon}`)} alt={dish.name}></img>
       </div>
       <div className="dish-carousel-price">
-      <div></div>
+      <div className="price-line "></div>
       <span >₪&nbsp;{dish.price}</span>
       <div></div>
       </div>

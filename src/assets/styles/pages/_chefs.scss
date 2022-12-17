@@ -1,16 +1,16 @@
-@import "../../basics/variables";
-@import "../../basics/breakpoints";
-@import "../../basics/base";
+@import "../basics/variables";
+@import "../basics/breakpoints";
+@import "../basics/base";
 .chefs-container {
   height: 100%;
   margin: 20px;
+  margin-top: 64px;
 }
 .chefs-content {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
-  //align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
@@ -73,7 +73,8 @@
     flex-direction: column;
     padding: 0px;
     gap: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
+    max-width: 1186px;
     h2{
         display: none;
     }
@@ -89,6 +90,5 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    width: 1185px
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import '../../assets/styles/components/about-us/about-us.scss';
 import logo from "../../assets/images/epicure-icon.png";
 import googleIcon from "../../assets/images/google-icon.png";
 import appleIcon from "../../assets/images/apple-icon.png";

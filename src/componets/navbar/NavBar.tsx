@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import '../../assets/styles/components/navbar/_navbar.scss';
 import menuButton from "../../assets/images/hamborger.svg";
 import logo from "../../assets/images/epicure-logo.svg";
 import cartIcon from "../../assets/images/cart-icon.svg";

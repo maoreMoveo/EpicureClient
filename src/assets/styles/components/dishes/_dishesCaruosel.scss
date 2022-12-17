@@ -1,16 +1,13 @@
 @import "../../basics/variables";
 @import "../../basics/breakpoints";
 @import "../../basics/base";
-.dish-carousel-container {
-  width: 100%;
-  margin-top: 20px;
-  position: relative;
-}
-.dish-title-chef {
-  margin-left: 20px;
-}
+
 .dish-carousel {
-  margin-left: 10px;
+  margin-top: 20px;
+  //margin-left: 30px;
+  .link{
+    margin-top: 30px;
+  }
 }
 .dish-desktop {
   display: none;
@@ -19,12 +16,6 @@
   margin-left: 10px;
 }
 @include xl {
-  .dish-carousel-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-  }
   .dish-carousel {
     display: none;
   }
@@ -33,13 +24,12 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 24px;
   }
   .dish-items {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    //gap: 24px;
+    gap: 24px;
   }
   .dish-link {
     display: flex;

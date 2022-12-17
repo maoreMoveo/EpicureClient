@@ -2,42 +2,38 @@
  @import './basics/variables.scss';
 @import './basics/breakpoints.scss';
  @import './basics/base.scss';
-
-
-
 // COMPONENTS
-@import './components/common/home-page-link.scss';
-@import './components/navbar/navbar.scss';
-@import './components/navbar/open-menu';
-@import './components/navbar/open-search';
-@import './components/navbar/open-cart';
-@import './components/hero-main/heromain.scss';
+// @import './components/navbar/navbar.scss';
+// @import './components/navbar/open-menu';
+// @import './components/navbar/open-search';
+// @import './components/navbar/open-cart';
+// @import './components/hero-main/heromain.scss';
 
 //COMPONENTS Restaurant
-@import './components/restaurant/restaurant';
-@import './components/restaurant/restaurantCard';
-@import './components/restaurant/restaurant-page';
-@import './components/restaurant/restaurantCardCarousel.scss';
-@import './components/restaurant/restaurantCarousel.scss';
+// @import './components/restaurant/restaurant';
+// @import './components/restaurant/restaurantCard';
+// @import './components/restaurant/restaurant-page';
+// @import './components/restaurant/restaurantCardCarousel.scss';
+// @import './components/restaurant/restaurantCarousel.scss';
 
 //COMPONENTS dish
-@import './components/dishes/dishCardCarousel.scss';
-@import './components/dishes/dishesCaruosel.scss';
-@import './components/dishes/dish-signature.scss';
-@import './components/dishes/dishCard';
-@import './components/dishes/dish-modal';
+// @import './components/dishes/dishCardCarousel.scss';
+// @import './components/dishes/dishesCaruosel.scss';
+// @import './components/dishes/dish-signature.scss';
+// @import './components/dishes/dishCard';
+// @import './components/dishes/dish-modal';
 
 
 ////COMPONENTS shef
-@import './components/chefs/chefOfWeek.scss';
-@import './components/chefs/chefCard';
-@import './components/chefs/chefCaruosel';
-@import './components/chefs/chefs';
+// @import './components/chefs/chefOfWeek.scss';
+// @import './components/chefs/chefCard';
+// @import './components/chefs/chefCaruosel';
+// @import './components/chefs/chefs';
 
 //COMPONENTS about-us
-@import './components/about-us/about-us.scss';
+// @import './components/about-us/about-us.scss';
 //COMPONENTS footer
-@import './components/footer/footer';
+// @import './components/footer/footer';
 // PAGES
 
 

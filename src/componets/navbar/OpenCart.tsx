@@ -1,4 +1,5 @@
 import React from "react";
+import '../../assets/styles/components/navbar/_open-cart.scss';
 import { Link } from "react-router-dom";
 import cartIcon from "../../assets/images/cart-icon.svg";
 interface IProps {

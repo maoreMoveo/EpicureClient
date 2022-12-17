@@ -1,4 +1,5 @@
 import React from "react";
+import '../../assets/styles/components/chefs/_chefCaruosel.scss';
 import HomePageLink from "../common/links/HomePageLink";
 import ChefResturantCard from "./ChefResturantCard";
 import { restaurantsData } from "../../data/restaurantData";
@@ -23,7 +24,7 @@ const ChefCaruosel = () => {
             <ChefResturantCard key={rest._id} res={rest} />
           ))}
         </Slider>
-        <HomePageLink path="chefs" />
+          <HomePageLink path="chefs" />
         </div>
       
       <div className="chef-desktop">

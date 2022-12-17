@@ -10,6 +10,9 @@
   flex-direction: column;
   margin-top: 20px;
 }
+.dish-title-signature{
+  margin-top: 20px;
+}
 .dish-options {
   display: flex;
   justify-content: space-around;
@@ -22,8 +25,8 @@
     flex-direction: column;
   }
   img {
-    height: 30px;
-    width: 40px;
+    height: 50px;
+    width: 60px;
   }
   h2 {
     margin-top: 10px;

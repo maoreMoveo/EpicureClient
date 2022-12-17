@@ -1,4 +1,5 @@
 import React from "react";
+import '../../assets/styles/components/hero-main/_heromain.scss';
 import heroImg from "../../assets/images/main-image.png";
 import searchButton from "../../assets/images/search-icon.svg";
 

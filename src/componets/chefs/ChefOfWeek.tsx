@@ -1,11 +1,11 @@
 import React from "react";
+import '../../assets/styles/components/chefs/_chefOfWeek.scss';
 import ChefCaruosel from "./ChefCaruosel";
 
 const ChefOfWeek = () => {
   return (
     <>
-    <div className="chef-container">
-      <h2>Chef of the week:</h2>
+
       <div className="chef-about-content">
       <div className="chef-week-img">
         <img
@@ -26,9 +26,7 @@ const ChefOfWeek = () => {
       </div>
       <div className="chef-week">
         <ChefCaruosel/>
-      </div>
-      </div>
-      
+      </div> 
       </>
   );
 };

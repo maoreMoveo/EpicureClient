@@ -19,6 +19,7 @@ $BaseFont: "Helvetica Neue";
   letter-spacing: 2.67px;
   color: $PrimaryColorBlack;
   text-transform: none;
+ 
 }
 
 @mixin buttonPrimary {
@@ -33,7 +34,6 @@ $BaseFont: "Helvetica Neue";
   background: $PrimaryColorBlack;
   border: 1px solid $PrimaryColorBlack;
   font-family: $BaseFont;
-  font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 20px;

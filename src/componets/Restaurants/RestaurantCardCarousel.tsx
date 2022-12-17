@@ -1,4 +1,5 @@
 import React from "react";
+import '../../assets/styles/components/restaurant/_restaurantCardCarousel.scss';
 import IRestaurant from "../../interfaces/Restaurant";
 interface IProps {
   restaurant: IRestaurant;
