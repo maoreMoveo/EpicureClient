@@ -5,7 +5,11 @@ import RestaurantCardCarousel from "./RestaurantCardCarousel";
 import Slider from "react-slick";
 import HomePageLink from "../common/links/HomePageLink";
 import RestaurantCard from "./RestaurantCard";
-const RestaurantCarousel = () => {
+import IRestaurant from "../../interfaces/Restaurant";
+interface IProps{
+  restaurant:IRestaurant[];
+}
+const RestaurantCarousel = ({restaurant}:IProps) => {
   const settings = {
     dots: false,
     speed: 1000,
@@ -28,14 +32,14 @@ const RestaurantCarousel = () => {
     <>
       <div className="restaurant-carousel">
         <Slider {...settings}>
-          {restaurantsData.map((rest) => (
+          {restaurant.map((rest) => (
             <RestaurantCardCarousel key={rest._id} restaurant={rest} />
           ))}
         </Slider>
       </div>
       <div className="restaurant-desktop">
         <div className="restaurant-items">
-          {restaurantsData.slice(0, 3).map((rest) => (
+          {restaurant.slice(0, 3).map((rest) => (
             <RestaurantCard key={rest._id} restaurant={rest} />
           ))}
         </div> 

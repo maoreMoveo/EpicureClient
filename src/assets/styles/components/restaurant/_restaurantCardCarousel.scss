@@ -1,6 +1,9 @@
 @import "../../basics/variables";
 @import "../../basics/base";
 
+.card-navigate{
+  width: 100%;
+}
 .card-restaurant-carousel {
   width: 250px;
   background-color: $SeconderyBeige;

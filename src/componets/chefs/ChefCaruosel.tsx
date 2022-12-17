@@ -10,9 +10,19 @@ const ChefCaruosel = () => {
     dots: false,
     speed: 1000,
     infinite: false,
-    slidesToShow: 1.5,
+    slidesToShow: 3,
     swipeToSlide: true,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 580,
+        settings: {
+          slidesToShow: 1.5,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+    ],
   };
   return (
 

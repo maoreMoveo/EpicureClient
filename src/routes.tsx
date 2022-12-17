@@ -20,11 +20,6 @@ export const router = createBrowserRouter(
         <Route path="chefs" element={<Chefs />} />
       </Route>
 
-      {/* to check with amir */}
-
-      {/* <Route path="restaurant" element={<Restaurants />}>
-        <Route path=":restaurantId" element={<RestaurantPage />} />
-        </Route> */}
     </>
   )
 );

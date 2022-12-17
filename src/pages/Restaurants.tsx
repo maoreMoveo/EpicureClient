@@ -1,10 +1,10 @@
 import React from "react";
 import "../assets/styles/pages/_restaurant.scss";
-
-import { restaurantsData } from "../data/restaurantData";
 import { ISortPath } from "../interfaces/sortPath";
 import RestaurantCard from "../componets/Restaurants/RestaurantCard";
 import singleArrow from "../assets/images/single-arrow.svg";
+import { restaurantsData } from "../data/restaurantData";
+
 const Restaurants = () => {
   const sortPath: ISortPath[] = [
     { path: "All", isActive: true },
