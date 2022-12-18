@@ -78,7 +78,7 @@
   .restaurant-page-dish{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+    //gap: 32px;
     width: 100%;
     align-items: center;
 
@@ -86,14 +86,10 @@
 }
 @include xl {
   .restaurant-page-container {
-    margin-left: 130px;
-    margin-right: 130px;
-    // max-width: 1200px;
-    // margin: 0 auto;
     margin-bottom: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    width: 100%;
     align-items: center;
     .restaurant-page-img {
       height: 425px;

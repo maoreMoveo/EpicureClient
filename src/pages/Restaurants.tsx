@@ -25,7 +25,7 @@ const Restaurants = () => {
           ))}
         </ul>
       </div>
-      <div className="navbar-filter">
+      {/* <div className="navbar-filter">
         <div className="navbar-filter-item">
           <span>Price Range</span>
           <img src={singleArrow} alt="single-arrow"></img>
@@ -38,7 +38,7 @@ const Restaurants = () => {
           <span>Rating</span>
           <img src={singleArrow} alt="single-arrow"></img>
         </div>
-      </div>
+      </div> */}
       <div className="restaurant-content">
         {restaurantsData.map((rest) => (
           <RestaurantCard key={rest._id} restaurant={rest} />

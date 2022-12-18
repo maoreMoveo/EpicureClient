@@ -64,7 +64,9 @@
   span {
     height: 100%;
     display: flex;
+    font-weight: 400;
     font-size: 20px;
+    line-height: 30px;
     align-items: center;
   }
   div {
@@ -76,8 +78,9 @@
 
 @include xl {
   .dish-card {
-    gap: 8px;
     width: 272px;
+    height: 413px;
+    margin: 0px;
     img {
       width: 100%;
       height: 173.23px;
@@ -87,21 +90,37 @@
   }
   .dish-details {
     align-items: center;
-
+    padding: 0;
+    gap: 12px;
+    height: 241.29px;
+    margin-right: 0px;
+    margin-top: 10px;
     h3 {
       font-size: 24px;
     }
   }
   .dish-ing {
-    width: 272px;
+    max-width: 272px;
+    min-height: 140px;
+    margin-right: 25px;
+    margin-left: 25px;
     p {
-      font-size: 24px;
-      line-height: 30px;
+      display: flex;
+      text-align: center;
+      font-size: 20px;
+      line-height: 24px;
     }
   }
   .dish-price {
+    display: flex;
+    justify-content: center;
+    bottom: 20px;
     .price-line {
       display: flex;
+      width: 82.5px;
+    }
+    div{
+      width: 82.5px;
     }
   }
 }

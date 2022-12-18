@@ -1,6 +1,7 @@
 import React from "react";
 import '../../assets/styles/components/dishes/_dish-modal.scss';
 import x from "../../assets/images/x.svg";
+import xWhite from '../../assets/images/x-white.svg';
 import IDish from "../../interfaces/Dishes";
 interface IProps {
   dish: IDish;
@@ -10,7 +11,7 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
   return (
     <div className="dish-modal-container">
     <div className="dish-modal">
-      <div className="menu_button">
+      <div className="dish-menu-button">
         <img src={x} alt="hamborger-icon" onClick={() => dishToggle()}></img>
       </div>
       <div className="dish-modal-content">
@@ -19,12 +20,18 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
           <div className="dish-info">
             <h3>{dish.name}</h3>
             <p>{dish.ingredients}</p>
+            <div className="dish-modal-price">
+          <div className="price-line"></div>
+          <span>₪&nbsp;{dish.price}</span>
+          <div ></div>
+        </div>
           </div>
           <div className="dish-chooose">
             <div className="dish-item-choose">
               <div className="dish-title-choose">
                 <span>Choose a side</span>
               </div>
+              <div className="dish-inputs">
               <div className="dish-input-side">
                 <input type="checkbox"></input>
                 <span>White bread</span>
@@ -33,11 +40,13 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
                 <input type="checkbox"></input>
                 <span>Sticky rice</span>
               </div>
+              </div>
             </div>
             <div className="dish-item-choose">
               <div className="dish-title-choose">
                 <span>Changes</span>
               </div>
+              <div className="dish-inputs">
               <div className="dish-input">
                 <input type="checkbox"></input>
                 <span>Whithout peanuts</span>
@@ -45,6 +54,7 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
               <div className="dish-input">
                 <input type="checkbox"></input>
                 <span>Sticky Less spicy</span>
+              </div>
               </div>
             </div>
             <div className="dish-item-choose">

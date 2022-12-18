@@ -2,7 +2,7 @@
 @import "../../basics/base";
 @import "../../basics/breakpoints";
 .open-cart {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 220px;
   //left: -1px;

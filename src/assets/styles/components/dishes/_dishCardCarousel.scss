@@ -91,7 +91,7 @@
     text-align: center;
     max-width: 295px;
     min-height: 176px;
-    p{
+    p {
       font-size: 24px;
       line-height: 30px;
     }
@@ -113,7 +113,12 @@
     .price-line {
       display: flex;
     }
-    div{
+    span {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+    }
+    div {
       width: 109px;
     }
   }
