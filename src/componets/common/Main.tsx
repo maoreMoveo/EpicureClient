@@ -1,5 +1,5 @@
 import React from 'react'
-import '../assets/styles/utils/_main.scss';
+import '../../assets/styles/components/common/_main.scss';
 interface IProps{
     children:React.ReactNode
 }
@@ -9,4 +9,4 @@ const Main = ({children}:IProps) => {
   )
 }
 
-export default Main
+export default Main;

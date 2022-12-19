@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../assets/styles/pages/_restaurant-page.scss";
+import {useSelector} from 'react-redux';
+import { RootStore } from "../store/store";
 import { useParams } from "react-router";
 import { restaurantsData } from "../data/restaurantData";
 import clockIcon from "../assets/images/clock-icon.svg";
@@ -10,6 +12,8 @@ import { ISortPath } from "../interfaces/sortPath";
 import DishCard from "../componets/dishes/DishCard";
 
 const RestaurantPage = () => {
+  const restaurants = useSelector((state:RootStore) => state.restaurants.restaurants);
+  const dishes = useSelector((state:RootStore) => state.dishes.dishes);
   const { restaurantId } = useParams();
   const [restaurant, setRestaurant] = useState<IRestaurant | undefined>(
     undefined
@@ -17,20 +21,23 @@ const RestaurantPage = () => {
   const [restaurantDishes, setRestaurantDishes] = useState<IDish[]>([]);
 
   useEffect(() => {
+    if(restaurants && dishes){
     const rest = restaurantsData.find((res) => res._id === restaurantId);
-    const dish = dishesData.filter((d) => d.restaurant === rest?.name);
+    const dishesRestaurant = dishesData.filter((d) => d.restaurant === rest?.name);
     setRestaurant(rest);
-    setRestaurantDishes(dish);
-  }, [restaurantId]);
+    setRestaurantDishes(dishesRestaurant);
+    }
+  }, [restaurantId,restaurants,dishes]);
 
   const sortPath: ISortPath[] = [
     { path: "Breakfast", isActive: true },
     { path: "Lanch", isActive: false },
     { path: "Dinner", isActive: false },
   ];
+  if(!restaurant && !dishes) return <div>loading...</div>
   return (
     <>
-      {!restaurant && <span>loading...</span>}
+   
       {restaurant && (
         <div className="restaurant-page-container">
           <img

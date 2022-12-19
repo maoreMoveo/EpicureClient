@@ -1,14 +1,23 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "../assets/styles/pages/_chefs.scss";
-import { chefData } from "../data/shefData";
 import { ISortPath } from "../interfaces/sortPath";
-
+import {useSelector,useDispatch} from 'react-redux';
+import { AppDispatch, RootStore } from "../store/store";
+import { getAllChefs } from "../store/chef/chefAction";
 const Chefs = () => {
+  const chefs= useSelector((state:RootStore) => state.chefs.chefs);
   const sortPath: ISortPath[] = [
     { path: "All", isActive: true },
     { path: "New", isActive: false },
     { path: "Most Views", isActive: false },
   ];
+  const dispatch=useDispatch<AppDispatch>();
+  
+  useEffect(() => {
+    dispatch(getAllChefs())
+  }, [dispatch])
+  
+  if(!chefs) return <div>loading...</div>
   return (
     <div className="chefs-container">
       <h2>chefs</h2>
@@ -23,7 +32,7 @@ const Chefs = () => {
         </ul>
       </div>
       <div className="chefs-content">
-        {chefData.map((chefs) => (
+        {chefs.map((chefs) => (
           <div key={chefs.name} className="chef-img">
             <img src={require(`../${chefs.image}`)} alt={chefs.name}></img>
             <div>{chefs.name}</div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../assets/styles/utils/_container.scss';
+import '../../assets/styles/components/common/_container.scss';
 interface IProps{
     children:React.ReactNode
 }

@@ -1,4 +1,4 @@
-import IChef  from "../interfaces/shef";
+import IChef  from "../interfaces/chef";
 
 export const chefData: IChef[] = [
   {

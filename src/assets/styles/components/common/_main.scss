@@ -1,6 +1,6 @@
-@import '../basics/breakpoints';
+@import '../../basics/breakpoints';
 .main{
-        //overflow-x: hidden;
+        overflow-x: hidden;
         max-width: 1440px;
         min-height: calc(100vh - 200px);
         width: 100%;

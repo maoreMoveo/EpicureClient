@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import DishCardCarousel from "./DishCardCarousel";
 import IDish from "../../interfaces/Dishes";
 interface IProps{
-  dishes: IDish[];
+  dishes: IDish[] | null;
 }
 const DishesCarousel = ({dishes}:IProps) => {
   const settings = {
@@ -25,6 +25,7 @@ const DishesCarousel = ({dishes}:IProps) => {
       },
     ],
   };
+  if (!dishes) return <div>loading....</div>;
   return (
     <>
       <div className="dish-carousel">

@@ -2,10 +2,13 @@ import React from "react";
 import '../../assets/styles/components/chefs/_chefCaruosel.scss';
 import HomePageLink from "../common/links/HomePageLink";
 import ChefResturantCard from "./ChefResturantCard";
-import { restaurantsData } from "../../data/restaurantData";
 import Slider from "react-slick";
+import {useSelector} from 'react-redux';
+import { RootStore } from "../../store/store";
 
 const ChefCaruosel = () => {
+  const restaurants = useSelector((state:RootStore) => state.restaurants.restaurants);
+
   const settings = {
     dots: false,
     speed: 1000,
@@ -24,13 +27,14 @@ const ChefCaruosel = () => {
       },
     ],
   };
+  if(!restaurants) return <div>loading..</div>
   return (
 
       <div className="chef-res-carousel-container">
         <h2>Chef of the week:</h2>
         <div className="chef-res-carousel">
         <Slider {...settings}>
-          {restaurantsData.map((rest) => (
+          {restaurants.map((rest) => (
             <ChefResturantCard key={rest._id} res={rest} />
           ))}
         </Slider>
@@ -39,7 +43,7 @@ const ChefCaruosel = () => {
       
       <div className="chef-desktop">
         <div className="chef-items">
-          {restaurantsData.slice(0, 3).map((rest) => (
+          {restaurants.slice(0, 3).map((rest) => (
             <ChefResturantCard key={rest._id} res={rest} />
           ))}
         </div>
