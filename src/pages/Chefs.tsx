@@ -4,6 +4,7 @@ import { ISortPath } from "../interfaces/sortPath";
 import {useSelector,useDispatch} from 'react-redux';
 import { AppDispatch, RootStore } from "../store/store";
 import { getAllChefs } from "../store/chef/chefAction";
+import Loading from "../componets/common/loading/Loading";
 const Chefs = () => {
   const chefs= useSelector((state:RootStore) => state.chefs.chefs);
   const sortPath: ISortPath[] = [
@@ -12,12 +13,12 @@ const Chefs = () => {
     { path: "Most Views", isActive: false },
   ];
   const dispatch=useDispatch<AppDispatch>();
-  
+
   useEffect(() => {
     dispatch(getAllChefs())
   }, [dispatch])
   
-  if(!chefs) return <div>loading...</div>
+  if(!chefs) return <Loading/>
   return (
     <div className="chefs-container">
       <h2>chefs</h2>

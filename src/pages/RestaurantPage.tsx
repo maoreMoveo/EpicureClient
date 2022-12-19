@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../assets/styles/pages/_restaurant-page.scss";
-import {useSelector} from 'react-redux';
+import { useSelector } from "react-redux";
 import { RootStore } from "../store/store";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { restaurantsData } from "../data/restaurantData";
 import clockIcon from "../assets/images/clock-icon.svg";
 import IRestaurant from "../interfaces/Restaurant";
@@ -10,34 +10,42 @@ import IDish from "../interfaces/Dishes";
 import { dishesData } from "../data/dishesData";
 import { ISortPath } from "../interfaces/sortPath";
 import DishCard from "../componets/dishes/DishCard";
+import Loading from "../componets/common/loading/Loading";
 
 const RestaurantPage = () => {
-  const restaurants = useSelector((state:RootStore) => state.restaurants.restaurants);
-  const dishes = useSelector((state:RootStore) => state.dishes.dishes);
+  const restaurants = useSelector(
+    (state: RootStore) => state.restaurants.restaurants
+  );
+  const dishes = useSelector((state: RootStore) => state.dishes.dishes);
   const { restaurantId } = useParams();
   const [restaurant, setRestaurant] = useState<IRestaurant | undefined>(
     undefined
   );
   const [restaurantDishes, setRestaurantDishes] = useState<IDish[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if(restaurants && dishes){
-    const rest = restaurantsData.find((res) => res._id === restaurantId);
-    const dishesRestaurant = dishesData.filter((d) => d.restaurant === rest?.name);
-    setRestaurant(rest);
-    setRestaurantDishes(dishesRestaurant);
+    if (restaurants && dishes) {
+      const rest = restaurantsData.find((res) => res._id === restaurantId);
+      if (!rest) {
+        navigate("/");
+      }
+      const dishesRestaurant = dishesData.filter(
+        (d) => d.restaurant === rest?.name
+      );
+      setRestaurant(rest);
+      setRestaurantDishes(dishesRestaurant);
     }
-  }, [restaurantId,restaurants,dishes]);
+  }, [restaurantId, restaurants, dishes,navigate]);
 
   const sortPath: ISortPath[] = [
     { path: "Breakfast", isActive: true },
     { path: "Lanch", isActive: false },
     { path: "Dinner", isActive: false },
   ];
-  if(!restaurant && !dishes) return <div>loading...</div>
+  if (!restaurants || !dishes) return <Loading />;
   return (
     <>
-   
       {restaurant && (
         <div className="restaurant-page-container">
           <img
@@ -63,9 +71,10 @@ const RestaurantPage = () => {
             </ul>
           </div>
           <div className="restaurant-page-dish">
-            {restaurantDishes.map((dish) => (
-              <DishCard key={dish._id} dish={dish} />
-            ))}
+            {restaurantDishes &&
+              restaurantDishes.map((dish) => (
+                <DishCard key={dish._id} dish={dish} />
+              ))}
           </div>
         </div>
       )}

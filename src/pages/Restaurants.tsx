@@ -4,6 +4,7 @@ import "../assets/styles/pages/_restaurant.scss";
 import { ISortPath } from "../interfaces/sortPath";
 import RestaurantCard from "../componets/Restaurants/RestaurantCard";
 import { RootStore } from "../store/store";
+import Loading from "../componets/common/loading/Loading";
 
 const Restaurants = () => {
   const restaurants = useSelector((state:RootStore) => state.restaurants.restaurants);
@@ -15,7 +16,7 @@ const Restaurants = () => {
     { path: "Most Popular", isActive: false },
     { path: "Open Now", isActive: false },
   ];
-  if (!restaurants) return <div>loading....</div>;
+  if(!restaurants) return <Loading/>
 
   return (
     <div className="restaurant-container">
@@ -44,7 +45,7 @@ const Restaurants = () => {
         </div>
       </div> */}
       <div className="restaurant-content">
-        {restaurants.map((rest) => (
+        { restaurants && restaurants.map((rest) => (
           <RestaurantCard key={rest._id} restaurant={rest} />
         ))}
       </div>

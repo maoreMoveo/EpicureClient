@@ -1,7 +1,6 @@
 import React from "react";
 import '../../assets/styles/components/dishes/_dish-modal.scss';
 import x from "../../assets/images/x.svg";
-import xWhite from '../../assets/images/x-white.svg';
 import IDish from "../../interfaces/Dishes";
 interface IProps {
   dish: IDish;

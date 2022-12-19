@@ -10,13 +10,16 @@ import ChefOfWeek from "../componets/chefs/ChefOfWeek";
 import Container from "../componets/common/Container";
 import HomePageLink from "../componets/common/links/HomePageLink";
 import { RootStore } from "../store/store";
+import Loading from "../componets/common/loading/Loading";
 
 
 const HomePage = () => {
   const restaurants = useSelector((state:RootStore) => state.restaurants.restaurants);
   const dishes= useSelector((state:RootStore)=> state.dishes.dishes);
-  
-  return (
+
+  // ask  amir why not &&
+  if (!restaurants || !dishes) return <Loading />;
+    return (
     <div>
       <HeroMain />
       <Container>

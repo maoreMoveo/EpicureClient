@@ -27,19 +27,19 @@ const RestaurantCarousel = ({ restaurants }: IProps) => {
       },
     ],
   };
-  if (!restaurants) return <div>loading....</div>;
+  
   return (
     <>
       <div className="restaurant-carousel">
         <Slider {...settings}>
-          {restaurants.map((rest) => (
+          {restaurants && restaurants.map((rest) => (
             <RestaurantCardCarousel key={rest._id} restaurant={rest} />
           ))}
         </Slider>
       </div>
       <div className="restaurant-desktop">
         <div className="restaurant-items">
-          {restaurants.slice(0, 3).map((rest) => (
+          {restaurants && restaurants.slice(0, 3).map((rest) => (
             <RestaurantCard key={rest._id} restaurant={rest} />
           ))}
         </div>

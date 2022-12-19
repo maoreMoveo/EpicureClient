@@ -4,7 +4,9 @@ import IRestaurant from "../interfaces/Restaurant";
 
 const getAll = () => {
   return new Promise<IRestaurant[]>((resolve) => {
+   setTimeout(() => {
     resolve(restaurantsData);
+   }, 5000);
   });
 };
 

@@ -27,7 +27,7 @@ const OpenMenu = ({ menuToggle }: IProps) => {
       prevNavLink[link].isActive = true;
     }
     setNavLinks(prevNavLink);
-  }, [location.pathname, navLinks]);
+  }, [location.pathname]);
 
   return (
     <div className="open-menu">
@@ -36,14 +36,13 @@ const OpenMenu = ({ menuToggle }: IProps) => {
       </div>
       <div className="list">
         {navLinks.map((link, index) => (
-           <>
           <div key={link.path}>
-            <Link key={link.path} to={link.path} className="navbar-link">
-              <h3 className={link.isActive ? "active" : ""}>{link.value}</h3>
-            </Link>
-            
+          <div >
+              <Link key={link.path} to={link.path} className="navbar-link">
+                <h3 className={link.isActive ? "active" : ""}>{link.value}</h3>
+              </Link>
           </div>
-         {index === 1 ? <div className="navbar-line"></div> : ""}</>
+            {index === 1 ? <div className="navbar-line"></div> : ""}</div>
         ))}
       </div>
     </div>

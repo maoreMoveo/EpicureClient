@@ -10,7 +10,6 @@ import OpenMenu from "./OpenMenu";
 import OpenSearch from "./OpenSearch";
 import OpenCart from "./OpenCart";
 import { Link, useLocation } from "react-router-dom";
-import { ISortPath } from "../../interfaces/sortPath";
 import { ILink } from "../../interfaces/ILink";
 
 const NavBar = () => {

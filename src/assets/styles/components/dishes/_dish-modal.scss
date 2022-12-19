@@ -238,7 +238,7 @@
     gap: 10px;
     width: 232px;
     height: 616px;
-    margin-top: 20px;
+    //margin-top: 20px;
     .dish-info {
       margin-right: 0;
       margin-top: 10px;
@@ -252,6 +252,7 @@
         line-height: 26px;
       }
       p {
+        margin: 10px;
         width: 100%;
         font-weight: 200;
         font-size: 18px;

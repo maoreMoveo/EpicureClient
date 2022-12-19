@@ -16,10 +16,11 @@ export const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route element={<Layout />}>
-        <Route path="/" element={<HomePage />} />
+        <Route index path="/" element={<HomePage />} />
         <Route path="restaurant" element={<Restaurants />}></Route>
         <Route path="restaurant/:restaurantId" element={<RestaurantPage />} />
         <Route path="chefs" element={<Chefs />} />
+        <Route path="*" element={<HomePage />} />
       </Route>
 
     </>
