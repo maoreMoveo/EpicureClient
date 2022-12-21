@@ -37,12 +37,18 @@ const OpenMenu = ({ menuToggle }: IProps) => {
       <div className="list">
         {navLinks.map((link, index) => (
           <div key={link.path}>
-          <div >
-              <Link key={link.path} to={link.path} className="navbar-link">
+            <div>
+              <Link
+                key={link.path}
+                to={link.path}
+                className="navbar-link"
+                onClick={() => menuToggle()}
+              >
                 <h3 className={link.isActive ? "active" : ""}>{link.value}</h3>
               </Link>
+            </div>
+            {index === 1 ? <div className="navbar-line"></div> : ""}
           </div>
-            {index === 1 ? <div className="navbar-line"></div> : ""}</div>
         ))}
       </div>
     </div>

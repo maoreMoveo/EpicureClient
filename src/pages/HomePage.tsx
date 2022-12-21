@@ -11,12 +11,16 @@ import Container from "../componets/common/Container";
 import HomePageLink from "../componets/common/links/HomePageLink";
 import { RootStore } from "../store/store";
 import Loading from "../componets/common/loading/Loading";
+import Carausel from "../componets/common/Carousel";
+import RestaurantCardCarousel from "../componets/Restaurants/RestaurantCardCarousel";
+import RestaurantCard from "../componets/Restaurants/RestaurantCard";
+import DishCardCarousel from "../componets/dishes/DishCardCarousel";
+import IRestaurant from "../interfaces/Restaurant";
 
 
 const HomePage = () => {
   const restaurants = useSelector((state:RootStore) => state.restaurants.restaurants);
   const dishes= useSelector((state:RootStore)=> state.dishes.dishes);
-
   // ask  amir why not &&
   if (!restaurants || !dishes) return <Loading />;
     return (
@@ -25,7 +29,8 @@ const HomePage = () => {
       <Container>
         <div className="restaurant-carousel-container">
           <h2>popular restaurant in epicure:</h2>
-          <RestaurantCarousel restaurants={restaurants} />
+          <Carausel data={restaurants}  Content={RestaurantCard} />
+          {/* <RestaurantCarousel restaurants={restaurants} /> */}
           <div className="restaurant-link ">
             <HomePageLink path="restaurant" />
           </div>
@@ -34,7 +39,8 @@ const HomePage = () => {
       <Container>
         <div className="dish-carousel-container">
           <h2>Signature Dish Of:</h2>
-          <DishesCarousel dishes={dishes} />
+          {/* <DishesCarousel dishes={dishes} /> */}
+          <Carausel data={dishes}  Content={DishCardCarousel}/>
           <div className="dish-restaurant-link ">
             <HomePageLink path="restaurant" />
           </div>

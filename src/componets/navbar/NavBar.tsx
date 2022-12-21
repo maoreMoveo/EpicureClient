@@ -11,11 +11,13 @@ import OpenSearch from "./OpenSearch";
 import OpenCart from "./OpenCart";
 import { Link, useLocation } from "react-router-dom";
 import { ILink } from "../../interfaces/ILink";
+import OpenUser from "./OpenUser";
 
 const NavBar = () => {
   const [openMenu, menuToggle] = useToggle();
   const [openSearch, searchToggle] = useToggle();
   const [openCart, cartToggle] = useToggle();
+  const [openUser, userToggle] = useToggle();
   const location = useLocation();
   const [navLinks, setNavLinks] = useState<ILink[]>([
     { path: "restaurant", isActive: false, value: "Restaurant" },
@@ -70,7 +72,11 @@ const NavBar = () => {
             alt="search-icon"
             onClick={() => searchToggle()}
           ></img>
-          <img src={userIcon} alt="user-icon"></img>
+          <img
+            src={userIcon}
+            alt="user-icon"
+            onClick={() => userToggle()}
+          ></img>
           <img
             src={cartIcon}
             alt="cart-icon"
@@ -82,6 +88,7 @@ const NavBar = () => {
       {openMenu && <OpenMenu menuToggle={menuToggle} />}
       {openSearch && <OpenSearch searchToggle={searchToggle} />}
       {openCart && <OpenCart cartToggle={cartToggle} />}
+      {openUser && <OpenUser userToggle={userToggle}/>}
     </>
   );
 };

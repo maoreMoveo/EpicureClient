@@ -31,14 +31,14 @@ const DishesCarousel = ({dishes}:IProps) => {
       <div className="dish-carousel">
         <Slider {...settings}>
           {dishes && dishes.map((dish) => (
-            <DishCardCarousel key={dish._id} dish={dish} />
+            <DishCardCarousel key={dish._id} item={dish} />
           ))}
         </Slider>
       </div>
       <div className="dish-desktop">
         <div className="dish-items">
           {dishes && dishes.slice(0, 3).map((dish) => (
-            <DishCardCarousel key={dish._id} dish={dish} />
+            <DishCardCarousel key={dish._id} item={dish} />
           ))}
         </div>
       </div>

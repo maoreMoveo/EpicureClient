@@ -6,7 +6,7 @@ const getAll = () => {
   return new Promise<IRestaurant[]>((resolve) => {
    setTimeout(() => {
     resolve(restaurantsData);
-   }, 5000);
+   }, 3000);
   });
 };
 

@@ -59,6 +59,9 @@
       &:focus {
         outline: none;
       }
+      &::placeholder{
+        text-align: center;
+      }
     }
   }
 }

@@ -8,12 +8,12 @@ import { getAllDishes } from "./store/dishes/dishesAction";
 
 const App = () => {
   const dispatch = useDispatch<AppDispatch>();
+
   useEffect(() => {
     dispatch(getAllRestaurants());
     dispatch(getAllDishes());
   }, [dispatch]);
-  
- 
+
   return (
     <>
       <RouterProvider router={router} />

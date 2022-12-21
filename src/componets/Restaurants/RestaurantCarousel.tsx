@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import RestaurantCard from "./RestaurantCard";
 import IRestaurant from "../../interfaces/Restaurant";
 interface IProps {
-  restaurants: IRestaurant[] | null;
+  restaurants: IRestaurant[] | null;  
 }
 const RestaurantCarousel = ({ restaurants }: IProps) => {
 
@@ -33,14 +33,14 @@ const RestaurantCarousel = ({ restaurants }: IProps) => {
       <div className="restaurant-carousel">
         <Slider {...settings}>
           {restaurants && restaurants.map((rest) => (
-            <RestaurantCardCarousel key={rest._id} restaurant={rest} />
+            <RestaurantCardCarousel key={rest._id} item={rest} />
           ))}
         </Slider>
       </div>
       <div className="restaurant-desktop">
         <div className="restaurant-items">
           {restaurants && restaurants.slice(0, 3).map((rest) => (
-            <RestaurantCard key={rest._id} restaurant={rest} />
+            <RestaurantCard key={rest._id} item={rest} />
           ))}
         </div>
       </div>

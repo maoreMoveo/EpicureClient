@@ -1,20 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import '../../assets/styles/components/restaurant/_restaurantCardCarousel.scss';
+import IDish from "../../interfaces/Dishes";
 import IRestaurant from "../../interfaces/Restaurant";
 interface IProps {
-  restaurant: IRestaurant;
+  item: IRestaurant;
 }
-const RestaurantCardCarousel = ({ restaurant }: IProps) => {
+const RestaurantCardCarousel = ({ item }: IProps) => {
   return (
-    <Link className="card-navigate" to={`/restaurant/${restaurant._id}`}>
+    <Link className="card-navigate" to={`/restaurant/${item._id}`}>
     <div className="card-restaurant-carousel">
       <img
-        src={require(`../../${restaurant.thumb}`)}
-        alt={restaurant.name}
+        src={require(`../../${item.thumb}`)}
+        alt={item.name}
       ></img>
-      <h3>{restaurant.name}</h3>
-      <h2>{restaurant.chef}</h2>
+      <h3>{item.name}</h3>
+      <h2>{item.chef}</h2>
     </div>
     </Link>
   );

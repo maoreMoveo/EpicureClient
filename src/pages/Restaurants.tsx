@@ -8,7 +8,7 @@ import Loading from "../componets/common/loading/Loading";
 
 const Restaurants = () => {
   const restaurants = useSelector((state:RootStore) => state.restaurants.restaurants);
-  
+
   
   const sortPath: ISortPath[] = [
     { path: "All", isActive: true },
@@ -46,7 +46,7 @@ const Restaurants = () => {
       </div> */}
       <div className="restaurant-content">
         { restaurants && restaurants.map((rest) => (
-          <RestaurantCard key={rest._id} restaurant={rest} />
+          <RestaurantCard key={rest._id} item={rest} />
         ))}
       </div>
     </div>

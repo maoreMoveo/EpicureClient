@@ -6,24 +6,24 @@ import star from '../../assets/images/star.svg';
 import emptyStar from '../../assets/images/empty-star.svg';
 
 interface IProps {
-  restaurant: IRestaurant;
+  item: IRestaurant;
 }
-const RestaurantCard = ({ restaurant }: IProps) => {
+const RestaurantCard = ({ item }: IProps) => {
   return (
-    <Link className="card-navigate" to={`/restaurant/${restaurant._id}`}>
+    <Link className="card-navigate" to={`/restaurant/${item._id}`}>
       <div className="card-restaurant">
         <img
-          src={require(`../../${restaurant.thumb}`)}
-          alt={restaurant.name}
+          src={require(`../../${item.thumb}`)}
+          alt={item.name}
         ></img>
         <div className="card-content">
-          <h3>{restaurant.name}</h3>
-          <h2>{restaurant.chef}</h2>
+          <h3>{item.name}</h3>
+          <h2>{item.chef}</h2>
           <div className="card-stars">
-          {[...Array(restaurant.stars)].map((_, i) => (
+          {[...Array(item.stars)].map((_, i) => (
             <img src={star} alt="" key={i} />
           ))}
-          {[...Array(5 - restaurant.stars)].map((_, i) => (
+          {[...Array(5 - item.stars)].map((_, i) => (
             <img src={emptyStar} alt="" key={i} />
           ))}
         </div>
