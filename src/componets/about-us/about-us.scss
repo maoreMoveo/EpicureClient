@@ -13,7 +13,7 @@
 }
 .about-us-container {
   background-color: $SeconderyLightGray;
- // height: 100%;
+  // height: 100%;
   width: 100%;
   margin-top: 20px;
 }
@@ -21,21 +21,20 @@
   margin-left: 20px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
 }
 .about-us-logo {
-  margin-top: 20px;
+  margin-top: 24px;
   img {
     height: 100px;
     width: 100px;
   }
 }
 .about-us-down-link {
-  margin-top: 20px;
+  margin-top: 36px;
   display: flex;
   flex-direction: column;
   // align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 .about-us-download {
   display: flex;
@@ -46,6 +45,7 @@
   height: 50px;
   border: 0.5px solid #000000;
   border-radius: 10px;
+  gap: 7px;
   img {
     width: 20px;
     height: 25px;
@@ -61,18 +61,21 @@
       @include line;
     }
     .line-two {
+      @include line;
       font-size: 16px;
       line-height: 20px;
     }
   }
 }
 .about-us-text {
+  margin-top: 48px;
   margin-right: 20px;
-  margin-bottom: 40px;
-    h2{
-      display: none;
-    }
+  margin-bottom: 48px;
+  h2{
+    margin-bottom: 16px;
+  }
   p {
+    margin: 0;
     font-family: $BaseFont;
     font-style: normal;
     font-weight: 200;
@@ -81,6 +84,7 @@
     letter-spacing: 2.14px;
     color: $PrimaryColorBlack;
   }
+ 
 }
 
 @include xl {
@@ -109,15 +113,14 @@
   .about-us-down-link {
     position: absolute;
     bottom: 40px;
-   
   }
   .about-us-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-   
+
     margin-top: 40px;
-    h2{
+    h2 {
       display: flex;
     }
     p {

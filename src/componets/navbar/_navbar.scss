@@ -50,8 +50,18 @@
     width: 20px;
   }
 }
+@include md{
+  .navbar{
+    max-width: 820px;
+  }
+}
+@include lg{
+  .navbar{
+    max-width: 960px;
+  }
+}
 
-@include md {
+@include xl {
   .navbar{
     max-width: 1186px;
   }

@@ -22,6 +22,16 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
+  .card-navigate {
+    width: 100%;
+  }
+  .card-restaurant{
+    width: 100%;
+    height: 288px;
+    img{
+      height: 207px;
+    }
+  }
 }
 .restuarant-sort {
   margin-top: 24px;

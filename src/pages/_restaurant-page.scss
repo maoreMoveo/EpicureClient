@@ -68,20 +68,38 @@
       font-weight: 400;
     }
   }
- 
 }
 
+.restaurant-page-dish {
+  margin: 20px;
+  margin-bottom: 56px;
+  .dish-card {
+    width: 100%;
+    height: 375.84px;
+    margin-bottom: 20px;
+    img {
+      height: 213px;
+    }
+    .dish-icon {
+      display: none;
+    }
+    .dish-info {
+      max-width: 303px;
+      max-height: 90px;
+    }
+    .dish-ing{
+      max-width: 100%;
+    }
+  }
+}
 
-
-
-@include lg{
-  .restaurant-page-dish{
+@include lg {
+  .restaurant-page-dish {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     //gap: 32px;
     width: 100%;
     align-items: center;
-
   }
 }
 @include xl {
@@ -93,7 +111,7 @@
     align-items: center;
     .restaurant-page-img {
       height: 425px;
-      //ask amir 
+      //ask amir
       object-fit: cover;
     }
   }
@@ -119,19 +137,17 @@
       color: $PrimaryColorBlack;
     }
   }
-  .restuarant-page-sort{
+  .restuarant-page-sort {
     margin: 0;
     display: flex;
     justify-content: center;
   }
-  .restaurant-page-dish{
+  .restaurant-page-dish {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
     width: 100%;
     align-items: center;
     max-width: 1184px;
-
   }
 }
-

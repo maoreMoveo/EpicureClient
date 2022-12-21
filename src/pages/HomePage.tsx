@@ -5,13 +5,12 @@ import AboutUs from "../componets/about-us/AboutUs";
 import DishSignature from "../componets/dishes/DishSignature";
 import HeroMain from "../componets/hero_main/HeroMain";
 import ChefOfWeek from "../componets/chefs/ChefOfWeek";
-import Container from "../layouts/Container";
 import HomePageLink from "../componets/common/links/HomePageLink";
 import { RootStore } from "../store/store";
 import Loading from "../componets/common/loading/Loading";
 import Carausel from "../componets/common/carousel/Carousel";
 import RestaurantCard from "../componets/Restaurants/RestaurantCard";
-import DishCardCarousel from "../componets/dishes/DishCardCarousel";
+import DishCard from "../componets/dishes/DishCard";
 
 const HomePage = () => {
   const restaurants = useSelector(
@@ -23,31 +22,28 @@ const HomePage = () => {
   return (
     <div>
       <HeroMain />
-      <Container>
-        <div className="restaurant-carousel-container">
+        <div className="container">
           <h2>popular restaurant in epicure:</h2>
           <Carausel data={restaurants} Content={RestaurantCard} />
           <div className="restaurant-link ">
             <HomePageLink path="restaurant" />
           </div>
         </div>
-      </Container>
-      <Container>
-        <div className="dish-carousel-container">
+        <div className="container">
           <h2>Signature Dish Of:</h2>
-          <Carausel data={dishes} Content={DishCardCarousel} />
+          <Carausel data={dishes} Content={DishCard} />
           <div className="dish-restaurant-link ">
             <HomePageLink path="restaurant" />
           </div>
         </div>
-      </Container>
       <DishSignature />
-      <Container>
-        <div className="chef-container">
+        <div className="container">
           <h2>Chef of the week:</h2>
           <ChefOfWeek />
+          <div className="restaurant-link ">
+            <HomePageLink path="restaurant" />
+          </div>
         </div>
-      </Container>
       <AboutUs />
     </div>
   );

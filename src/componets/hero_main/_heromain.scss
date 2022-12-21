@@ -19,13 +19,18 @@
   position: absolute;
   width: 335px;
   height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
   .text {
     display: flex;
     justify-content: center;
     text-align: center;
+    margin-top: 16px;
   }
   .search {
-    margin: 10px;
+  margin-bottom: 16px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -59,7 +64,7 @@
       &:focus {
         outline: none;
       }
-      &::placeholder{
+      &::placeholder {
         text-align: center;
       }
     }
@@ -77,25 +82,26 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
 
     .text {
       width: 450px;
       height: 80px;
+      margin-top: 38px;
     }
-    
-    .search{
+
+    .search {
       width: 505px;
       height: 50px;
-      margin-top: 20px;
       text-align: center;
-      button{
-        img{
+      margin-bottom: 38px;
+
+      button {
+        img {
           height: 30px;
           width: 30px;
         }
       }
-      input{
+      input {
         width: 100%;
         font-size: 24px;
       }

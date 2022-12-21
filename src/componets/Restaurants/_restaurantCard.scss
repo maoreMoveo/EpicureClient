@@ -1,48 +1,47 @@
 @import "../../assets/styles/basics/variables";
 @import "../../assets/styles/basics/base";
 @import "../../assets/styles/basics/breakpoints";
-.card-navigate{
+.card-navigate {
   width: 250px;
 }
 .card-restaurant {
   width: 250px;
+  height: 232.8px;
   background-color: $SeconderyBeige;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  //margin: 10px;
-  gap: 8px;
+
   img {
     width: 100%;
-    height: 210px;
+    height: 151.8px;
     object-fit: cover;
   }
-  .card-content{
+  .card-content {
+    gap: 10px;
+    width: 245px;
+    height: 81px;
+    padding: 16px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
     h3 {
       @include cardTitle;
     }
-  
     h2 {
       text-transform: none;
-      margin-bottom: 10px;
     }
-  
-    h3,
-    h2 {
-      margin-left: 20px;
-    }
-   
   }
-  .card-stars{
+  .card-stars {
     display: none;
   }
 }
 
-@include lg{
+@include xl {
   .card-restaurant {
     justify-content: center;
     align-items: center;
-   width: 379px;
+    width: 379px;
     img {
       width: 379px;
       height: 235.82px;
@@ -65,11 +64,11 @@
         padding: 0;
       }
     }
-    .card-stars{
+    .card-stars {
       display: flex;
       flex-direction: row;
       margin-bottom: 20px;
-      img{
+      img {
         height: 40px;
         width: 40px;
       }

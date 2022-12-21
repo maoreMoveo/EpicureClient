@@ -33,10 +33,10 @@ const Chefs = () => {
         </ul>
       </div>
       <div className="chefs-content">
-        {chefs.map((chefs) => (
-          <div key={chefs.name} className="chef-img">
-            <img src={require(`../${chefs.image}`)} alt={chefs.name}></img>
-            <div>{chefs.name}</div>
+        {chefs.map((chef) => (
+          <div key={chef.name} className="chef-img">
+            <img src={require(`../${chef.image}`)} alt={chef.name}></img>
+            <div>{chef.name}</div>
           </div>
         ))}
       </div>

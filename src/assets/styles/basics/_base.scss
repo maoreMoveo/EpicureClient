@@ -26,6 +26,8 @@ h1 {
   line-height: 32px;
   letter-spacing: 1.97px;
   color: $PrimaryColorBlack;
+  margin: 0;
+  padding: 0;
 }
 h2 {
   font-family: $BaseFont;
@@ -36,7 +38,8 @@ h2 {
   letter-spacing: 1.25px;
   text-transform: uppercase;
   color: $PrimaryColorBlack;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
 }
 h3 {
   font-family: $BaseFont;
@@ -47,6 +50,8 @@ h3 {
   letter-spacing: 2.67px;
   color: $PrimaryColorBlack;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 
 //for Desktop
@@ -82,7 +87,7 @@ h3 {
   h3 {
     font-family: $BaseFont;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 40px;
     line-height: 47px;
     letter-spacing: 2.67px;

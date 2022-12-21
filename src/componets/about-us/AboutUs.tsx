@@ -1,5 +1,5 @@
 import React from "react";
-import './about-us.scss';
+import "./about-us.scss";
 import logo from "../../assets/images/epicure-icon.png";
 import googleIcon from "../../assets/images/google-icon.png";
 import appleIcon from "../../assets/images/apple-icon.png";
@@ -12,20 +12,20 @@ const AboutUs = () => {
           <img src={logo} alt="logo"></img>
         </div>
         <div className="about-us-down-link">
-        <div className="about-us-download">
-          <img src={googleIcon} alt="google-icon"></img>
-          <div>
-            <span className="line-one">Get it on</span>
-            <span className="line-two">Google Play</span>
+          <div className="about-us-download">
+            <img src={googleIcon} alt="google-icon"></img>
+            <div>
+              <span className="line-one">Get it on</span>
+              <span className="line-two">Google Play</span>
+            </div>
           </div>
-        </div>
-        <div className="about-us-download">
-          <img src={appleIcon} alt="apple-icon"></img>
-          <div>
-            <span className="line-one">Download on the</span>
-            <span className="line-two">App Store</span>
+          <div className="about-us-download">
+            <img src={appleIcon} alt="apple-icon"></img>
+            <div>
+              <span className="line-one">Download on the</span>
+              <span className="line-two">App Store</span>
+            </div>
           </div>
-        </div>
         </div>
         <div className="about-us-text">
           <h2>ABOUT US:</h2>
@@ -33,9 +33,11 @@ const AboutUs = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus
             vel justo fermentum bibendum non eu ipsum. Cras porta malesuada
             eros, eget blandit turpis suscipit at. Vestibulum sed massa in magna
-            sodales porta. Vivamus elit urna, dignissim a vestibulum. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel
-            justo fermentum bibendum no eu ipsum. Cras porta malesuada eros.
+            sodales porta. Vivamus elit urna, dignissim a vestibulum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus
+            vel justo fermentum bibendum no eu ipsum. Cras porta malesuada eros.
           </p>
         </div>
       </div>

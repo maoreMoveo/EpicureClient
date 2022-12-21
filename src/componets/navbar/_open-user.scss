@@ -32,10 +32,10 @@
   }
 }
 .user-info {
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
   gap: 40px;
   width: 351px;
   height: 288px;
@@ -52,7 +52,7 @@
       line-height: 14px;
     }
   }
-  .user-inputs{
+  .user-inputs {
     height: 100%;
     width: 100%;
     display: flex;
@@ -138,60 +138,57 @@
     text-align: center;
   }
 }
-.user-signup{
-    button {
-        @include buttonPrimary;
-        background-color: $PrimaryWhite;
-        color: $PrimaryColorBlack;
-      }
+.user-signup {
+  button {
+    @include buttonPrimary;
+    background-color: $PrimaryWhite;
+    color: $PrimaryColorBlack;
+  }
 }
 // open user position absolute
-  @include xl{
-        .open-user{
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.7);
-            flex-direction: column;
-            .user-button{
-                width: 573px;
-                background-color: transparent;
-                img{
-                    content: url("../../assets/images/x-white.svg");
-                    margin-left: 0px;
-                    height: 20px;
-                    width: 20px;
-                }
-            }
-            .user-content{
-                width: 573px;
-            }
-        }
-        
-        .user-info {
-            width: 360px;
-            text-align: center;
-            .user-info-header {
-              width: 100%;
-              h3{
-                font-weight: 200;
-                line-height: 26px;
-                font-size: 24px;
-              }
-              h2 {
-                text-transform: none;
-                line-height: 18px;
-                font-size: 18px;
-              }
-            }
-            .user-inputs{
-                gap: 8px;
-                width: 360px;
-                height: 136px;
-              }
-     
-        }
-        
-
+@include xl {
+  .open-user {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    flex-direction: column;
+    .user-button {
+      width: 573px;
+      background-color: transparent;
+      img {
+        content: url("../../assets/images/x-white.svg");
+        margin-left: 0px;
+        height: 20px;
+        width: 20px;
+      }
+    }
+    .user-content {
+      width: 573px;
+    }
   }
+
+  .user-info {
+    width: 360px;
+    text-align: center;
+    .user-info-header {
+      width: 100%;
+      h3 {
+        font-weight: 200;
+        line-height: 26px;
+        font-size: 24px;
+      }
+      h2 {
+        text-transform: none;
+        line-height: 18px;
+        font-size: 18px;
+      }
+    }
+    .user-inputs {
+      gap: 8px;
+      width: 360px;
+      height: 136px;
+    }
+  }
+}

@@ -73,7 +73,7 @@ const RestaurantPage = () => {
           <div className="restaurant-page-dish">
             {restaurantDishes &&
               restaurantDishes.map((dish) => (
-                <DishCard key={dish._id} dish={dish} />
+                <DishCard key={dish._id} item={dish} />
               ))}
           </div>
         </div>
