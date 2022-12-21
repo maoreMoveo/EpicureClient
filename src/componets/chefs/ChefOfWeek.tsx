@@ -1,5 +1,5 @@
 import React from "react";
-import '../../assets/styles/components/chefs/_chefOfWeek.scss';
+import './_chefOfWeek.scss';
 import ChefCaruosel from "./ChefCaruosel";
 
 const ChefOfWeek = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../assets/styles/components/restaurant/_restaurantCarousel.scss";
+import "./_restaurantCarousel.scss";
 import RestaurantCardCarousel from "./RestaurantCardCarousel";
 import Slider from "react-slick";
 import RestaurantCard from "./RestaurantCard";

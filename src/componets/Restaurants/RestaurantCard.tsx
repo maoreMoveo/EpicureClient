@@ -1,5 +1,5 @@
 import React from "react";
-import '../../assets/styles/components/restaurant/_restaurantCard.scss';
+import './_restaurantCard.scss';
 import { Link } from "react-router-dom";
 import IRestaurant from "../../interfaces/Restaurant";
 import star from '../../assets/images/star.svg';

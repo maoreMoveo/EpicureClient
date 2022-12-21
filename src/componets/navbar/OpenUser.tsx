@@ -1,6 +1,6 @@
 import React from "react";
 import x from "../../assets/images/x.svg";
-import "../../assets/styles/components/navbar/_open-user.scss";
+import "./_open-user.scss";
 interface IProps {
   userToggle: () => void;
 }

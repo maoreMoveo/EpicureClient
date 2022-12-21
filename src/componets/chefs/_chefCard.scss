@@ -1,0 +1,24 @@
+@import "../../assets/styles/basics/variables";
+@import "../../assets/styles/basics/base";
+.card-chef-res {
+  background-color: $SeconderyBeige;
+  width: 250px;
+
+  img {
+    height: 150px;
+    width: 250px;
+    object-fit: cover;
+  }
+  .chef-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    height: 80px;
+    h2 {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+}

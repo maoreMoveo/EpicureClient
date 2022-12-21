@@ -1,0 +1,62 @@
+@import "../assets/styles/basics/variables";
+@import "../assets/styles/basics/breakpoints";
+@import "../assets/styles/basics/base";
+
+.restaurant-carousel-container {
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    // margin-left: 20px;
+    overflow-x: hidden;
+    padding-left: 20px;
+  }
+  .dish-carousel-container {
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    // margin-left: 20px;
+    overflow-x: hidden;
+    padding-left: 20px;
+  }
+
+  .chef-container {
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    h2{
+      margin-left: 0;
+    }
+  }
+
+  @include xl{
+    .restaurant-carousel-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        margin-top: 0px;
+        padding-left: 0px;
+      }
+      .restaurant-link {
+        display: flex;
+        width: 100%;
+        justify-content: end;
+      }
+      .dish-restaurant-link{
+        display: none;
+      }
+      .dish-carousel-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        padding-left: 0px;
+
+      }
+      .chef-container{
+        gap: 40px;
+        margin: 0px;
+        margin-top: 0px;
+      }
+  }

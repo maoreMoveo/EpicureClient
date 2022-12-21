@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../assets/styles/pages/_restaurant-page.scss";
+import "./_restaurant-page.scss";
 import { useSelector } from "react-redux";
 import { RootStore } from "../store/store";
 import { useNavigate, useParams } from "react-router";

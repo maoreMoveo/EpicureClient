@@ -1,6 +1,6 @@
 import React from "react";
 import {useSelector} from 'react-redux';
-import "../assets/styles/pages/_restaurant.scss";
+import "./_restaurant.scss";
 import { ISortPath } from "../interfaces/sortPath";
 import RestaurantCard from "../componets/Restaurants/RestaurantCard";
 import { RootStore } from "../store/store";

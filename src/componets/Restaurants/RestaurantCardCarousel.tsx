@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import '../../assets/styles/components/restaurant/_restaurantCardCarousel.scss';
-import IDish from "../../interfaces/Dishes";
+import './_restaurantCardCarousel.scss';
 import IRestaurant from "../../interfaces/Restaurant";
 interface IProps {
   item: IRestaurant;

@@ -1,5 +1,5 @@
 import React from "react";
-import '../../assets/styles/components/dishes/_dishesCaruosel.scss';
+import './_dishesCaruosel.scss';
 import Slider from "react-slick";
 import DishCardCarousel from "./DishCardCarousel";
 import IDish from "../../interfaces/Dishes";

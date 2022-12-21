@@ -1,5 +1,5 @@
 import React,{useEffect} from "react";
-import "../assets/styles/pages/_chefs.scss";
+import "./_chefs.scss";
 import { ISortPath } from "../interfaces/sortPath";
 import {useSelector,useDispatch} from 'react-redux';
 import { AppDispatch, RootStore } from "../store/store";

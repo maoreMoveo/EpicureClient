@@ -1,0 +1,38 @@
+@import "../../assets/styles/basics/variables";
+@import "../../assets/styles/basics/breakpoints";
+@import "../../assets/styles/basics/base";
+
+.dish-carousel {
+  margin-top: 20px;
+  //margin-left: 30px;
+  .link{
+    margin-top: 30px;
+  }
+}
+.dish-desktop {
+  display: none;
+}
+.dish-link {
+  margin-left: 10px;
+}
+@include xl {
+  .dish-carousel {
+    display: none;
+  }
+  .dish-desktop {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .dish-items {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 24px;
+  }
+  .dish-link {
+    display: flex;
+    justify-content: end;
+  }
+}

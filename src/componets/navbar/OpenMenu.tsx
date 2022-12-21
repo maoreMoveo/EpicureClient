@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../assets/styles/components/navbar/_open-menu.scss";
+import "./_open-menu.scss";
 import { Link } from "react-router-dom";
 import x from "../../assets/images/x.svg";
 import { useLocation } from "react-router";

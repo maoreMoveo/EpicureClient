@@ -1,5 +1,5 @@
 import React from "react";
-import '../../assets/styles/components/chefs/_chefCaruosel.scss';
+import './_chefCaruosel.scss';
 import HomePageLink from "../common/links/HomePageLink";
 import ChefResturantCard from "./ChefResturantCard";
 import Slider from "react-slick";

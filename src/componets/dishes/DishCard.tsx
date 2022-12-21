@@ -1,5 +1,5 @@
 import React from "react";
-import '../../assets/styles/components/dishes/_dishCard.scss';
+import './_dishCard.scss';
 import { useToggle } from "../../hooks/useToggle";
 import IDish from "../../interfaces/Dishes";
 import DishModal from "./DishModal";

@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useState } from "react";
-import "../../assets/styles/components/dishes/_dish-modal.scss";
+import "./_dish-modal.scss";
 import x from "../../assets/images/x.svg";
 import IDish from "../../interfaces/Dishes";
 interface IProps {

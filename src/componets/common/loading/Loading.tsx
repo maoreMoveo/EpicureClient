@@ -1,6 +1,6 @@
 import React from "react";
 import {Circles} from "react-loader-spinner";
-import '../../../assets/styles/components/common/_loading.scss';
+import './_loading.scss';
 const Loading = () => {
   return (
     <div className="loading-container">

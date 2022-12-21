@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/styles/components/dishes/_dish-signature.scss';
+import './_dish-signature.scss';
 import spicyIcon from '../../assets/images/spicy-icon.svg';
 import vegetarianIcon from '../../assets/images/vegetarian-icon.svg';
  import veganIcon from '../../assets/images/vegan-icon.svg';

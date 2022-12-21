@@ -1,0 +1,30 @@
+@import '../../../assets/styles/basics/variables';
+@import '../../../assets/styles/basics/base';
+@import "../../../assets/styles/basics/breakpoints";
+
+.carousel {
+  // margin-left: 10px;
+  margin-top: 20px;
+}
+.desktop {
+  display: none;
+}
+
+@include xl {
+  .carousel {
+    display: none;
+  }
+  .desktop {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .items {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 24px;
+  }
+ 
+}

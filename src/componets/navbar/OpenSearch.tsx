@@ -1,5 +1,5 @@
 import React from "react";
-import '../../assets/styles/components/navbar/_open-search.scss';
+import './_open-search.scss';
 import x from "../../assets/images/x.svg";
 import searchButton from "../../assets/images/search-icon.svg";
 interface IProps{

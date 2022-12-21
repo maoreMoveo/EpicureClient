@@ -1,5 +1,5 @@
 import React from "react";
-import '../../assets/styles/components/dishes/_dishCardCarousel.scss';
+import './_dishCardCarousel.scss';
 import IDish from "../../interfaces/Dishes";
 interface IProps {
   item: IDish;

@@ -1,0 +1,137 @@
+@import "../assets/styles/basics/variables";
+@import "../assets/styles/basics/base";
+@import "../assets/styles/basics/breakpoints";
+.restaurant-page-container {
+  height: 100%;
+  // width: 100%;
+
+  .restaurant-page-img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+  }
+}
+.restaurant-page-details {
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
+  gap: 10px;
+  h3 {
+    @include cardTitle;
+    margin: 0;
+  }
+  h2 {
+    text-transform: none;
+    margin: 0;
+  }
+}
+.time-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  img {
+    height: 17px;
+    width: 17px;
+  }
+  span {
+    font-family: $BaseFont;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 1.97px;
+    color: $PrimaryColorBlack;
+  }
+}
+.restuarant-page-sort {
+  margin: 20px;
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding-inline-start: 0px;
+    margin-right: 20px;
+    gap: 20px;
+    li {
+      font-family: $BaseFont;
+      font-style: normal;
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 1.92px;
+      color: $PrimaryColorBlack;
+    }
+    .active {
+      border-bottom: 1.8px solid rgba(222, 146, 0, 0.9);
+      font-weight: 400;
+    }
+  }
+ 
+}
+
+
+
+
+@include lg{
+  .restaurant-page-dish{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    //gap: 32px;
+    width: 100%;
+    align-items: center;
+
+  }
+}
+@include xl {
+  .restaurant-page-container {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    .restaurant-page-img {
+      height: 425px;
+      //ask amir 
+      object-fit: cover;
+    }
+  }
+  .restaurant-page-details {
+    justify-content: center;
+    align-items: center;
+    h3 {
+      font-weight: 400;
+      font-size: 56px;
+      line-height: 64px;
+      letter-spacing: 3.67px;
+    }
+    h2 {
+      font-size: 32px;
+    }
+    span {
+      font-family: $BaseFont;
+      font-style: normal;
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: 1.97px;
+      color: $PrimaryColorBlack;
+    }
+  }
+  .restuarant-page-sort{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .restaurant-page-dish{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    width: 100%;
+    align-items: center;
+    max-width: 1184px;
+
+  }
+}
+

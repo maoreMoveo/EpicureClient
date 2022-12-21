@@ -1,0 +1,10 @@
+@import '../assets/styles/basics/base';
+
+@include lg{
+.container{
+    max-width: 1186px;
+    //height: 100%;
+   margin: 0 auto;
+   margin-top: 80px;
+}
+}

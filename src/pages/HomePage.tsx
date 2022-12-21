@@ -1,36 +1,32 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import "../assets/styles/pages/_home-page.scss";
+import "./_home-page.scss";
 import AboutUs from "../componets/about-us/AboutUs";
-import DishesCarousel from "../componets/dishes/DishesCarousel";
 import DishSignature from "../componets/dishes/DishSignature";
 import HeroMain from "../componets/hero_main/HeroMain";
-import RestaurantCarousel from "../componets/Restaurants/RestaurantCarousel";
 import ChefOfWeek from "../componets/chefs/ChefOfWeek";
-import Container from "../componets/common/Container";
+import Container from "../layouts/Container";
 import HomePageLink from "../componets/common/links/HomePageLink";
 import { RootStore } from "../store/store";
 import Loading from "../componets/common/loading/Loading";
-import Carausel from "../componets/common/Carousel";
-import RestaurantCardCarousel from "../componets/Restaurants/RestaurantCardCarousel";
+import Carausel from "../componets/common/carousel/Carousel";
 import RestaurantCard from "../componets/Restaurants/RestaurantCard";
 import DishCardCarousel from "../componets/dishes/DishCardCarousel";
-import IRestaurant from "../interfaces/Restaurant";
-
 
 const HomePage = () => {
-  const restaurants = useSelector((state:RootStore) => state.restaurants.restaurants);
-  const dishes= useSelector((state:RootStore)=> state.dishes.dishes);
+  const restaurants = useSelector(
+    (state: RootStore) => state.restaurants.restaurants
+  );
+  const dishes = useSelector((state: RootStore) => state.dishes.dishes);
   // ask  amir why not &&
   if (!restaurants || !dishes) return <Loading />;
-    return (
+  return (
     <div>
       <HeroMain />
       <Container>
         <div className="restaurant-carousel-container">
           <h2>popular restaurant in epicure:</h2>
-          <Carausel data={restaurants}  Content={RestaurantCard} />
-          {/* <RestaurantCarousel restaurants={restaurants} /> */}
+          <Carausel data={restaurants} Content={RestaurantCard} />
           <div className="restaurant-link ">
             <HomePageLink path="restaurant" />
           </div>
@@ -39,8 +35,7 @@ const HomePage = () => {
       <Container>
         <div className="dish-carousel-container">
           <h2>Signature Dish Of:</h2>
-          {/* <DishesCarousel dishes={dishes} /> */}
-          <Carausel data={dishes}  Content={DishCardCarousel}/>
+          <Carausel data={dishes} Content={DishCardCarousel} />
           <div className="dish-restaurant-link ">
             <HomePageLink path="restaurant" />
           </div>
