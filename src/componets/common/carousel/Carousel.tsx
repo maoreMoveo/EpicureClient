@@ -21,8 +21,8 @@ const Carousel = ({ data, Content }: IProps) => {
       {
         breakpoint: 1199,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToShow: 3,
+          slidesToScroll: 3,
           initialSlide: 1,
         },
       },
