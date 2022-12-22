@@ -3,7 +3,7 @@
 .header{
    width: 100%;
 }
-@include lg{
+@include xl{
 .header{
     max-width: 1440px;
     height: 46px;
