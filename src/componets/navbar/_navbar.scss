@@ -18,6 +18,7 @@
   z-index: 2;
 
   img {
+    cursor: pointer;
     height: 20px;
     width: 20px;
   }
@@ -46,20 +47,17 @@
   //margin-right: 10px;
   z-index: 3;
   img {
+    cursor: pointer;
     height: 20px;
     width: 20px;
   }
 }
 @include md{
   .navbar{
-    max-width: 820px;
+    max-width: 100%;
   }
 }
-@include lg{
-  .navbar{
-    max-width: 960px;
-  }
-}
+
 
 @include xl {
   .navbar{

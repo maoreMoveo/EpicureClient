@@ -40,7 +40,7 @@ const HomePage = () => {
         <div className="container">
           <h2>Chef of the week:</h2>
           <ChefOfWeek />
-          <div className="restaurant-link ">
+          <div className="chefOfWeek-link ">
             <HomePageLink path="restaurant" />
           </div>
         </div>

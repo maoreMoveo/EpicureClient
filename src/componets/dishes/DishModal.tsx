@@ -10,12 +10,31 @@ interface IProps {
 const DishModal = ({ dish, dishToggle }: IProps) => {
   const [dishQuantity, setDishQuontity] = useState<number>(1);
   const [chooseSide, setChooseSide] = useState<string>("");
+  const [cart, setCart] = useState<Object>({
+    side: chooseSide,
+    changes: {
+      withoutPeanuts: "",
+      lessSpicy: "",
+    },
+  });
 
+  const handleChange = (event: any) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    console.log(name);
+
+    // setCart([...cart, cart[name] = value])
+  };
   return (
     <div className="dish-modal-container">
       <div className="dish-modal">
         <div className="dish-menu-button">
-          <img src={x} alt="hamborger-icon" onClick={() => dishToggle()}></img>
+          <img
+            className="dish-menu-button-img"
+            src={x}
+            alt="hamborger-icon"
+            onClick={() => dishToggle()}
+          ></img>
         </div>
         <div className="dish-modal-content">
           <img src={require(`../../${dish.image}`)} alt={dish.name}></img>
@@ -23,6 +42,9 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
             <div className="dish-info">
               <h3>{dish.name}</h3>
               <p>{dish.ingredients}</p>
+              <div className="dish-modal-icon">
+                <img src={require(`../../${dish.icon}`)} alt={dish.name}></img>
+              </div>
               <div className="dish-modal-price">
                 <div className="price-line"></div>
                 <span>₪&nbsp;{dish.price}</span>
@@ -40,7 +62,11 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
                       type="checkbox"
                       value="bread"
                       checked={chooseSide === "bread"}
-                      onChange={(e) => setChooseSide((prevState)=> prevState==="bread"? "" : "bread")}
+                      onChange={(e) =>
+                        setChooseSide(() =>
+                          chooseSide === "bread" ? "" : "bread"
+                        )
+                      }
                     ></input>
                     <span>White bread</span>
                   </div>
@@ -49,7 +75,11 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
                       type="checkbox"
                       value="rice"
                       checked={chooseSide === "rice"}
-                      onChange={(e) => setChooseSide((prevState)=> prevState==="rise"? "" : "rise")}
+                      onChange={(e) =>
+                        setChooseSide(() =>
+                          chooseSide === "rice" ? "" : "rice"
+                        )
+                      }
                     ></input>
                     <span>Sticky rice</span>
                   </div>
@@ -61,11 +91,19 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
                 </div>
                 <div className="dish-inputs">
                   <div className="dish-input">
-                    <input type="checkbox"></input>
+                    <input
+                      type="checkbox"
+                      name="withoutPeanuts"
+                      onChange={(e) => handleChange(e)}
+                    ></input>
                     <span>Whithout peanuts</span>
                   </div>
                   <div className="dish-input">
-                    <input type="checkbox"></input>
+                    <input
+                      type="checkbox"
+                      name="lessSpicy"
+                      onChange={(e) => handleChange(e)}
+                    ></input>
                     <span>Sticky Less spicy</span>
                   </div>
                 </div>

@@ -71,20 +71,21 @@
   margin-top: 48px;
   margin-right: 20px;
   margin-bottom: 48px;
-  h2{
+  h2 {
     margin-bottom: 16px;
   }
-  p {
-    margin: 0;
-    font-family: $BaseFont;
-    font-style: normal;
-    font-weight: 200;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 2.14px;
-    color: $PrimaryColorBlack;
+  .about-us-text-p {
+    p {
+      margin: 0;
+      font-family: $BaseFont;
+      font-style: normal;
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 2.14px;
+      color: $PrimaryColorBlack;
+    }
   }
- 
 }
 
 @include xl {
@@ -113,19 +114,26 @@
   .about-us-down-link {
     position: absolute;
     bottom: 40px;
+    flex-direction: row;
   }
+
   .about-us-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
+    max-width: 917px;
     margin-top: 40px;
     h2 {
       display: flex;
     }
-    p {
-      width: 569px;
+    .about-us-text-p {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
       height: 330px;
+      p {
+        width: 569px;
+      }
     }
   }
 }

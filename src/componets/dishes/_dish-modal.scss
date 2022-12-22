@@ -9,9 +9,10 @@
   width: 100%;
   height: 100%;
   top: 0px;
+  left: 0;
+  right: 0;
   background-color: #ffffff;
   z-index: 3;
-
 }
 .dish-menu-button {
   height: 30px;
@@ -22,9 +23,13 @@
   background: white;
   width: 100%;
   margin-left: 20px;
-  img {
-    height: 18px;
-    width: 18px;
+
+  .dish-menu-button-img {
+    img {
+      cursor: pointer;
+      height: 18px;
+      width: 18px;
+    }
   }
 }
 .dish-modal-content {
@@ -34,7 +39,7 @@
   width: 100%;
   height: 100%;
   left: -1px;
-  background: #ffffff; 
+  background: #ffffff;
   transition: 1s opacity ease-in-out;
   img {
     height: 280px;
@@ -48,8 +53,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-left: 20px;
-
+  padding-left: 20px;
+  gap: 35px;
   .dish-info {
     display: flex;
     flex-direction: column;
@@ -63,6 +68,8 @@
       margin: 0;
     }
     p {
+      margin: 0;
+      padding: 0;
       font-family: $BaseFont;
       font-style: normal;
       font-weight: 200;
@@ -72,6 +79,9 @@
       color: $PrimaryColorBlack;
     }
   }
+}
+.dish-modal-icon{
+  display: none;
 }
 .dish-modal-price {
   display: none;
@@ -186,8 +196,8 @@
     @include buttonPrimary;
   }
 }
-@include md{
-  .dish-modal{
+@include md {
+  .dish-modal {
     overflow-y: scroll;
   }
 }
@@ -198,7 +208,7 @@
     background: rgba(0, 0, 0, 0.7);
     height: 100%;
     width: 100%;
-    z-index: 100;
+    z-index: 4;
     top: 0;
     display: flex;
     justify-content: center;
@@ -211,7 +221,7 @@
     width: 573px;
     height: auto;
     top: none;
-   
+
     background-color: transparent;
     overflow-y: unset;
   }
@@ -221,8 +231,10 @@
     margin-left: 0px;
     background-color: transparent;
     height: auto;
+    padding-bottom: 5px;
     img {
-      content: url('../../assets/images/x-white.svg');
+      cursor: pointer;
+      content: url("../../assets/images/x-white.svg");
       height: 18px;
       width: 18px;
     }
@@ -251,7 +263,7 @@
       margin-top: 10px;
       align-items: center;
       text-align: center;
-      gap: 5px;
+      gap: 10px;
       width: 232px;
       h3 {
         font-weight: 400;
@@ -264,6 +276,13 @@
         font-weight: 200;
         font-size: 14px;
         line-height: 18px;
+      }
+      .dish-modal-icon{
+        display: flex;
+        img{
+          height: 20px;
+          width: 30px;
+        }
       }
       .dish-modal-price {
         display: flex;
@@ -303,5 +322,8 @@
     align-items: flex-start;
     flex-direction: column;
     width: 232px;
+  }
+  .dish-add{
+    margin-top: 0;
   }
 }

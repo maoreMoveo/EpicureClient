@@ -5,7 +5,7 @@ export  const dishesData: IDish[] = [
     name: "Pad Ki Mao",
     restaurant: "Tiger Lilly",
     ingredients:
-      "Shrimps, Glass Noodles, Kemiri Nuts, Shallots,Lemon Grass, Magic Chili Brown Coconut",
+      "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, Magic Chili Brown Coconut",
     image: "assets/images/dishes/pad-ki-mao.svg",
     icon: "assets/images/spicy-icon.svg",
     price: 88,

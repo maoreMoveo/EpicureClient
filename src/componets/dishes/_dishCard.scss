@@ -9,11 +9,11 @@
   align-items: flex-start;
   width: 250px;
   height: 388px;
-  img {
-    width: 100%;
-    height: 152px;
-    object-fit: cover;
-  }
+}
+.dish-card-img {
+  width: 100%;
+  height: 152px;
+  object-fit: cover;
 }
 .dish-details {
   display: flex;
@@ -39,7 +39,7 @@
 }
 .dish-ing {
   max-width: 209px;
-    height: 100px;
+  height: 100px;
   p {
     margin: 0;
     font-family: $BaseFont;
@@ -51,11 +51,11 @@
     text-transform: none;
   }
 }
-.dish-icon{
-  img{
-  height: 25px;
-  width: 30px;
-}
+.dish-icon {
+  img {
+    height: 25px;
+    width: 30px;
+  }
 }
 .dish-price {
   // position: absolute;
@@ -68,12 +68,12 @@
   .price-line {
     display: none;
   }
-  label{
+  label {
     font-size: 14px;
     margin-top: 2px;
   }
   span {
-    font-family: 'Helvetica Neue';
+    font-family: "Helvetica Neue";
     height: 100%;
     display: flex;
     font-weight: 400;
@@ -90,48 +90,88 @@
 
 @include xl {
   .dish-card {
-    width: 272px;
-    height: 413px;
+    width: 378px;
+    height: 654px;
     margin: 0px;
     img {
       width: 100%;
-      height: 173.23px;
-      width: 100%;
+      height: 306px;
+      max-height: 306px;
       object-fit: cover;
     }
   }
   .dish-details {
+    position: relative;
     align-items: center;
     padding: 0;
-    gap: 12px;
-    height: 241.29px;
+    gap: 8px;
+    height: 348px;
+    max-height: 348px;
     margin-right: 0px;
-    margin-top: 10px;
+  }
+  .dish-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+    gap: 8px;
+    padding-top: 24px;
+    max-height: 278px;
+    max-width: 295px;
     h3 {
-      font-size: 24px;
+      @include cardTitle;
+      max-width: 209px;
+      font-size: 40px;
+      line-height: 47px;
+      letter-spacing: 2.67px;
+    
     }
+    
   }
   .dish-ing {
-    max-width: 272px;
-    min-height: 140px;
-    margin-right: 20px;
-    margin-left: 20px;
+    width: 295px;
+    height: 176px;
+    max-width: 295px;
     p {
       display: flex;
       text-align: center;
-      font-size: 20px;
-      line-height: 24px;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 1.97px;
+    }
+  }
+  .dish-icon {
+    display: none;
+    img {
+      height: 30px;
+      width: 40px;
     }
   }
   .dish-price {
     display: flex;
     justify-content: center;
-    bottom: 20px;
+    position: absolute;
+    bottom: 8px;
     .price-line {
       display: flex;
       width: 82.5px;
+
+      border: 0.5px solid #979797;
+    }
+    label{
+      font-size: 18px;
+      margin-top: 4px;
+  
+    }
+    span {
+      font-size: 24px;
+      line-height: 30px;      
+      text-align: center;
+      letter-spacing: 1.97px;
     }
     div {
+      border: 0.5px solid #979797;
       width: 82.5px;
     }
   }

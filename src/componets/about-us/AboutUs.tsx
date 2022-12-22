@@ -29,7 +29,8 @@ const AboutUs = () => {
         </div>
         <div className="about-us-text">
           <h2>ABOUT US:</h2>
-          <p>
+        <div className="about-us-text-p">
+        <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus
             vel justo fermentum bibendum non eu ipsum. Cras porta malesuada
             eros, eget blandit turpis suscipit at. Vestibulum sed massa in magna
@@ -39,6 +40,7 @@ const AboutUs = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus
             vel justo fermentum bibendum no eu ipsum. Cras porta malesuada eros.
           </p>
+        </div>
         </div>
       </div>
     </div>

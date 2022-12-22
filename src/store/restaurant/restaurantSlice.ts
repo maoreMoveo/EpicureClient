@@ -13,6 +13,7 @@ const restaurantSlice = createSlice({
   reducers: {} ,
   extraReducers: (builder) => {
     builder.addCase(getAllRestaurants.fulfilled, (state, action) => {
+      console.log(action.payload)
       state.restaurants= action.payload;
     });
   },

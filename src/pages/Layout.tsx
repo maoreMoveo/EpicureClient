@@ -1,9 +1,10 @@
 import React from "react";
 import { Outlet } from "react-router";
-import Footer from "../componets/footer/Footer";
+import FooterContent from "../componets/footer/FooterContent";
 import NavBar from "../componets/navbar/NavBar";
 import Header from "../layouts/Header";
 import Main from "../layouts/Main";
+import Footer from '../layouts/Footer';
 import ScrollToTop from "../componets/common/scrollToTop";
 
 const Layout = () => {
@@ -16,9 +17,9 @@ const Layout = () => {
       <Main>
         <Outlet />
       </Main>
-      <footer>
-        <Footer />
-      </footer>
+      <Footer>
+        <FooterContent />
+      </Footer>
     </>
   );
 };

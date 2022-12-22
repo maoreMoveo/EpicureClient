@@ -31,7 +31,7 @@ export  const restaurantsData: IRestaurant[] = [
       chef: "Aviv Moshe",
       opens: "08:00",
       closes: "13:00",
-      thumb: "assets/images/restaurants/messa.png",
+      thumb: "assets/images/restaurants/messa.svg",
       image: "assets/images/restaurants/claroBig.png",
       latitude: "32.07036590576172",
       longitude: "34.786685943603516",

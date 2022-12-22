@@ -5,12 +5,15 @@ import IDish from "../../interfaces/Dishes";
 import DishModal from "./DishModal";
 interface IProps {
   item: IDish;
+  isOpenModal?:boolean
 }
-const DishCard = ({ item }: IProps) => {
+const DishCard = ({ item,isOpenModal }: IProps) => {
   const [openDishModal, dishToggle] = useToggle();
+  console.log(openDishModal);
   return (
-      <div className="dish-card" onClick={() => dishToggle()}>
-        <img src={require(`../../${item.image}`)} alt={item.name}></img>
+    <>
+      <div className="dish-card" onClick={ isOpenModal && dishToggle}>
+        <img className="dish-card-img" src={require(`../../${item.image}`)} alt={item.name}></img>
         <div className="dish-details">
           <div className="dish-info">
             <h3>{item.name}</h3>
@@ -28,8 +31,10 @@ const DishCard = ({ item }: IProps) => {
             <div></div>
           </div>
         </div>
-        {openDishModal && <DishModal dish={item} dishToggle={dishToggle} />}
       </div>
+        
+        {openDishModal && <DishModal dish={item} dishToggle={dishToggle} />}
+        </>
   );
 };
 
