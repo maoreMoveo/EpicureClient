@@ -1,6 +1,6 @@
 import React from "react";
 import './_heromain.scss';
-import heroImg from "../../assets/images/main-image.png";
+import heroImg from "../../assets/images/hero-main.svg";
 import searchButton from "../../assets/images/search-icon.svg";
 
 const HeroMain = () => {

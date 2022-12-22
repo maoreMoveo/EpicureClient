@@ -13,6 +13,7 @@
   right: 0;
   background-color: #ffffff;
   z-index: 3;
+  overflow-y: scroll;
 }
 .dish-menu-button {
   height: 30px;
@@ -54,7 +55,8 @@
   flex-direction: column;
   justify-content: flex-start;
   padding-left: 20px;
-  gap: 35px;
+  // gap: 35px;
+  
   .dish-info {
     display: flex;
     flex-direction: column;
@@ -63,6 +65,7 @@
     gap: 14px;
     margin-right: 40px;
     margin-top: 20px;
+    padding-bottom: 35px;
     h3 {
       @include cardTitle;
       margin: 0;
@@ -196,9 +199,15 @@
     @include buttonPrimary;
   }
 }
-@include md {
-  .dish-modal {
+@include md{
+  .dish-modal{
     overflow-y: scroll;
+  }
+}
+
+@include sm{
+  .dish-modal{
+    overflow-y: unset;
   }
 }
 

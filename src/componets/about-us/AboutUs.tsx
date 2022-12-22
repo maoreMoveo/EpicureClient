@@ -1,8 +1,8 @@
 import React from "react";
 import "./about-us.scss";
-import logo from "../../assets/images/epicure-icon.png";
-import googleIcon from "../../assets/images/google-icon.png";
-import appleIcon from "../../assets/images/apple-icon.png";
+import logo from "../../assets/images/epicure-logo.svg";
+import googleIcon from "../../assets/images/google-icon.svg";
+import appleIcon from "../../assets/images/apple-icon.svg";
 
 const AboutUs = () => {
   return (
@@ -29,18 +29,20 @@ const AboutUs = () => {
         </div>
         <div className="about-us-text">
           <h2>ABOUT US:</h2>
-        <div className="about-us-text-p">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus
-            vel justo fermentum bibendum non eu ipsum. Cras porta malesuada
-            eros, eget blandit turpis suscipit at. Vestibulum sed massa in magna
-            sodales porta. Vivamus elit urna, dignissim a vestibulum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus
-            vel justo fermentum bibendum no eu ipsum. Cras porta malesuada eros.
-          </p>
-        </div>
+          <div className="about-us-text-p">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a
+              lacus vel justo fermentum bibendum non eu ipsum. Cras porta
+              malesuada eros, eget blandit turpis suscipit at. Vestibulum sed
+              massa in magna sodales porta. Vivamus elit urna, dignissim a
+              vestibulum.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a
+              lacus vel justo fermentum bibendum no eu ipsum. Cras porta
+              malesuada eros.
+            </p>
+          </div>
         </div>
       </div>
     </div>

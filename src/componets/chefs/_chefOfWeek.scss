@@ -19,7 +19,9 @@
     position: absolute;
     width: 100%;
     bottom: 0px;
-    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     font-family: $BaseFont;
     font-style: normal;
     font-weight: 400;
@@ -51,6 +53,11 @@
   .chef-week-img {
     width: 478px;
     height: 399px;
+    div {
+
+      height: 78px;
+      font-size: 40px;
+    }
   }
   .chef-about-content {
     display: flex;
@@ -82,5 +89,6 @@
     align-items: flex-start;
     padding: 0px;
     gap: 40px;
+    margin-top: 45px;
   }
 }
