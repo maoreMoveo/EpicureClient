@@ -2,29 +2,44 @@ import React, { ChangeEvent, useState } from "react";
 import "./_dish-modal.scss";
 import x from "../../assets/images/x.svg";
 import IDish from "../../interfaces/Dishes";
+import ICart from '../../interfaces/cart';
+import { AppDispatch, RootStore } from "../../store/store";
+import {useDispatch,useSelector} from 'react-redux';
+import { addItem } from "../../store/cart/cartSlice";
 interface IProps {
   dish: IDish;
   dishToggle: () => void;
 }
 
 const DishModal = ({ dish, dishToggle }: IProps) => {
-  const [dishQuantity, setDishQuontity] = useState<number>(1);
-  const [chooseSide, setChooseSide] = useState<string>("");
-  const [cart, setCart] = useState<Object>({
-    side: chooseSide,
-    changes: {
-      withoutPeanuts: "",
-      lessSpicy: "",
-    },
+  const dispatch = useDispatch<AppDispatch>();
+  const cart = useSelector((state:RootStore) => state.cart);
+  const [dishItem, setDishItem] = useState<ICart>({
+    dish:dish,
+    side: "",
+    changes: [],
+    quantity:1
   });
-
-  const handleChange = (event: any) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    console.log(name);
-
-    // setCart([...cart, cart[name] = value])
-  };
+  console.log(cart);
+  const handleChange = (event:ChangeEvent<HTMLInputElement>) => {
+    if(!dishItem.changes.includes(event.target.value)){
+      console.log('add changes');
+      setDishItem({
+        ...dishItem,
+        changes: [...dishItem.changes, event.target.value]
+      });
+    } else{
+      setDishItem({
+        ...dishItem,
+        changes: dishItem.changes.filter(item => item !== event.target.value)
+      });
+    }
+  }
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    dispatch(addItem(dishItem));
+    dishToggle();
+  }
   return (
     <div className="dish-modal-container">
       <div className="dish-modal">
@@ -51,7 +66,7 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
                 <div></div>
               </div>
             </div>
-            <div className="dish-chooose">
+              <form  className="dish-chooose" onSubmit={handleSubmit}>
               <div className="dish-item-choose">
                 <div className="dish-title-choose">
                   <span>Choose a side</span>
@@ -60,11 +75,12 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
                   <div className="dish-input-side">
                     <input
                       type="checkbox"
-                      value="bread"
-                      checked={chooseSide === "bread"}
+                      value="White bread"
+                      name="side"
+                      checked={dishItem.side === "White bread"}
                       onChange={(e) =>
-                        setChooseSide(() =>
-                          chooseSide === "bread" ? "" : "bread"
+                        setDishItem(
+                          {...dishItem,side:dishItem.side === "White bread" ? "" : "White bread"}
                         )
                       }
                     ></input>
@@ -73,11 +89,12 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
                   <div className="dish-input-side">
                     <input
                       type="checkbox"
-                      value="rice"
-                      checked={chooseSide === "rice"}
+                      value="Sticky rice"
+                      name="side"
+                      checked={dishItem.side === "Sticky rice"}
                       onChange={(e) =>
-                        setChooseSide(() =>
-                          chooseSide === "rice" ? "" : "rice"
+                        setDishItem(
+                          {...dishItem,side:dishItem.side === "Sticky rice" ? "" : "Sticky rice"}
                         )
                       }
                     ></input>
@@ -93,6 +110,7 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
                   <div className="dish-input">
                     <input
                       type="checkbox"
+                      value="Whithout peanuts"
                       name="withoutPeanuts"
                       onChange={(e) => handleChange(e)}
                     ></input>
@@ -102,6 +120,7 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
                     <input
                       type="checkbox"
                       name="lessSpicy"
+                      value="Sticky Less spicy"
                       onChange={(e) => handleChange(e)}
                     ></input>
                     <span>Sticky Less spicy</span>
@@ -114,20 +133,22 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
                 </div>
                 <div className="dish-quantity">
                   <button
+                  type="button"
                     className="minus"
                     onClick={() =>
-                      setDishQuontity((prevstate) =>
-                        prevstate > 1 ? prevstate - 1 : prevstate
+                      setDishItem(
+                        {...dishItem,quantity: (dishItem.quantity>0)? dishItem.quantity -1: dishItem.quantity}
                       )
                     }
                   >
                     -
                   </button>
-                  <span>{dishQuantity}</span>
+                  <span>{dishItem.quantity}</span>
                   <button
+                  type="button"
                     className="pluse"
                     onClick={() =>
-                      setDishQuontity((prevstate) => prevstate + 1)
+                      setDishItem({...dishItem,quantity: dishItem.quantity +1})
                     }
                   >
                     +
@@ -135,13 +156,14 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
                 </div>
               </div>
               <div className="dish-add">
-                <button>Add to bag</button>
+                <button type="submit">Add to bag</button>
               </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 

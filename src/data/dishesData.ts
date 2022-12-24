@@ -86,4 +86,5 @@ export  const dishesData: IDish[] = [
     price: 98,
     chef: "Aviv Moshe",
   },
+
 ];

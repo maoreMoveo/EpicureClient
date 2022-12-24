@@ -31,7 +31,9 @@ const ChefOfWeek = () => {
         </div>
       </div>
       <div className="chef-week">
-        <h2>Chef of the week:</h2>
+        <h2 className="chef-week-title">Chef of the week:</h2>
+        <h2 className="chef-week-title2">Yossi’s Restaurants</h2>
+
         <Carousel data={restaurants} Content={ChefRestaurantCard} />
       </div>
     </>

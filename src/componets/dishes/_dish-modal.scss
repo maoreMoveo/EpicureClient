@@ -228,11 +228,12 @@
   .dish-modal {
     position: relative;
     width: 573px;
-    height: auto;
+   height: fit-content;
+  //  height: 900px;
     top: none;
 
     background-color: transparent;
-    overflow-y: unset;
+    overflow-y: scroll;
   }
   .dish-menu-button {
     display: flex;
@@ -250,7 +251,8 @@
   }
   .dish-modal-content {
     align-items: center;
-    height: auto;
+    // height: 900px;
+    height: fit-content;
     top: 0;
     background-color: #ffffff;
     box-shadow: 2px 4px 10px rgb(175 175 175 / 25%);
@@ -263,22 +265,21 @@
     margin-left: 0px;
     align-items: center;
     padding: 0px;
-    gap: 10px;
     width: 232px;
-    height: 616px;
+    //height: 616px;
     //margin-top: 20px;
     .dish-info {
       margin-right: 0;
       margin-top: 10px;
       align-items: center;
       text-align: center;
-      gap: 10px;
+
       width: 232px;
       padding-bottom: 0px;
       h3 {
         font-weight: 400;
-        font-size: 24px;
-        line-height: 26px;
+        font-size: 28px;
+        line-height: 32px;
       }
       p {
         margin: 10px;
@@ -322,10 +323,10 @@
   }
   .dish-chooose {
     align-items: center;
-    gap: 15px;
   }
   .dish-item-choose {
     align-items: center;
+    padding-top: 0px;
   }
   .dish-inputs {
     display: flex;
@@ -335,5 +336,22 @@
   }
   .dish-add{
     margin-top: 0;
+    padding-bottom: 20px;
+  }
+}
+
+@include xxl{
+  .dish-modal{
+    //height: 900px;
+    overflow-y: unset;
+  }
+  .dish-modal-details{
+    .dish-info{
+      margin-top: 0px;
+      padding-top: 15px;
+    }
+  }
+  .dish-chooose{
+    padding-top: 20px;
   }
 }

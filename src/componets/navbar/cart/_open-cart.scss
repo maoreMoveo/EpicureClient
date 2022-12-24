@@ -1,0 +1,20 @@
+@import "../../../assets/styles/basics/variables";
+@import "../../../assets/styles/basics/base";
+@import "../../../assets/styles/basics/breakpoints";
+.open-cart {
+  position: fixed;
+  top: 45px;
+  background-color: #ffffff;
+  z-index: 3;
+  width: 100%;
+  
+}
+
+@include xl {
+  .open-cart {
+    right: 0;
+    position: absolute;
+    width: 500px;
+
+  }
+}

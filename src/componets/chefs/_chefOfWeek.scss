@@ -47,6 +47,9 @@
 }
 .chef-week {
   margin-top: 32px;
+  .chef-week-title2{
+    display: none;
+  }
 }
 
 @include xl {
@@ -90,5 +93,11 @@
     padding: 0px;
     gap: 40px;
     margin-top: 45px;
+    .chef-week-title{
+      display: none;
+  }
+  .chef-week-title2{
+    display: flex;
+  }
   }
 }
