@@ -14,10 +14,11 @@ import { ILink } from "../../interfaces/ILink";
 import OpenUser from "./OpenUser";
 
 const NavBar = () => {
-  const [openMenu, menuToggle] = useToggle();
-  const [openSearch, searchToggle] = useToggle();
-  const [openCart, cartToggle] = useToggle();
-  const [openUser, userToggle] = useToggle();
+  const [openMenu, menuToggle,resetMenuToogle] = useToggle();
+  const [openSearch, searchToggle,resetSearchToogle] = useToggle();
+  const [openCart, cartToggle,resetCartToogle] = useToggle();
+  const [openUser, userToggle,resetUserToogle] = useToggle();
+  const [lastModalOpen, setLastModalOpen] = useState<string>("");
   const location = useLocation();
   const [navLinks, setNavLinks] = useState<ILink[]>([
     { path: "restaurant", isActive: false, value: "Restaurant" },
@@ -36,6 +37,20 @@ const NavBar = () => {
     setNavLinks(prevNavLink);
   }, [location.pathname]);
 
+  const resetToggle=(type:string,func:Function)=>{
+    resetMenuToogle();
+    resetCartToogle();
+    resetSearchToogle();
+    resetUserToogle();
+    setLastModalOpen(type);
+    func();
+    if(lastModalOpen===type){
+      setLastModalOpen("")
+      func();
+
+    }
+  }
+
   return (
     <>
       <nav className="navbar">
@@ -43,7 +58,7 @@ const NavBar = () => {
           <img
             src={menuButton}
             alt="hh3mborger-icon"
-            onClick={() => menuToggle()}
+            onClick={() => resetToggle("menu",menuToggle)}
           ></img>
         </div>
         <div className="logo">
@@ -70,25 +85,25 @@ const NavBar = () => {
           <img
             src={searchIcon}
             alt="search-icon"
-            onClick={() => searchToggle()}
+            onClick={() => resetToggle("search",searchToggle)}
           ></img>
           <img
             src={userIcon}
             alt="user-icon"
-            onClick={() => userToggle()}
+            onClick={() => resetToggle("user",userToggle)}
           ></img>
           <img
             src={cartIcon}
             alt="cart-icon"
-            onClick={() => cartToggle()}
+            onClick={() => resetToggle("cart",cartToggle)}
           ></img>
         </div>
       </nav>
 
       {openMenu && <OpenMenu menuToggle={menuToggle} />}
-      {openSearch && <OpenSearch searchToggle={searchToggle} />}
+      {openSearch && <OpenSearch  resetToggles={resetToggle} searchToggle={searchToggle} />}
       {openCart && <OpenCart cartToggle={cartToggle} />}
-      {openUser && <OpenUser userToggle={userToggle}/>}
+      {openUser && <OpenUser resetToggles={resetToggle} userToggle={userToggle}/>}
     </>
   );
 };

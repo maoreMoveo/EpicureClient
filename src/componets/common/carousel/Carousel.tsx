@@ -1,7 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import IDish from "../../../interfaces/Dishes";
-import IRestaurant from "../../../interfaces/Restaurant";
+
 import "./_carausel.scss";
 interface IProps {
   data: any;

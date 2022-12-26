@@ -3,12 +3,13 @@ import x from "../../assets/images/x.svg";
 import "./_open-user.scss";
 interface IProps {
   userToggle: () => void;
+  resetToggles: (type:string,func:Function)=>void;
 }
-const OpenUser = ({ userToggle }: IProps) => {
+const OpenUser = ({ userToggle,resetToggles }: IProps) => {
   return (
-    <div className="open-user">
+    <div className="open-user" >
       <div className="user-button">
-        <img src={x} alt="hamborger-icon" onClick={() => userToggle()}></img>
+        <img src={x} alt="hamborger-icon" onClick={() => resetToggles("user",userToggle)}></img>
       </div>
       <div className="user-content">
         <div className="user-info">

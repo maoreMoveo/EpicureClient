@@ -7,7 +7,7 @@
     }, []);
     const resetToggleToFalse = useCallback((): void =>{
         console.log('toggle to false') 
-        setState(state => false)
+        setState(false)
     }, []);
     return [state, toggle,resetToggleToFalse]
 }
