@@ -23,8 +23,6 @@ const Chefs = () => {
     { path: "Most Views", isActive: false,value:"All" },
   ]);
   useEffect(() => {
-    console.log('counttt')
-    console.log(Math.trunc(chefsCount / 6))
     setPageCount(Math.trunc(chefsCount / 6)+1); 
   }, [chefsCount]);
 
@@ -61,11 +59,10 @@ const Chefs = () => {
     setLoading(true);
     setPageOffset(0);
   };
-  if(!chefs && !loading) return <Loading/>
+  if(loading) return <Loading/>
   return (
     <div className="chefs-container">
       <h2>chefs</h2>
-      {/* add sort item */}
       <div className="chefs-sort">
         <ul>
           {sortPaths.map((path, index) => (

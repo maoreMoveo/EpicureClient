@@ -12,8 +12,6 @@ const dishesSlice = createSlice({
   reducers: {} ,
   extraReducers: (builder) => {
     builder.addCase(getDishesHomePage.fulfilled, (state, action) => {
-      console.log('dish')
-      console.log(action.payload)
       state.dishes= action.payload.dishes;
     });
   },

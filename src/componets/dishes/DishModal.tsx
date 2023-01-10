@@ -52,13 +52,13 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
           ></img>
         </div>
         <div className="dish-modal-content">
-          <img src={require(`../../${dish.image}`)} alt={dish.name}></img>
+          <img src={`${dish.image}`} alt={dish.name}></img>
           <div className="dish-modal-details">
             <div className="dish-info">
               <h3>{dish.name}</h3>
               <p>{dish.ingredients}</p>
               <div className="dish-modal-icon">
-                <img src={require(`../../${dish.icon}`)} alt={dish.name}></img>
+                <img src={`${dish.icon}`} alt={dish.name}></img>
               </div>
               <div className="dish-modal-price">
                 <div className="price-line"></div>

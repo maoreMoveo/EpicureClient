@@ -19,13 +19,10 @@ const restaurantSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getRestaurantsPerPageWithFilter.fulfilled, (state, action) => {
-      console.log(action.payload);
       state.restaurantCount=action.payload.restaurantCount
       state.restaurants = action.payload.restaurants;
     });
     builder.addCase(getPopularRestaurant.fulfilled, (state, action) => {
-      console.log('slice')
-      console.log(action.payload.restaurants);
       state.popularRestaurant = action.payload.restaurants;
       ;
     });

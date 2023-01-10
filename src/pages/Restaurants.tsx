@@ -67,7 +67,7 @@ const Restaurants = () => {
     setPageOffset(0);
   };
 
-  if (!restaurants && !loading) return <Loading />;
+  if (loading) return <Loading />;
   return (
     <div className="restaurant-container">
       <h2 className="restaurant-title">Restaurants</h2>

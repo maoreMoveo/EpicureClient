@@ -21,10 +21,26 @@ const getPopularRestaraunt = async() => {
   }
  
 };
+const getRestarauntById = async( id:string) => {
+  try{
+  const res=  await axios.get('http://localhost:3003/restaurant/getRestaurantById',{
+    params:{
+      id:id
+    }
+  });
+  console.log('gett by id')
+  console.log(res)
+  return res.data;
+  }catch(err){
+    console.log(err)
+  }
+ 
+};
 
 const restaurantService = {
   getAllRestaraunt,
   getPopularRestaraunt,
+  getRestarauntById
 };
 
 export default restaurantService;

@@ -18,14 +18,10 @@ const chefSlice = createSlice({
   reducers: {} ,
   extraReducers: (builder) => {
     builder.addCase(getChefsWithPagination.fulfilled, (state, action) => {
-      console.log('chefs slice pagination')
-      console.log(action.payload)
       state.chefsCount=action.payload.chefsCount;
       state.chefs= action.payload.chefs;
     });
     builder.addCase(getChefOFWeek.fulfilled, (state, action) => {
-      console.log('chef slice')
-      console.log(action.payload)
       state.chefOfWeek= action.payload;
     });
   },
