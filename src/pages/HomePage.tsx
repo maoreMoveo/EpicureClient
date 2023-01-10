@@ -13,18 +13,20 @@ import RestaurantCard from "../componets/Restaurants/RestaurantCard";
 import DishCard from "../componets/dishes/DishCard";
 
 const HomePage = () => {
-  const restaurants = useSelector(
-    (state: RootStore) => state.restaurants.restaurants
+  const popularRestaurant = useSelector(
+    (state: RootStore) => state.restaurants.popularRestaurant
   );
   const dishes = useSelector((state: RootStore) => state.dishes.dishes);
+  const chefOfWeek= useSelector((state:RootStore)=> state.chefs.chefOfWeek)
+
   // ask  amir why not &&
-  if (!restaurants || !dishes) return <Loading />;
+  if (!popularRestaurant || !dishes ||!chefOfWeek) return <Loading />;
   return (
     <div>
       <HeroMain />
         <div className="container">
           <h2>popular restaurant in epicure:</h2>
-          <Carausel data={restaurants} Content={RestaurantCard} />
+          <Carausel data={popularRestaurant} Content={RestaurantCard} />
           <div className="restaurant-link ">
             <HomePageLink path="restaurant" />
           </div>

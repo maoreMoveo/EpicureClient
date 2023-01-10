@@ -1,9 +1,10 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import dishService from '../../services/dishService';
-export const getAllDishes = createAsyncThunk(
+export const getDishesHomePage = createAsyncThunk(
     "dishes/getAllDishes",
     async () => {
-      const res = await dishService.getAll();
+      const res = await dishService.getDishesHomePage();
       return res;
     }
+  
   );

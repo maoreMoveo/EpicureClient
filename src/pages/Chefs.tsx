@@ -8,9 +8,9 @@ import Loading from "../componets/common/loading/Loading";
 const Chefs = () => {
   const chefs= useSelector((state:RootStore) => state.chefs.chefs);
   const sortPath: ISortPath[] = [
-    { path: "All", isActive: true },
-    { path: "New", isActive: false },
-    { path: "Most Views", isActive: false },
+    { path: "All", isActive: true ,value:""},
+    { path: "New", isActive: false,value:"" },
+    { path: "Most Views", isActive: false,value:"" },
   ];
   const dispatch=useDispatch<AppDispatch>();
 

@@ -8,7 +8,7 @@ const ChefRestaurantCard = ({item}:IPropsChef) => {
   return (
     <div className="card-chef-res">
       <img
-        src={require(`../../${item.thumb}`)}
+        src={`${item.thumb}`}
         alt={item.name}
       ></img>
       <div className='chef-card-content'>

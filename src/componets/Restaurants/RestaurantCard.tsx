@@ -12,10 +12,10 @@ const RestaurantCard = ({ item }: IProps) => {
   return (
     <Link className="card-navigate" to={`/restaurant/${item._id}`}>
       <div className="card-restaurant">
-        <img src={require(`../../${item.thumb}`)} alt={item.name}></img>
+        <img src={`${item.thumb}`} alt={item.name}></img>
         <div className="card-content">
           <h3>{item.name}</h3>
-          <h2>{item.chef}</h2>
+          <h2>{item.chef[0].name}</h2>
           <div className="card-stars">
             {[...Array(item.stars)].map((_, i) => (
               <img src={star} alt="" key={i} />

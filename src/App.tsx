@@ -3,15 +3,19 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./routes";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "./store/store";
-import { getAllRestaurants } from "./store/restaurant/restaurantAction";
-import { getAllDishes } from "./store/dishes/dishesAction";
+import {getPopularRestaurant } from "./store/restaurant/restaurantAction";
+import { getDishesHomePage } from "./store/dishes/dishesAction";
+import { getChefOFWeek } from "./store/chef/chefAction";
 
 const App = () => {
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
-    dispatch(getAllRestaurants());
-    dispatch(getAllDishes());
+   
+    //get chefOfWeek
+    dispatch(getPopularRestaurant());
+    dispatch(getDishesHomePage());
+    dispatch(getChefOFWeek());
   }, [dispatch]);
 
   return (

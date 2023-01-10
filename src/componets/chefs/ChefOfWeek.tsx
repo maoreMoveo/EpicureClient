@@ -6,27 +6,23 @@ import { RootStore } from "../../store/store";
 import ChefRestaurantCard from "./ChefRestaurantCard";
 
 const ChefOfWeek = () => {
-  const restaurants = useSelector(
-    (state: RootStore) => state.restaurants.restaurants
+  const chefOfWeek = useSelector(
+    (state: RootStore) => state.chefs.chefOfWeek
   );
-
+console.log(chefOfWeek);
   return (
     <>
-      <div className="chef-about-content">
+       <div className="chef-about-content">
         <div className="chef-week-img">
           <img
-            src={require("../../assets/images/yossi-shitrit-image.png")}
+            src={`${chefOfWeek.chef.image}`}
             alt="yossi shitrit"
           ></img>
-          <div>Yossi Shitrit</div>
+          <div>{chefOfWeek.chef.name}</div>
         </div>
         <div className="chef-about">
           <p>
-            Chef Yossi Shitrit has been living and breathing his culinary dreams
-            for more than two decades, including running the kitchen in his
-            first restaurant, the fondly-remembered Violet, located in Moshav
-            Udim. Shitrit's creativity and culinary acumen born of long
-            experience are expressed in the every detail of each and every dish.
+           {chefOfWeek.chef.description}
           </p>
         </div>
       </div>
@@ -34,8 +30,8 @@ const ChefOfWeek = () => {
         <h2 className="chef-week-title">Chef of the week:</h2>
         <h2 className="chef-week-title2">Yossi’s Restaurants</h2>
 
-        <Carousel data={restaurants} Content={ChefRestaurantCard} />
-      </div>
+        <Carousel data={chefOfWeek.restaurantChef} Content={ChefRestaurantCard} />
+      </div> 
     </>
   );
 };

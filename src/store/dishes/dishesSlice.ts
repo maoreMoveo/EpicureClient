@@ -1,6 +1,6 @@
 import { createSlice} from "@reduxjs/toolkit";
 import IDish from '../../interfaces/Dishes';
-import { getAllDishes } from "./dishesAction";
+import { getDishesHomePage } from "./dishesAction";
 interface DishesState {
   dishes: IDish[] | null;
 }
@@ -11,8 +11,10 @@ const dishesSlice = createSlice({
   initialState,
   reducers: {} ,
   extraReducers: (builder) => {
-    builder.addCase(getAllDishes.fulfilled, (state, action) => {
-      state.dishes= action.payload;
+    builder.addCase(getDishesHomePage.fulfilled, (state, action) => {
+      console.log('dish')
+      console.log(action.payload)
+      state.dishes= action.payload.dishes;
     });
   },
 });
