@@ -1,7 +1,7 @@
 
 import axios from "axios";
-const getAllChefs = async() => {
-  const res=  await axios.get('http://localhost:3003/chef/getChefs');
+const getChefsWithPagination = async(typeFilter:string,page:number,perPage:number) => {
+  const res=  await axios.get(`http://localhost:3003/chef/getChefsWithPagination?page=${page}&perPage=${perPage}&typeFilter=${typeFilter}`);
   console.log(res)
   return res.data;
 };
@@ -17,7 +17,7 @@ const getChefOfWeek= async() => {
 
 
 const dishService = {
-  getAllChefs,
+  getChefsWithPagination,
   getChefOfWeek
 };
 

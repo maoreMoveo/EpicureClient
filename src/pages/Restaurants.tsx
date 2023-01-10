@@ -9,7 +9,6 @@ import { useDispatch } from "react-redux";
 import { getRestaurantsPerPageWithFilter } from "../store/restaurant/restaurantAction";
 import ReactPaginate from "react-paginate";
 
-// finish filteradd function and dispatch
 const Restaurants = () => {
   const { restaurants, restaurantCount } = useSelector(
     (state: RootStore) => state.restaurants

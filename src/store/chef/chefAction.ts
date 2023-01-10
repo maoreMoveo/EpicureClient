@@ -1,10 +1,10 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import chefService from "../../services/chefService";
 
-export const getAllChefs = createAsyncThunk(
-    "chef/getAllChefs",
-    async () => {
-      const res = await chefService.getAllChefs();
+export const getChefsWithPagination = createAsyncThunk(
+    "chef/getChefsWithPagination",
+    async ({typeFilter,page,perPage}:{typeFilter:string,page:number,perPage:number}) => {
+      const res = await chefService.getChefsWithPagination(typeFilter,page,perPage);
       return res;
     }
   );
