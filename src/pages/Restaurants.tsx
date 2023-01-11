@@ -61,13 +61,13 @@ const Restaurants = () => {
       (li) => li.path === sortItem.path
     );
     tempSortPath[pathIndex].isActive = true;
+    setLoading(true);
     setSortPath(sortItem);
     setSortPaths([...tempSortPath])
-    setLoading(true);
     setPageOffset(0);
   };
 
-  if (loading) return <Loading />;
+  if (loading || !restaurants) return <Loading />;
   return (
     <div className="restaurant-container">
       <h2 className="restaurant-title">Restaurants</h2>

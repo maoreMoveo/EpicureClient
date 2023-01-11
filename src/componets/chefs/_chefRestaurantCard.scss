@@ -1,7 +1,9 @@
 @import "../../assets/styles/basics/variables";
 @import "../../assets/styles/basics/base";
 @import "../../assets/styles/basics/breakpoints";
-
+.card-chef-navigate {
+  width: 250px;
+}
 .card-chef-res {
   background-color: $SeconderyBeige;
   width: 250px;

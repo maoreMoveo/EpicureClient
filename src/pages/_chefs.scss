@@ -10,6 +10,7 @@
   height: 100%;
   width: 100%;
   display: flex;
+  min-height: 500px;
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
@@ -131,5 +132,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    min-height: 510px;
   }
 }
