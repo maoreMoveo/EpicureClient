@@ -1,80 +1,102 @@
 import React, { useEffect, useState } from "react";
 import "./_restaurant-page.scss";
 import { useSelector } from "react-redux";
-import { RootStore } from "../store/store";
-import { useNavigate, useParams } from "react-router";
+import { AppDispatch, RootStore } from "../store/store";
+import { useParams } from "react-router";
 import clockIcon from "../assets/images/clock-icon.svg";
 import IRestaurant from "../interfaces/Restaurant";
-import IDish from "../interfaces/Dishes";
-import { ISortPath } from "../interfaces/sortPath";
+import { ISortPathChef } from "../interfaces/sortPath";
 import DishCard from "../componets/dishes/DishCard";
 import Loading from "../componets/common/loading/Loading";
 import restaurantService from "../services/restaurantService";
-import dishService from "../services/dishService";
-import ReactPaginate from "react-paginate";
+import Pagination from "../componets/common/pagination/Pagination";
+import { useDispatch } from "react-redux";
+import { getRestaurantDishes } from "../store/restaurant/restaurantAction";
+import LoadingContent from "../componets/common/loading/LoadingContent";
+import moment from "moment";
+import { MealOption } from "../interfaces/Dishes";
+
+const perPage = 4;
 
 const RestaurantPage = () => {
   const { restaurantId } = useParams();
-  const navigate = useNavigate();
-  const restaurants = useSelector(
-    (state: RootStore) => state.restaurants.restaurants
+  const dispatch = useDispatch<AppDispatch>();
+  const { restaurants, restaurantPage, loading } = useSelector(
+    (state: RootStore) => state.restaurants
   );
+  const [loadingPage, setLoadingPage] = useState<boolean>(true);
   const [restaurant, setRestaurant] = useState<IRestaurant | null>(null);
-  const [restaurantDishes, setRestaurantDishes] = useState<IDish[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
   const [pageOffset, setPageOffset] = useState<number>(0);
-  const [pageCount, setPageCount] = useState<number>(1);
-  const sortPath: ISortPath[] = [
-    { path: "Breakfast", isActive: true, value: "" },
-    { path: "Lanch", isActive: false, value: "" },
-    { path: "Dinner", isActive: false, value: "" },
-  ];
+  const [sortPath, setSortPath] = useState<ISortPathChef>({
+    path: "Breakfast",
+    isActive: true,
+    value: MealOption.Breakfast,
+  });
+  const [sortPaths, setSortPaths] = useState<ISortPathChef[]>([
+    { path: "Breakfast", isActive: true, value: MealOption.Breakfast },
+    { path: "Lunch", isActive: false, value: MealOption.Lunch },
+    { path: "Dinner", isActive: false, value: MealOption.Dinner },
+  ]);
 
   useEffect(() => {
-    let rest:IRestaurant | undefined=undefined;
-    if(!restaurant){
-      if (restaurants) {
-        rest = restaurants.find((rest) => rest._id === restaurantId);
-       if (rest) {
-         setRestaurant(rest);
-       }
-     } 
-     else {
-       try {
-         if (restaurantId) {
-         (async () => {
-               const res = await restaurantService.getRestarauntById(
-               restaurantId
-             );
-             if (res) {
-               rest = res.restaurant[0];
-               setRestaurant(res.restaurant[0]); 
-             }
-           })();
-         }
-       } catch (err) {
-         console.log(err);
-       }
-     }
+    if (restaurantId) {
+      fetchRestaurant(restaurantId);
     }
-    // if (!rest) navigate("/");
-    if(restaurantId){
-      (async () => {
-        const restDishes= await dishService.getRestaurantDishes(restaurantId,pageOffset+1,4);
-        if(restDishes)
-        setRestaurantDishes([...restDishes.restaurantDishes])
-        setPageCount(Math.trunc(restDishes.restDishesCount / 4))
-        setLoading(false);
-      })()
-        
-    }
-  }, [restaurants, restaurantId, navigate,pageOffset]);
+  }, [restaurantId,pageOffset,sortPath]);
 
-  const handlePageChange = (event: any) => {
-    setLoading(true);
+  const fetchRestaurant = async (restaurantId: string) => {
+    if (restaurants) {
+      const rest = restaurants.find((item) => item._id === restaurantId);
+      if (rest) {
+        await dispatch(
+          getRestaurantDishes({
+            id: restaurantId,
+            page: pageOffset + 1,
+            perPage: perPage,
+            filterByMeal: sortPath.value,
+          })
+        );
+        setRestaurant(rest);
+        setLoadingPage(false);
+      }
+    } else {
+      const restFromDb: any = await restaurantService.getRestarauntById(
+        restaurantId
+      );
+      if (restFromDb) {
+        await dispatch(
+          getRestaurantDishes({
+            id: restaurantId,
+            page: pageOffset + 1,
+            perPage: perPage,
+            filterByMeal: sortPath.value,
+          })
+        );
+        setRestaurant(restFromDb.restaurant[0]);
+        setLoadingPage(false);
+      }
+    }
+  };
+  const handleFilterChange = async (sortItem: ISortPathChef) => {
+    let tempSortPath = [...sortPaths];
+    tempSortPath.map((path) => (path.isActive = false));
+    const pathIndex = tempSortPath.findIndex((li) => li.path === sortItem.path);
+    tempSortPath[pathIndex].isActive = true;
+    setSortPath(sortItem);
+    setSortPaths([...tempSortPath]);
+    setPageOffset(0);
+  };
+
+  const isOpen = (open: string, close: string): boolean => {
+    const currentTime = moment();
+    const openTime = moment(open, "HH:mm");
+    const closeTime = moment(close, "HH:mm");
+    return currentTime.isBetween(openTime, closeTime);
+  };
+  const handlePageChange = async (event: any) => {
     setPageOffset(event.selected);
   };
-  if (loading) return <Loading />;
+  if (loadingPage) return <Loading />;
   return (
     <>
       {restaurant && (
@@ -87,48 +109,47 @@ const RestaurantPage = () => {
           <div className="restaurant-page-details">
             <h3>{restaurant.name}</h3>
             <h2>{restaurant.chef[0].name}</h2>
-            <div className="time-content">
-              <img src={clockIcon} alt="clock-icon"></img>
-              <span>Open now</span>
-            </div>
+            {isOpen(restaurant.open, restaurant.close) ? (
+              <div className="time-content">
+                <img src={clockIcon} alt="clock-icon"></img>
+                <span>Open now</span>
+              </div>
+            ) : (
+              <></>
+            )}
           </div>
           <div className="restuarant-page-sort">
-            <ul>
-              {sortPath.map((path, index) => (
-                <li key={index} className={path.isActive ? "active" : ""}>
+            <ul className="restaurant-page-sort-list">
+              {sortPaths.map((path, index) => (
+                <li
+                  key={index}
+                  onClick={() => handleFilterChange(path)}
+                  className={path.isActive ? "active" : ""}
+                >
                   {path.path}
                 </li>
               ))}
             </ul>
           </div>
           <div className="restaurant-page-dish">
-            {restaurantDishes &&
-              restaurantDishes.map((dish) => (
+            {loading ? (
+              <LoadingContent />
+            ) : (
+              restaurantPage.restaurantDishes &&
+              restaurantPage.restaurantDishes.map((dish) => (
                 <DishCard key={dish._id} item={dish} isOpenModal={true} />
-              ))}
+              ))
+            )}
           </div>
-          <div className="pagination">
-        <ReactPaginate
-          previousLabel="Previous"
-          nextLabel="Next"
-          pageClassName="page-item"
-          pageLinkClassName="page-link"
-          previousClassName="page-item"
-          previousLinkClassName="page-link"
-          nextClassName="page-item"
-          nextLinkClassName="page-link"
-          breakLabel="..."
-          breakClassName="page-item"
-          breakLinkClassName="page-link"
-          pageCount={pageCount}
-          marginPagesDisplayed={2}
-          pageRangeDisplayed={5}
-          onPageChange={(e: any) => handlePageChange(e)}
-          containerClassName="pagination"
-          activeClassName="link-active"
-          forcePage={pageOffset}
-        />
-      </div>
+          {restaurantPage.restaurantDishesCount > 0 && (
+            <Pagination
+              pageCount={Math.floor(
+                restaurantPage.restaurantDishesCount / perPage
+              )}
+              pageOffset={pageOffset}
+              handlePageChange={handlePageChange}
+            />
+          )}
         </div>
       )}
     </>

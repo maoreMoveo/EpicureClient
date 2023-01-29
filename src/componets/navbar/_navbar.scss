@@ -1,16 +1,27 @@
 @import "../../assets/styles/basics/variables";
 @import "../../assets/styles/basics/breakpoints";
-@import '../../assets/styles/basics/base';
+@import "../../assets/styles/basics/base";
 .navbar {
   height: 45px;
   max-width: 414px;
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   top: 0px;
   z-index: 2;
   position: fixed;
   background-color: #ffffff;
+}
+.navbar-content{
+  height: 45px;
+  max-width: 414px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  z-index: 2;
 }
 .menu_button {
   width: 70px;
@@ -52,15 +63,17 @@
     width: 20px;
   }
 }
-@include md{
-  .navbar{
+@include md {
+  .navbar {
     max-width: 100%;
   }
 }
 
-
 @include xl {
-  .navbar{
+  .navbar {
+    max-width: 1440px;
+  }
+  .navbar-content{
     max-width: 1186px;
   }
   .menu_button {
@@ -71,7 +84,7 @@
     //left: 127px;
     .navbar-links {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       margin-left: 20px;
       height: 100%;
       gap: 32px;
@@ -85,6 +98,10 @@
         color: $PrimaryColorBlack;
       }
       .navbar-link {
+        height: 30px;
+        text-align: center;
+        display: flex;
+        align-items: center;
         font-family: $BaseFont;
         font-style: normal;
         font-weight: 200;
@@ -99,7 +116,7 @@
       }
     }
   }
-  .buttons_group{
+  .buttons_group {
     right: 0px;
   }
 }

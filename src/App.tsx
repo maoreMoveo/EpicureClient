@@ -11,8 +11,6 @@ const App = () => {
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
-   
-    //get chefOfWeek
     dispatch(getPopularRestaurant());
     dispatch(getDishesHomePage());
     dispatch(getChefOFWeek());

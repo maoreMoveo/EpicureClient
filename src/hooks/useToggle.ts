@@ -2,7 +2,6 @@
  export const useToggle = (initialState: boolean = false): [boolean, any,any] => {
     const [state, setState] = useState<boolean>(initialState);
     const toggle = useCallback((): void =>{
-        console.log('toggle') 
         setState(state => !state)
     }, []);
     const resetToggleToFalse = useCallback((): void =>{

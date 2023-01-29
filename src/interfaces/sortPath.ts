@@ -3,3 +3,9 @@ export  type ISortPath={
     isActive:boolean,
     value:string
   }
+
+  export  type ISortPathChef={
+    path:string,
+    isActive:boolean,
+    value:number
+  }

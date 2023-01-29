@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./_dishCard.scss";
 import { useToggle } from "../../hooks/useToggle";
+import shekelImg from '../../assets/images/shekel.svg';
 import IDish from "../../interfaces/Dishes";
 import DishModal from "./DishModal";
 interface IProps {
@@ -9,6 +10,14 @@ interface IProps {
 }
 const DishCard = ({ item,isOpenModal }: IProps) => {
   const [openDishModal, dishToggle] = useToggle();
+  useEffect(() => {
+    if (openDishModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [openDishModal])
+  
   console.log(openDishModal);
   return (
     <>
@@ -26,9 +35,9 @@ const DishCard = ({ item,isOpenModal }: IProps) => {
           </div>
           <div className="dish-price">
             <div className="price-line"></div>
-            <label>₪</label>
-            <span>{item.price}</span>
-            <div></div>
+            <div className="dish-price-img"><img src={shekelImg} alt="shekel"></img></div>
+            <div className="dish-price-number">{item.price}</div>
+            <div className="price-line-seconde"></div>
           </div>
         </div>
       </div>

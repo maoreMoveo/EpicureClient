@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  h2{
+  h2 {
     font-size: 18px;
   }
 }
@@ -18,90 +18,34 @@
   display: none;
 }
 .restaurant-content {
-  // height: 100%;
   min-height: 500px;
   width: 100%;
   display: flex;
-  // justify-content: center;
-  align-items: center;
+  // align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
   .card-navigate {
     width: 100%;
   }
-  .card-restaurant{
+  .card-restaurant {
     width: 100%;
     height: 288px;
-    img{
+    img {
       height: 207px;
     }
   }
 }
 .restuarant-sort {
-  margin-top: 24px;
+  padding-top: 24px;
   margin-bottom: 37px;
-  ul {
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: space-between;
-    padding-inline-start: 0px;
-    gap: 20px;
-    li {
-      font-family: $BaseFont;
-      font-style: normal;
-      font-weight: 200;
-      font-size: 18px;
-      line-height: 22px;
-      letter-spacing: 1.92px;
-      color: $PrimaryColorBlack;
-      cursor: pointer;
-    }
-    .active {
-      border-bottom: 1.8px solid rgba(222, 146, 0, 0.9);
-      font-weight: 400;
-    }
-  }
-}
-.pagination{
-  // position: absolute;
-  // bottom: 20px;
-  display: flex;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-    height: 40px;
-     padding-top: 30px;
-    padding-bottom: 40px;
-    gap: 20px;
-    ul{
-      padding-left: 0px;
-    }
-    .page-item,.page-link{
-      height: 30px;
-      width: 60px;
-      font-size: 14px;
-      font-weight: 600;
-      list-style-type: none;
-    color: #979797;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-   .link-active{
-    color: black;
-   }
 }
 
 @include xl {
   .restaurant-container {
     position: relative;
     margin: 0;
-   //margin-bottom: 40px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -141,43 +85,53 @@
         color: #000000;
       }
       img {
-        // transform: rotate(90deg);
         width: 10px;
         height: 24px;
       }
     }
   }
+  .restaurant-content-loading {
+    display: flex;
+    //min-height: calc(100vh - 382px);
+     min-height: 843px;
+     max-height: 843px;
+    align-items: center;
+    justify-content: center;
+  }
   .restaurant-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     gap: 24px;
     width: 1185px;
-    align-items: center;
     margin: 0 auto;
-    min-height: 510px;
+    min-height: 843px;
+    max-height: 843px;
+   // min-height: calc(100vh - 382px);
     .card-navigate {
       height: 405px;
-    width: 379px;
+      width: 379px;
     }
-    .card-restaurant{
+   
+    .card-restaurant {
       width: 100%;
       height: 405px;
       max-height: 405px;
-      img{
+      img {
         height: 236px;
       }
     }
   }
 
   .restuarant-sort {
-     margin-top: 93px;
+    margin-top: 50px;
     width: 1185px;
-    ul {
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      padding: 0px;
-      gap: 40px;
-    }
+    // ul {
+    //   flex-direction: row;
+    //   align-items: center;
+    //   justify-content: center;
+    //   padding: 0px;
+    //   gap: 40px;
+    // }
   }
 }

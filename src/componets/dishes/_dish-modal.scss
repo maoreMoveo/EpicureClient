@@ -14,9 +14,10 @@
   background-color: #ffffff;
   z-index: 3;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 .dish-menu-button {
-  height: 30px;
+  height: 45px;
   display: flex;
   align-items: center;
   top: 0;
@@ -24,7 +25,7 @@
   background: white;
   width: 100%;
   margin-left: 20px;
-
+  padding-bottom: 10px;
   .dish-menu-button-img {
     img {
       cursor: pointer;
@@ -42,10 +43,15 @@
   left: -1px;
   background: #ffffff;
   transition: 1s opacity ease-in-out;
+  // overflow-y: scroll;
   img {
-    height: 280px;
+    height: 271px;
     width: 100%;
     object-fit: cover;
+    -webkit-transform: scale(1.1); /* Safari and Chrome */
+    -moz-transform: scale(1.1); /* Firefox */
+    -ms-transform: scale(1.1); /* IE 9 */
+    -o-transform: scale(1.1);
   }
 }
 .dish-modal-details {
@@ -55,22 +61,24 @@
   flex-direction: column;
   justify-content: flex-start;
   padding-left: 20px;
+  padding-top: 32px;
   // gap: 35px;
-  
+
   .dish-info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    min-width: 318px;
+    min-height: 94px;
     padding: 0px;
     gap: 14px;
-    margin-right: 40px;
-    margin-top: 20px;
-    padding-bottom: 35px;
+    margin-bottom: 48px;
     h3 {
       @include cardTitle;
       margin: 0;
     }
     p {
+      width: 100%;
       margin: 0;
       padding: 0;
       font-family: $BaseFont;
@@ -80,10 +88,13 @@
       line-height: 18px;
       letter-spacing: 1.97px;
       color: $PrimaryColorBlack;
+      min-height: 54px;
+      overflow-y: scroll;
+      overflow-x: hidden;
     }
   }
 }
-.dish-modal-icon{
+.dish-modal-icon {
   display: none;
 }
 .dish-modal-price {
@@ -94,7 +105,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 8px 0px 0px;
-  gap: 18px;
+  gap: 48px;
   justify-content: space-around;
 }
 .dish-item-choose {
@@ -105,7 +116,7 @@
   //gap: 8px;
 }
 .dish-title-choose {
-  height: 20px;
+  height: 26px;
   border-bottom: 1.8px solid rgba(222, 146, 0, 0.9);
   span {
     font-family: $BaseFont;
@@ -161,7 +172,7 @@
   }
 }
 .dish-quantity {
-  margin-top: 20px;
+  margin-top: 35px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -170,6 +181,7 @@
   width: 113px;
   height: 20px;
   align-items: center;
+  padding-bottom: 42px;
   span {
     font-family: "Helvetica Neue";
     font-style: normal;
@@ -195,21 +207,22 @@
 
 .dish-add {
   margin-top: 20px;
+  padding-bottom: 42px;
   button {
     @include buttonPrimary;
   }
 }
-@include md{
-  .dish-modal{
+@include md {
+  .dish-modal {
     overflow-y: scroll;
   }
 }
 
-@include sm{
-  .dish-modal{
-    overflow-y: unset;
-  }
-}
+// @include sm {
+//   .dish-modal {
+//     overflow-y: unset;
+//   }
+// }
 
 @include xl {
   .dish-modal-container {
@@ -228,20 +241,22 @@
   .dish-modal {
     position: relative;
     width: 573px;
-   height: fit-content;
-  //  height: 900px;
+    //height: fit-content;
+    height: calc(100vh - 3.5%);
+    // height: 100%;
     top: none;
-
+    right: none;
+    left: none;
     background-color: transparent;
     overflow-y: scroll;
+    overflow-x: hidden;
   }
   .dish-menu-button {
     display: flex;
     align-items: center;
     margin-left: 0px;
     background-color: transparent;
-    height: auto;
-    padding-bottom: 5px;
+    
     img {
       cursor: pointer;
       content: url("../../assets/images/x-white.svg");
@@ -258,7 +273,7 @@
     box-shadow: 2px 4px 10px rgb(175 175 175 / 25%);
     img {
       width: 100%;
-      height: 200px;
+      height: 292px;
     }
   }
   .dish-modal-details {
@@ -270,7 +285,7 @@
     //margin-top: 20px;
     .dish-info {
       margin-right: 0;
-      margin-top: 10px;
+      padding-top: 40px;
       align-items: center;
       text-align: center;
 
@@ -278,21 +293,25 @@
       padding-bottom: 0px;
       h3 {
         font-weight: 400;
-        font-size: 28px;
+        font-size: 32px;
         line-height: 32px;
       }
       p {
-        margin: 10px;
         width: 100%;
         font-weight: 200;
         font-size: 14px;
         line-height: 18px;
       }
-      .dish-modal-icon{
+      .dish-modal-icon {
         display: flex;
-        img{
-          height: 20px;
-          width: 30px;
+        // width: 60px;
+        // height: 60px;
+        height: 33px;
+        width: 42px;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
         }
       }
       .dish-modal-price {
@@ -300,20 +319,33 @@
         justify-content: center;
         align-items: center;
         bottom: 20px;
-        gap: 5px;
         .price-line {
           display: flex;
           width: 82.5px;
           border: 0.5px solid $PrimaryColorGray;
         }
+        div {
+          width: 82.5px;
+          border: 0.5px solid $PrimaryColorGray;
+        }
+        .dish-price-img {
+          height: 15px;
+          width: 10px;
+          display: flex;
+          align-items: flex-end;
+          border: none;
+          margin-left: 12px;
+          margin-right: 3px;
+          img {
+            height: 10px;
+            width: 10px;
+          }
+        }
         span {
           font-weight: 400;
           font-size: 24px;
           line-height: 30px;
-        }
-        div {
-          width: 82.5px;
-          border: 0.5px solid $PrimaryColorGray;
+          margin-right: 12px;
         }
       }
     }
@@ -334,24 +366,20 @@
     flex-direction: column;
     width: 232px;
   }
-  .dish-add{
+  .dish-add {
     margin-top: 0;
     padding-bottom: 20px;
   }
 }
 
-@include xxl{
-  .dish-modal{
-    //height: 900px;
-    overflow-y: unset;
-  }
-  .dish-modal-details{
-    .dish-info{
-      margin-top: 0px;
-      padding-top: 15px;
-    }
-  }
-  .dish-chooose{
-    padding-top: 20px;
-  }
-}
+// @include xxl {
+//   .dish-modal-details {
+//     .dish-info {
+//       margin-top: 0px;
+//       padding-top: 15px;
+//     }
+//   }
+//   .dish-chooose {
+//     padding-top: 20px;
+//   }
+// }

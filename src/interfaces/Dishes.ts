@@ -1,3 +1,8 @@
+export enum MealOption {
+  Breakfast = 0,
+  Lunch = 1,
+  Dinner = 2
+}
 export default interface IDish {
   _id: string
   name: string;
@@ -6,4 +11,5 @@ export default interface IDish {
   image: string;
   icon: string;
   price: number;
+  meal:MealOption
   }

@@ -1,7 +1,9 @@
 @import "../assets/styles/basics/variables";
 @import "../assets/styles/basics/breakpoints";
 @import "../assets/styles/basics/base";
-
+.home-container{
+  width: 100%;
+}
 .container {
   width: 100%;
   margin-top: 48px;
@@ -13,7 +15,7 @@
 
 @include lg {
   .container {
-    max-width: fit-content;
+    max-width: 1188px;
     margin: 0 auto;
     margin-top: 80px;
     display: flex;

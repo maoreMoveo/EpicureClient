@@ -4,7 +4,7 @@ import { getDishesHomePage } from "./dishesAction";
 interface DishesState {
   dishes: IDish[] | null;
 }
-const initialState = { dishes: null } as DishesState;
+const initialState = { dishes: null} as DishesState;
 
 const dishesSlice = createSlice({
   name: "dishes",

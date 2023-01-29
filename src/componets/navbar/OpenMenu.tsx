@@ -10,7 +10,7 @@ interface IProps {
 const OpenMenu = ({ menuToggle }: IProps) => {
   const location = useLocation();
   const [navLinks, setNavLinks] = useState<ILink[]>([
-    { path: "restaurant", isActive: false, value: "Restaurant" },
+    { path: "restaurants", isActive: false, value: "Restaurants" },
     { path: "chefs", isActive: false, value: "Chefs" },
     { path: "123", isActive: false, value: "Contact Us" },
     { path: "1", isActive: false, value: "Terms of Use" },

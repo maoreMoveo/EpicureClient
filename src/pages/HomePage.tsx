@@ -17,35 +17,34 @@ const HomePage = () => {
     (state: RootStore) => state.restaurants.popularRestaurant
   );
   const dishes = useSelector((state: RootStore) => state.dishes.dishes);
-  const chefOfWeek= useSelector((state:RootStore)=> state.chefs.chefOfWeek)
+  const chefOfWeek = useSelector((state: RootStore) => state.chefs.chefOfWeek);
 
-  // ask  amir why not &&
-  if (!popularRestaurant || !dishes ||!chefOfWeek) return <Loading />;
+  if (!popularRestaurant || !dishes || !chefOfWeek) return <Loading />;
   return (
-    <div>
+    <div className="home-container">
       <HeroMain />
-        <div className="container">
-          <h2>popular restaurant in epicure:</h2>
-          <Carausel data={popularRestaurant} Content={RestaurantCard} />
-          <div className="restaurant-link ">
-            <HomePageLink path="restaurant" />
-          </div>
+      <div className="container">
+        <h2>popular restaurant in epicure:</h2>
+        <Carausel data={popularRestaurant} Content={RestaurantCard} />
+        <div className="restaurant-link ">
+          <HomePageLink path="restaurants" />
         </div>
-        <div className="container">
-          <h2>Signature Dish Of:</h2>
-          <Carausel data={dishes} Content={DishCard} />
-          <div className="dish-restaurant-link ">
-            <HomePageLink path="restaurant" />
-          </div>
+      </div>
+      <div className="container">
+        <h2>Signature Dish Of:</h2>
+        <Carausel data={dishes} Content={DishCard} />
+        <div className="dish-restaurant-link ">
+          <HomePageLink path="restaurants" />
         </div>
+      </div>
       <DishSignature />
-        <div className="container">
-          <h2>Chef of the week:</h2>
-          <ChefOfWeek />
-          <div className="chefOfWeek-link ">
-            <HomePageLink path="restaurant" />
-          </div>
+      <div className="container">
+        <h2>Chef of the week:</h2>
+        <ChefOfWeek />
+        <div className="chefOfWeek-link ">
+          <HomePageLink path="restaurants" />
         </div>
+      </div>
       <AboutUs />
     </div>
   );

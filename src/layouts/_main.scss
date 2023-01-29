@@ -2,14 +2,14 @@
 
 .main{
         overflow-x: hidden;
-        max-width: 1440px;
+        //max-width: 1440px;
         min-height: calc(100vh - 200px);
         width: 100%;
 }
 
  @include xl{
 .main{
-    max-width: 1440px;
+   // max-width: 2000px;
     min-height: calc(100vh - 80px);
     display: flex;
     justify-content: center;

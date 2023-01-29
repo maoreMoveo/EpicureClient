@@ -1,6 +1,8 @@
 import React, { ChangeEvent, useState } from "react";
+import ReactDOM from 'react-dom';
 import "./_dish-modal.scss";
 import x from "../../assets/images/x.svg";
+import shekelImg from '../../assets/images/shekel.svg';
 import IDish from "../../interfaces/Dishes";
 import ICart from '../../interfaces/cart';
 import { AppDispatch, RootStore } from "../../store/store";
@@ -20,8 +22,8 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
     changes: [],
     quantity:1
   });
-  console.log(cart);
   const handleChange = (event:ChangeEvent<HTMLInputElement>) => {
+  console.log(cart);
     if(!dishItem.changes.includes(event.target.value)){
       console.log('add changes');
       setDishItem({
@@ -40,7 +42,7 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
     dispatch(addItem(dishItem));
     dishToggle();
   }
-  return (
+  return ReactDOM.createPortal(
     <div className="dish-modal-container">
       <div className="dish-modal">
         <div className="dish-menu-button">
@@ -62,7 +64,9 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
               </div>
               <div className="dish-modal-price">
                 <div className="price-line"></div>
-                <span>₪&nbsp;{dish.price}</span>
+                <div className="dish-price-img"><img src={shekelImg} alt="shekel"></img></div>
+                
+                <span>{dish.price}</span>
                 <div></div>
               </div>
             </div>
@@ -134,10 +138,10 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
                 <div className="dish-quantity">
                   <button
                   type="button"
-                    className="minus"
+                    className={dishItem.quantity===1?"minus":'pluse'}
                     onClick={() =>
                       setDishItem(
-                        {...dishItem,quantity: (dishItem.quantity>0)? dishItem.quantity -1: dishItem.quantity}
+                        {...dishItem,quantity: (dishItem.quantity>1)? dishItem.quantity -1: dishItem.quantity}
                       )
                     }
                   >
@@ -155,15 +159,14 @@ const DishModal = ({ dish, dishToggle }: IProps) => {
                   </button>
                 </div>
               </div>
+              </form>
               <div className="dish-add">
                 <button type="submit">Add to bag</button>
               </div>
-              </form>
             </div>
           </div>
         </div>
-      </div>
-    
+      </div>,document.body
   );
 };
 

@@ -155,6 +155,8 @@
     background: rgba(0, 0, 0, 0.7);
     flex-direction: column;
     .user-button {
+      align-items: end;
+    padding-bottom: 8px;
       width: 573px;
       background-color: transparent;
       img {
