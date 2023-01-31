@@ -47,6 +47,7 @@ const Restaurants = () => {
   }, [dispatch, pageOffset, sortPath]);
 
   const handlePageChange = (event: any) => {
+    window.scrollTo(0, 0);
     setPageOffset(event.selected);
   };
   const handleFilterChange = async (sortItem: ISortPath) => {

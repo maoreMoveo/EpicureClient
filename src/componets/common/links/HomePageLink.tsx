@@ -8,12 +8,13 @@ interface IProps {
 }
 const HomePageLink = ({ path }: IProps) => {
   return (
+    <Link to={path}>
     <div className="link">
       <h2>All Restaurant</h2>
-      <Link to={path}>
+     
         <img src={arrows} alt="link-button"></img>
-      </Link>
     </div>
+      </Link>
   );
 };
 

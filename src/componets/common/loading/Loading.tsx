@@ -5,8 +5,8 @@ const Loading = () => {
   return (
     <div className="loading-container">
       <Circles
-        height="150"
-        width="150"
+        height="100"
+        width="100"
         color="rgba(222, 146, 0, 0.9)"
         ariaLabel="circles-loading"
         wrapperStyle={{}}

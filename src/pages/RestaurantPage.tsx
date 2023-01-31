@@ -94,6 +94,7 @@ const RestaurantPage = () => {
     return currentTime.isBetween(openTime, closeTime);
   };
   const handlePageChange = async (event: any) => {
+    window.scrollTo(0, 0)
     setPageOffset(event.selected);
   };
   if (loadingPage) return <Loading />;
