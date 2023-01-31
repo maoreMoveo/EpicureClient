@@ -56,7 +56,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3003/",
+  "proxy": "http://localhost:3003",
   "devDependencies": {
     "@types/lodash": "^4.14.191",
     "@types/react-router-dom": "^5.3.3",

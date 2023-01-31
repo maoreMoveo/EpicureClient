@@ -8,7 +8,7 @@ const getAllRestaraunt = async (
 ) => {
   try {
     const res = await axios.get(
-      `/restaurant/getRestaurantsPerPageWithFilter?page=${page}&perPage=${perPage}&typeFilter=${typeFilter}`
+      `/api/restaurant/getRestaurantsPerPageWithFilter?page=${page}&perPage=${perPage}&typeFilter=${typeFilter}`
     );
     console.log(res);
     return res.data;
@@ -24,7 +24,7 @@ const getRestaurantDishes = async (
 ) => {
   try {
     const res = await axios.get(
-      "/dish/getRestaurantDishes",
+      "/api/dish/getRestaurantDishes",
       {
         params: {
           id: id,
@@ -44,7 +44,7 @@ const getRestaurantDishes = async (
 const getPopularRestaraunt = async () => {
   try {
     const res = await axios.get(
-      "/restaurant/getPopularRestaurnts"
+      "/api/restaurant/getPopularRestaurnts"
     );
     console.log(res);
     return res.data;
@@ -55,7 +55,7 @@ const getPopularRestaraunt = async () => {
 const getRestarauntById = async (id: string) => {
   try {
     const res = await axios.get(
-      "/restaurant/getRestaurantById",
+      "/api/restaurant/getRestaurantById",
       {
         params: {
           id: id,

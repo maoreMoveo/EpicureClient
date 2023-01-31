@@ -1,6 +1,6 @@
 import axios from "axios";
 const getDishesHomePage = async() => {
-  const res=  await axios.get('/dish/getDishesForHomePage');
+  const res=  await axios.get('/api/dish/getDishesForHomePage');
   console.log(res)
   return res.data;
 };
