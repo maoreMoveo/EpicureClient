@@ -1,0 +1,18 @@
+@import '../assets/styles/basics/breakpoints';
+
+.header{
+   width: 100%;
+}
+@include xl{
+.header{
+    // max-width: 2000px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+}
+}

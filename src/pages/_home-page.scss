@@ -1,0 +1,44 @@
+@import "../assets/styles/basics/variables";
+@import "../assets/styles/basics/breakpoints";
+@import "../assets/styles/basics/base";
+.home-container{
+  width: 100%;
+}
+.container {
+  width: 100%;
+  margin-top: 48px;
+  position: relative;
+  // overflow-x: hidden;
+  padding-left: 20px;
+}
+
+
+@include lg {
+  .container {
+    max-width: 1188px;
+    margin: 0 auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    padding-left: 0px;
+  }
+  .restaurant-link {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+  }
+  .dish-restaurant-link {
+    display: none;
+  }
+  .chefOfWeek-link{
+    display: none;
+  }
+  
+}
+// @include xl{
+//   .container{
+//     //max-width: 1440px;
+//   }
+// }

@@ -1,0 +1,37 @@
+@import '../../assets/styles/styles.scss';
+.header-sort {
+    margin: 0;
+    height: 27px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding-inline-start: 0px;
+    justify-content: space-between;
+    li {
+      height: 100%;
+      font-family: $BaseFont;
+      font-style: normal;
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 1.92px;
+      color: $PrimaryColorBlack;
+      cursor: pointer;
+    }
+    .active {
+      border-bottom: 1.8px solid rgba(222, 146, 0, 0.9);
+      font-weight: 400;
+    }
+  }
+  @include xl{
+    .header-sort{
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 0px;
+      gap: 40px;
+      .active{
+        border-bottom: 0;
+      }
+    }
+  }

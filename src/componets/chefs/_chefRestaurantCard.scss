@@ -1,0 +1,43 @@
+@import "../../assets/styles/basics/variables";
+@import "../../assets/styles/basics/base";
+@import "../../assets/styles/basics/breakpoints";
+.card-chef-navigate {
+  width: 250px;
+}
+.card-chef-res {
+  background-color: $SeconderyBeige;
+  width: 250px;
+  img {
+    height: 150px;
+    width: 250px;
+    object-fit: cover;
+  }
+}
+  .chef-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    height: 80px;
+    h2 {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 2.67px;
+    }
+  }
+
+
+@include xl{
+  .chef-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 133px;
+    h2 {
+      font-size: 30px;
+      line-height: 47px;
+      width: 118px;
+    }
+  }
+}

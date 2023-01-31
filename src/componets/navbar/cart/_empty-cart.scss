@@ -1,0 +1,68 @@
+@import "../../../assets/styles/basics/variables";
+@import "../../../assets/styles/basics/base";
+@import "../../../assets/styles/basics/breakpoints";
+
+
+.cart-empty-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+    width: 100%;
+    padding: 0px;
+ 
+  }
+  .cart-empty-text {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    opacity: 0.5;
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+  .cart-empty-order-link {
+    display: none;
+  }
+
+  @include xl{
+    .cart-empty-content {
+        height: 586px;
+        width: 500px;
+      }
+      .cart-empty-text {
+        h2 {
+          width: 121px;
+          height: 40px;
+          line-height: 20px;
+          font-size: 16px;
+        }
+      }
+      .cart-empty-order-link {
+        display: flex;
+        position: absolute;
+        bottom: 60px;
+        padding: 5px 15px;
+        gap: 10px;
+        border: 1px solid #000000;
+        a {
+          font-family: $BaseFont;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 20px;
+          text-align: center;
+          letter-spacing: 2.67px;
+          text-transform: uppercase;
+          color: $PrimaryColorBlack;
+        }
+      }
+    
+    }
+  

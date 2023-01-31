@@ -1,13 +1,45 @@
 // Primary Color
-$PrimaryColorBlack:#000000;
-$PrimaryColorGray:#979797;
-
+$PrimaryColorBlack: #000000;
+$PrimaryColorGray: #979797;
+$PrimaryWhite: #ffffff;
 //Secondery Color
+$SeconderyBeige: #f9f4ea;
+$SeconderYellow: #f5be00;
+$SeconderyLightGray: #fafafa;
 
-$SeconderyBeige:#F9F4EA;
-$SeconderYellow: #F5BE00;
-$SeconderyLightGray:#FAFAFA;
 
 // Fonts
+$BaseFont: "Helvetica Neue";
 
-$FontFamily:"Helvetica Neue"
+@mixin cardTitle {
+  font-family: $BaseFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 2.67px;
+  color: $PrimaryColorBlack;
+  text-transform: none;
+ 
+}
+
+@mixin buttonPrimary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 24px;
+  gap: 10px;
+  width: 206px;
+  height: 48px;
+  background: $PrimaryColorBlack;
+  border: 1px solid $PrimaryColorBlack;
+  font-family: $BaseFont;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 2.67px;
+  text-transform: uppercase;
+  color: #ffffff;
+}

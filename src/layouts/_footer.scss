@@ -1,0 +1,19 @@
+@import "../assets/styles/basics/variables";
+@import "../assets/styles/basics/base";
+@import "../assets/styles/basics/breakpoints";
+.footer {
+  width: 100%;
+  height: 200px;
+  border-top: 1px solid #f2f2f2;
+  padding: 20px;
+    
+}
+
+
+@include lg {
+  .footer {
+    height: 80px;
+    // max-width:1440px;
+   
+  }
+}

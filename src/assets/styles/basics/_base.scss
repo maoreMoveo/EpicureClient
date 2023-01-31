@@ -1,38 +1,99 @@
+@import "./variables";
+@import "./breakpoints";
 * {
   box-sizing: border-box;
+}
+a,input,button{
+  cursor: pointer;
 }
 
 body {
   margin: 0;
   padding: 0;
 }
-
+// main {
+//   overflow-x: hidden;
+//   //remember to delete
+//   height: 100%;
+//   margin-top: 46px;
+// }
+a {
+  text-decoration: none;
+}
+// for mobile
 h1 {
-  font-family:$FontFamily;
+  font-family: $BaseFont;
   font-style: normal;
   font-weight: 200;
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 24px;
+  line-height: 32px;
   letter-spacing: 1.97px;
   color: $PrimaryColorBlack;
+  margin: 0;
+  padding: 0;
 }
 h2 {
-  font-family: $FontFamily;
+  font-family: $BaseFont;
   font-style: normal;
   font-weight: 200;
-  font-size: 30px;
-  line-height: 35px;
-  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
   letter-spacing: 1.25px;
   text-transform: uppercase;
   color: $PrimaryColorBlack;
+  margin: 0;
+  padding: 0;
 }
 h3 {
-  font-family: $FontFamily;
+  font-family: $BaseFont;
   font-style: normal;
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 47px;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 35px;
   letter-spacing: 2.67px;
   color: $PrimaryColorBlack;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+//for Desktop
+@include xl {
+  #root {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-family: $BaseFont;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 1.97px;
+    color: $PrimaryColorBlack;
+  }
+  h2 {
+    font-family: $BaseFont;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    color: $PrimaryColorBlack;
+  }
+
+  h3 {
+    font-family: $BaseFont;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 2.67px;
+    color: $PrimaryColorBlack;
+  }
 }
